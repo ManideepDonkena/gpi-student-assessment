@@ -1,0 +1,84 @@
+{
+  "sessionId": "resp_61724",
+  "timestamp": "2026-02-10T20:26:50.076109",
+  "demographics": {
+    "age": 18,
+    "gender": "Female",
+    "occupation": "Self-employed",
+    "archetype_label": "tamas"
+  },
+  "responses": [
+    {
+      "scenarioId": "village_dilemma",
+      "choiceId": "ignore",
+      "timeToSelectMs": 9573,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "treasure_room",
+      "choiceId": "take_some",
+      "timeToSelectMs": 7195,
+      "hoverCount": 3
+    },
+    {
+      "scenarioId": "collapsed_bridge",
+      "choiceId": "wait",
+      "timeToSelectMs": 9925,
+      "hoverCount": 3
+    },
+    {
+      "scenarioId": "rival_merchant",
+      "choiceId": "return",
+      "timeToSelectMs": 7955,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "meditation_session",
+      "choiceId": "shout",
+      "timeToSelectMs": 8938,
+      "hoverCount": 0
+    },
+    {
+      "scenarioId": "team_credit",
+      "choiceId": "resent",
+      "timeToSelectMs": 7174,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "dietary_choice",
+      "choiceId": "overindulge",
+      "timeToSelectMs": 4379,
+      "hoverCount": 3
+    },
+    {
+      "scenarioId": "broken_item",
+      "choiceId": "hide",
+      "timeToSelectMs": 19055,
+      "hoverCount": 1
+    },
+    {
+      "scenarioId": "free_time",
+      "choiceId": "adventure",
+      "timeToSelectMs": 11586,
+      "hoverCount": 0
+    },
+    {
+      "scenarioId": "advice_request",
+      "choiceId": "avoid",
+      "timeToSelectMs": 14569,
+      "hoverCount": 0
+    },
+    {
+      "scenarioId": "traffic_jam",
+      "choiceId": "angry",
+      "timeToSelectMs": 10982,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "new_project",
+      "choiceId": "procrastinate",
+      "timeToSelectMs": 12610,
+      "hoverCount": 0
+    }
+  ]
+}

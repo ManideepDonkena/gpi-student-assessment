@@ -1,0 +1,84 @@
+{
+  "sessionId": "resp_68461",
+  "timestamp": "2026-02-10T20:26:50.106023",
+  "demographics": {
+    "age": 36,
+    "gender": "Other",
+    "occupation": "Unemployed",
+    "archetype_label": "sattva"
+  },
+  "responses": [
+    {
+      "scenarioId": "village_dilemma",
+      "choiceId": "trade",
+      "timeToSelectMs": 4040,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "treasure_room",
+      "choiceId": "leave",
+      "timeToSelectMs": 5647,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "collapsed_bridge",
+      "choiceId": "repair",
+      "timeToSelectMs": 3517,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "rival_merchant",
+      "choiceId": "keep",
+      "timeToSelectMs": 5189,
+      "hoverCount": 3
+    },
+    {
+      "scenarioId": "meditation_session",
+      "choiceId": "persist",
+      "timeToSelectMs": 5395,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "team_credit",
+      "choiceId": "share",
+      "timeToSelectMs": 3202,
+      "hoverCount": 1
+    },
+    {
+      "scenarioId": "dietary_choice",
+      "choiceId": "simple",
+      "timeToSelectMs": 6283,
+      "hoverCount": 3
+    },
+    {
+      "scenarioId": "broken_item",
+      "choiceId": "confess",
+      "timeToSelectMs": 4839,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "free_time",
+      "choiceId": "sleep",
+      "timeToSelectMs": 5766,
+      "hoverCount": 1
+    },
+    {
+      "scenarioId": "advice_request",
+      "choiceId": "constructive",
+      "timeToSelectMs": 3595,
+      "hoverCount": 0
+    },
+    {
+      "scenarioId": "traffic_jam",
+      "choiceId": "calm",
+      "timeToSelectMs": 5019,
+      "hoverCount": 0
+    },
+    {
+      "scenarioId": "new_project",
+      "choiceId": "plan",
+      "timeToSelectMs": 8619,
+      "hoverCount": 1
+    }
+  ]
+}

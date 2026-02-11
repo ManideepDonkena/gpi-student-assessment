@@ -1,0 +1,84 @@
+{
+  "sessionId": "resp_79233",
+  "timestamp": "2026-02-10T20:26:50.040253",
+  "demographics": {
+    "age": 38,
+    "gender": "Male",
+    "occupation": "Unemployed",
+    "archetype_label": "mixed"
+  },
+  "responses": [
+    {
+      "scenarioId": "village_dilemma",
+      "choiceId": "help",
+      "timeToSelectMs": 4001,
+      "hoverCount": 1
+    },
+    {
+      "scenarioId": "treasure_room",
+      "choiceId": "take_all",
+      "timeToSelectMs": 3650,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "collapsed_bridge",
+      "choiceId": "wait",
+      "timeToSelectMs": 4626,
+      "hoverCount": 1
+    },
+    {
+      "scenarioId": "rival_merchant",
+      "choiceId": "return",
+      "timeToSelectMs": 5013,
+      "hoverCount": 1
+    },
+    {
+      "scenarioId": "meditation_session",
+      "choiceId": "shout",
+      "timeToSelectMs": 1873,
+      "hoverCount": 1
+    },
+    {
+      "scenarioId": "team_credit",
+      "choiceId": "assert",
+      "timeToSelectMs": 4538,
+      "hoverCount": 0
+    },
+    {
+      "scenarioId": "dietary_choice",
+      "choiceId": "overindulge",
+      "timeToSelectMs": 5425,
+      "hoverCount": 3
+    },
+    {
+      "scenarioId": "broken_item",
+      "choiceId": "confess",
+      "timeToSelectMs": 2984,
+      "hoverCount": 3
+    },
+    {
+      "scenarioId": "free_time",
+      "choiceId": "learn",
+      "timeToSelectMs": 2336,
+      "hoverCount": 3
+    },
+    {
+      "scenarioId": "advice_request",
+      "choiceId": "constructive",
+      "timeToSelectMs": 5732,
+      "hoverCount": 2
+    },
+    {
+      "scenarioId": "traffic_jam",
+      "choiceId": "zone_out",
+      "timeToSelectMs": 5843,
+      "hoverCount": 3
+    },
+    {
+      "scenarioId": "new_project",
+      "choiceId": "rush",
+      "timeToSelectMs": 5752,
+      "hoverCount": 1
+    }
+  ]
+}

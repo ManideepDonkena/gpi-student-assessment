@@ -1,0 +1,149 @@
+:root {
+  --bg-color: #f0f4f8;
+  /* Lighter academic theme */
+  --card-bg: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --accent-color: #2563eb;
+  /* Royal Blue */
+  --accent-hover: #1d4ed8;
+  --border-radius: 8px;
+  --transition: all 0.2s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* Changed from center for long forms */
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+#app {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: 'Cinzel', serif;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Likert Grid */
+.likert-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.likert-item p {
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #334155;
+}
+
+.likert-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.likert-options label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.likert-options input {
+  margin-top: 0.5rem;
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent-color);
+}
+
+/* Form Elements */
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .results-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .likert-options {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .likert-options label {
+    margin: 0.5rem;
+  }
+}
