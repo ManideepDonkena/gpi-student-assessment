@@ -71,6 +71,25 @@ def flatten_session(session):
         "GPA": session.get('demographics', {}).get('gpa'),
         "Gender": session.get('demographics', {}).get('gender'),
     }
+
+    # Computed Scores (New)
+    computed = session.get('computedScores', {})
+    guna_raw = computed.get('gunaRaw', {})
+    guna_norm = computed.get('gunaNormalized', {})
+
+    row['Score_Sattva_Raw'] = guna_raw.get('Sattva')
+    row['Score_Rajas_Raw'] = guna_raw.get('Rajas')
+    row['Score_Tamas_Raw'] = guna_raw.get('Tamas')
+
+    row['Score_Sattva_Norm'] = guna_norm.get('Sattva')
+    row['Score_Rajas_Norm'] = guna_norm.get('Rajas')
+    row['Score_Tamas_Norm'] = guna_norm.get('Tamas')
+
+    row['Dominant_Guna'] = computed.get('dominantGuna')
+
+    big_five = computed.get('bigFive', {})
+    for trait, score in big_five.items():
+        row[f'Score_BigFive_{trait}'] = score
     
     # Behavioral Metadata
     row["Guna_Time_ms"] = session.get('gunaMetadata', {}).get('timeMs')

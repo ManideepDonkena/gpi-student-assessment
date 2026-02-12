@@ -89,11 +89,16 @@ export function logScenarioResponse(response) {
         store.state.endTime = new Date().toISOString();
 
         // Auto-save to Firebase
-        import('./firebase.js').then(module => {
-            module.saveSessionData(store.state).then(id => {
-                console.log("Session saved to Firebase:", id);
-                store.state.firebaseId = id; // Store ID to show to user if needed
-            }).catch(err => console.error("Firebase save failed", err));
+        // We compute scores first so they are saved in the DB
+        import('./scoring.js').then(scoring => {
+            store.state.computedScores = scoring.calculateScores(store.state);
+
+            import('./firebase.js').then(module => {
+                module.saveSessionData(store.state).then(id => {
+                    console.log("Session saved to Firebase:", id);
+                    store.state.firebaseId = id; // Store ID to show to user if needed
+                }).catch(err => console.error("Firebase save failed", err));
+            });
         });
 
         store.state.view = 'results';

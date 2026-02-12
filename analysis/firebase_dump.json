@@ -1,0 +1,2385 @@
+[
+  {
+    "bigFiveItems": [
+      {
+        "reverse": true,
+        "trait": "extraversion",
+        "id": "BF1",
+        "text": "I see myself as someone who is reserved."
+      },
+      {
+        "reverse": false,
+        "trait": "agreeableness",
+        "id": "BF2",
+        "text": "I see myself as someone who is generally trusting."
+      },
+      {
+        "reverse": true,
+        "trait": "conscientiousness",
+        "id": "BF3",
+        "text": "I see myself as someone who tends to be lazy."
+      },
+      {
+        "reverse": true,
+        "trait": "neuroticism",
+        "id": "BF4",
+        "text": "I see myself as someone who is relaxed, handles stress well."
+      },
+      {
+        "reverse": true,
+        "trait": "openness",
+        "id": "BF5",
+        "text": "I see myself as someone who has few artistic interests."
+      },
+      {
+        "reverse": false,
+        "trait": "extraversion",
+        "id": "BF6",
+        "text": "I see myself as someone who is outgoing, sociable."
+      },
+      {
+        "reverse": true,
+        "trait": "agreeableness",
+        "id": "BF7",
+        "text": "I see myself as someone who tends to find fault with others."
+      },
+      {
+        "reverse": false,
+        "trait": "conscientiousness",
+        "id": "BF8",
+        "text": "I see myself as someone who does a thorough job."
+      },
+      {
+        "reverse": false,
+        "trait": "neuroticism",
+        "id": "BF9",
+        "text": "I see myself as someone who gets nervous easily."
+      },
+      {
+        "reverse": false,
+        "trait": "openness",
+        "id": "BF10",
+        "text": "I see myself as someone who has an active imagination."
+      }
+    ],
+    "gunaMetadata": {
+      "cursorDistancePx": 11681,
+      "answerChanges": 57,
+      "timeMs": 153743
+    },
+    "gunaResponses": {
+      "T17": 2,
+      "S11": 3,
+      "T16": 3,
+      "S12": 3,
+      "T9": 2,
+      "R15": 3,
+      "T24": 2,
+      "T8": 3,
+      "R5": 3,
+      "S5": 3,
+      "R6": 4,
+      "T21": 3,
+      "T11": 2,
+      "T26": 3,
+      "T3": 1,
+      "S9": 4,
+      "R3": 3,
+      "T4": 3,
+      "R16": 4,
+      "T19": 3,
+      "S8": 5,
+      "R4": 4,
+      "R7": 2,
+      "R13": 2,
+      "T23": 1,
+      "R10": 3,
+      "S13": 3,
+      "T18": 4,
+      "T1": 4,
+      "S6": 4,
+      "S2": 3,
+      "R12": 1,
+      "T14": 4,
+      "R14": 2,
+      "S7": 4,
+      "R9": 4,
+      "T27": 4,
+      "T10": 2,
+      "T22": 2,
+      "R2": 4,
+      "R1": 3,
+      "S3": 2,
+      "S1": 2,
+      "T2": 5,
+      "T6": 3,
+      "T15": 3,
+      "S4": 3,
+      "T20": 4,
+      "T7": 4,
+      "S14": 2,
+      "T13": 3,
+      "R8": 5,
+      "T25": 2,
+      "R11": 2,
+      "T5": 4,
+      "S10": 4,
+      "T12": 3
+    },
+    "bigFiveResponses": {
+      "BF1": 2,
+      "BF9": 3,
+      "BF2": 3,
+      "BF7": 3,
+      "BF8": 2,
+      "BF6": 2,
+      "BF10": 3,
+      "BF4": 2,
+      "BF3": 2,
+      "BF5": 3
+    },
+    "bigFiveMetadata": {
+      "cursorDistancePx": 1595,
+      "answerChanges": 10,
+      "timeMs": 9724
+    },
+    "endTime": "2026-02-12T08:20:46.802Z",
+    "uploadedAt": "2026-02-12T08:20:47.212Z",
+    "gunaItems": [
+      {
+        "domain": "academic",
+        "id": "S12",
+        "text": "If you are working on a project that looks like it will fail, do you continue to put in your best effort until the very end?",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S6",
+        "text": "How much time per week do you spend voluntarily learning something new (reading, watching documentaries) just for the sake of understanding?",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "R1",
+        "text": "If taking a shortcut (like skipping a queue or bending a regulation) would guarantee you a major win, how likely are you to take it?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R3",
+        "text": "When solving a problem, how often do you dismiss traditional or old-fashioned approaches in favor of your own logic?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R4",
+        "text": "How often do you check your social media likes or exam grades and feel a sudden rush of pride or superiority?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R7",
+        "text": "After achieving a goal, how quickly do you feel restless and start chasing the next achievement?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "T6",
+        "text": "How often do you put off important tasks until the last minute, even when you know it will stress you out?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T7",
+        "text": "When faced with a complex problem, how often do you freeze up and wait for someone else to solve it for you?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T8",
+        "text": "Do you frequently look at your life and feel 'stuck' or like you are 'falling behind' everyone else?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T9",
+        "text": "If a gym workout or a study session gets difficult, how likely are you to quit early and tell yourself 'I'll do it tomorrow'?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T12",
+        "text": "How many New Year's resolutions or self-improvement plans have you started and dropped within 2 weeks?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T20",
+        "text": "On Sunday evening, do you feel a knot in your stomach thinking about work/school on Monday?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "S3",
+        "text": "If an elderly family member gives you advice that contradicts your own plans, how likely are you to listen respectfully and seriously consider their perspective?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S4",
+        "text": "In a heated argument, how much effort do you make to keep your tone calm and avoid using harsh words?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S9",
+        "text": "If you promise to help a friend move house, but wake up feeling tired and lazy, how likely are you to go anyway simply because you gave your word?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S11",
+        "text": "How often do you treat the campus janitor/security guard with the exact same respect and patience as you do your Professor or Dean?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "R2",
+        "text": "If a friend invites you to a lecture on philosophy or spirituality, how likely are you to decline because you find it 'boring' or 'useless'?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R5",
+        "text": "How often do you find yourself admiring or following rich influencers and celebrities rather than scientists or social workers?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R13",
+        "text": "If someone asks for a donation, do you feel annoyed or resentful, even if you eventually give a small amount?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "T1",
+        "text": "When things go wrong in your life, how often do you feel that it was completely someone else's fault at 'the world is against you'?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T4",
+        "text": "In your head or with friends, how often do you find yourself making fun of or judging strangers/acquaintances?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T11",
+        "text": "How many times a week do you feel a flash of rage (at traffic, people, or technology)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T15",
+        "text": "Do you feel like you are always the one giving in relationships while others just take from you?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T18",
+        "text": "When talking to friends, how often do you find yourself mostly complaining about your problems?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T19",
+        "text": "When a friend succeeds (gets a job/promotion), how often do you feel a pang of jealousy or 'Why not me?'",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T26",
+        "text": "I often neglect my responsibilities to my friends",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T27",
+        "text": "How often do you act aggressively or violently towards others when upset?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S1",
+        "text": "When given a choice at a buffet, how often do you naturally gravitate towards fresh fruits and salads over heavy or spicy dishes?",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S5",
+        "text": "If a cashier gives you too much change, how likely are you to immediately point out the mistake and return the money?",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R6",
+        "text": "To what extent do you live your life with the assumption that this physical existence is the only reality that matters?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R8",
+        "text": "How much do you crave spicy, salty, or very rich foods (like fried snacks or heavy desserts) compared to plain, simple meals?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R9",
+        "text": "If you lost your phone or favorite watch today, how strictly would it affect your mood and sense of self-worth for the next week?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R10",
+        "text": "On a free evening, how often do you choose loud social outings (parties, clubs) over quiet, solitary activities?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R11",
+        "text": "How much of your daily mental energy is spent thinking about or pursuing romantic/sexual gratification?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R12",
+        "text": "When looking at a buffet or a sale, do you often take more than you actually need, just because it's available?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R14",
+        "text": "After buying something you really wanted, how quickly do you start wanting a better version of it?",
+        "category": "rajas"
+      },
+      {
+        "reverse": true,
+        "domain": "lifestyle",
+        "id": "R15",
+        "text": "How often do you feel you could be genuinely happy living in a simple house without luxury items?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R16",
+        "text": "How frequently do you prioritize physical enjoyment (like food, comfort, or sex) over your other responsibilities?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T2",
+        "text": "How often do you do something impulsive (like staying up late or skipping work) and regret it the next morning?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T5",
+        "text": "How often do you struggle to get out of bed because the day ahead feels pointless or too heavy?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T21",
+        "text": "If you could get away with not paying a bus fare or sneaking into a movie, would you do it?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T22",
+        "text": "If there is a box of cookies in front of you and you decided not to eat one, how long can you resist before giving in?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T23",
+        "text": "How often do you find yourself wishing you could escape to a quiet village rather than living in the busy city?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T24",
+        "text": "How often do you feel controlled by a physical or psychological habit/addiction that you can't break?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "S2",
+        "text": "When you look at an animal or another person, to what extent do you feel a deep, underlying connection or shared 'life force' with them?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S7",
+        "text": "When facing a difficult decision where you could gain personally by bending the rules, how often do you stop to ask yourself 'Is this the right thing to do?'",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S8",
+        "text": "Imagine you made a mistake at work/school that no one else noticed. How likely are you to admit it voluntarily?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S10",
+        "text": "Think about a time when you had nothing to do and no entertainment. How comfortable/happy were you just 'being' with yourself?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S13",
+        "text": "Before taking action, how often do you consult higher ethical or moral principles?",
+        "category": "sattva"
+      },
+      {
+        "reverse": true,
+        "domain": "inner",
+        "id": "S14",
+        "text": "How often do you feel that 'self-realization' or 'spiritual growth' is irrelevant to your real-life goals?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "T3",
+        "text": "On a typical day, what percentage of the time do you feel a general sense of 'blah' or dissatisfaction for no specific reason?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T10",
+        "text": "If you miss a bus or drop your coffee, does it ruin your entire morning?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T13",
+        "text": "Do you often feel a vague sense of dread or anxiety about the future without knowing exactly why?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T14",
+        "text": "Do your moods swing wildly during the day (e.g., fine one minute, crying/angry the next)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T16",
+        "text": "How often do you feel 'down in the dumps' or 'low energy' even when nothing bad has happened?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T17",
+        "text": "Do you often 'forget' or avoid doing chores/errands that your family asked you to do?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T25",
+        "text": "I often feel mentally unbalanced or chaotic inside",
+        "category": "tamas"
+      }
+    ],
+    "sessionId": "b5a8e366-0414-4969-aa70-3026a0b1e994",
+    "demographics": {
+      "gender": "Female",
+      "education": "High School",
+      "gitaFamiliarity": "Somewhat",
+      "spiritualPractice": "Occasional",
+      "industry": "Engineering",
+      "experience": "0-2",
+      "occupation": "Working Professional",
+      "age": "21"
+    },
+    "startTime": "2026-02-12T08:17:30.794Z",
+    "scenarioResponses": [
+      {
+        "choiceId": "sattva",
+        "scenarioId": "SC1",
+        "timeToSelectMs": 942,
+        "timestamp": "2026-02-12T08:20:45.819Z",
+        "hoverCount": 1
+      },
+      {
+        "choiceId": "rajas",
+        "scenarioId": "SC2",
+        "timeToSelectMs": 465,
+        "timestamp": "2026-02-12T08:20:46.285Z",
+        "hoverCount": 1
+      },
+      {
+        "choiceId": "sattva",
+        "scenarioId": "SC3",
+        "timeToSelectMs": 517,
+        "timestamp": "2026-02-12T08:20:46.802Z",
+        "hoverCount": 1
+      }
+    ],
+    "currentScenarioIndex": 2,
+    "view": "results",
+    "computedScores": {
+      "dominantGuna": "Sattva",
+      "gunaNormalized": {
+        "Sattva": "0.349",
+        "Tamas": "0.318",
+        "Rajas": "0.333"
+      },
+      "gunaRaw": {
+        "Sattva": "3.21",
+        "Tamas": "2.93",
+        "Rajas": "3.06"
+      },
+      "bigFive": {
+        "Neuroticism": "3.5",
+        "Conscientiousness": "3.0",
+        "Extraversion": "3.0",
+        "Agreeableness": "3.0",
+        "Openness": "3.0"
+      }
+    },
+    "scenarios": [
+      {
+        "id": "SC1",
+        "options": [
+          {
+            "text": "Calmly talk to him to understand the issue, then divide his work among the group so we finish on time.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Get furious, yell at him in the group chat, and report him to the professor immediately.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ignore it. If we fail, we fail. Too much hassle to deal with it now.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You are working on a group project. One team member, Rahul, hasn't done any work for two weeks and is making excuses. The deadline is tomorrow. What is your immediate reaction?"
+      },
+      {
+        "id": "SC2",
+        "options": [
+          {
+            "text": "Buying a book or attending a workshop to learn something new.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Going out for a movie and expensive dinner with friends.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ordering junk food and sleeping/binge-watching TV at home.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You have a free Saturday and 1000 rupees. How would you prefer to spend it?"
+      },
+      {
+        "id": "SC3",
+        "options": [
+          {
+            "text": "Calmly use your phone hotspot or go to a neighbor's house to submit it.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Panic, scream at the ISP customer care, and throw the router.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Give up and go to sleep, hoping the professor accepts a late submission.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "Your internet connection stops working right before you need to submit an assignment. What do you do?"
+      }
+    ],
+    "firebase_id": "5ycdKVAL2t6eik5J80HJ"
+  },
+  {
+    "bigFiveItems": [
+      {
+        "reverse": true,
+        "trait": "extraversion",
+        "id": "BF1",
+        "text": "I see myself as someone who is reserved."
+      },
+      {
+        "reverse": false,
+        "trait": "agreeableness",
+        "id": "BF2",
+        "text": "I see myself as someone who is generally trusting."
+      },
+      {
+        "reverse": true,
+        "trait": "conscientiousness",
+        "id": "BF3",
+        "text": "I see myself as someone who tends to be lazy."
+      },
+      {
+        "reverse": true,
+        "trait": "neuroticism",
+        "id": "BF4",
+        "text": "I see myself as someone who is relaxed, handles stress well."
+      },
+      {
+        "reverse": true,
+        "trait": "openness",
+        "id": "BF5",
+        "text": "I see myself as someone who has few artistic interests."
+      },
+      {
+        "reverse": false,
+        "trait": "extraversion",
+        "id": "BF6",
+        "text": "I see myself as someone who is outgoing, sociable."
+      },
+      {
+        "reverse": true,
+        "trait": "agreeableness",
+        "id": "BF7",
+        "text": "I see myself as someone who tends to find fault with others."
+      },
+      {
+        "reverse": false,
+        "trait": "conscientiousness",
+        "id": "BF8",
+        "text": "I see myself as someone who does a thorough job."
+      },
+      {
+        "reverse": false,
+        "trait": "neuroticism",
+        "id": "BF9",
+        "text": "I see myself as someone who gets nervous easily."
+      },
+      {
+        "reverse": false,
+        "trait": "openness",
+        "id": "BF10",
+        "text": "I see myself as someone who has an active imagination."
+      }
+    ],
+    "gunaMetadata": {
+      "cursorDistancePx": 13525,
+      "answerChanges": 57,
+      "timeMs": 82375
+    },
+    "gunaResponses": {
+      "T17": 3,
+      "S11": 3,
+      "T16": 3,
+      "S12": 3,
+      "T9": 3,
+      "R15": 3,
+      "T24": 2,
+      "T8": 4,
+      "R5": 3,
+      "S5": 3,
+      "R6": 4,
+      "T21": 3,
+      "T11": 3,
+      "T26": 3,
+      "T3": 1,
+      "S9": 4,
+      "R3": 4,
+      "T4": 4,
+      "R16": 4,
+      "T19": 4,
+      "S8": 5,
+      "R4": 2,
+      "R7": 3,
+      "R13": 2,
+      "T23": 3,
+      "R10": 3,
+      "S13": 3,
+      "T18": 3,
+      "T1": 3,
+      "S6": 4,
+      "S2": 3,
+      "R12": 3,
+      "T14": 4,
+      "R14": 4,
+      "S7": 4,
+      "R9": 2,
+      "T27": 4,
+      "T10": 2,
+      "T22": 4,
+      "R2": 4,
+      "R1": 3,
+      "S3": 2,
+      "S1": 3,
+      "T2": 3,
+      "T6": 4,
+      "T15": 2,
+      "S4": 3,
+      "T20": 4,
+      "T7": 3,
+      "S14": 2,
+      "T13": 3,
+      "R8": 3,
+      "T25": 4,
+      "R11": 4,
+      "T5": 4,
+      "S10": 4,
+      "T12": 3
+    },
+    "bigFiveResponses": {
+      "BF1": 2,
+      "BF9": 3,
+      "BF2": 3,
+      "BF7": 2,
+      "BF8": 3,
+      "BF6": 3,
+      "BF10": 4,
+      "BF4": 3,
+      "BF3": 2,
+      "BF5": 4
+    },
+    "bigFiveMetadata": {
+      "cursorDistancePx": 1938,
+      "answerChanges": 10,
+      "timeMs": 12114
+    },
+    "endTime": "2026-02-12T08:05:59.581Z",
+    "uploadedAt": "2026-02-12T08:06:00.015Z",
+    "gunaItems": [
+      {
+        "domain": "academic",
+        "id": "S12",
+        "text": "If you are working on a project that looks like it will fail, do you continue to put in your best effort until the very end?",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S6",
+        "text": "How much time per week do you spend voluntarily learning something new (reading, watching documentaries) just for the sake of understanding?",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "R1",
+        "text": "If taking a shortcut (like skipping a queue or bending a regulation) would guarantee you a major win, how likely are you to take it?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R3",
+        "text": "When solving a problem, do you prefer to rely entirely on your own logic/modern methods rather than looking at how things were traditionally done?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R4",
+        "text": "How often do you check your social media likes or exam grades and feel a sudden rush of pride or superiority?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R7",
+        "text": "When you achieve a goal, how long does the 'high' last before you start looking for the next big thing?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "T6",
+        "text": "If you have a deadline in 3 days, do you start now, or wait until the night before (even if it stresses you out)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T7",
+        "text": "When faced with a complex problem, is your first instinct to try and solve it, or to freeze and wait for someone else to help?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T8",
+        "text": "Do you frequently look at your life and feel 'stuck' or like you are 'falling behind' everyone else?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T9",
+        "text": "If a gym workout or a study session gets difficult, how likely are you to quit early and tell yourself 'I'll do it tomorrow'?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T12",
+        "text": "How many New Year's resolutions or self-improvement plans have you started and dropped within 2 weeks?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T20",
+        "text": "On Sunday evening, do you feel a knot in your stomach thinking about work/school on Monday?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "S3",
+        "text": "If an elderly family member gives you advice that contradicts your own plans, how likely are you to listen respectfully and seriously consider their perspective?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S4",
+        "text": "In a heated argument, how much effort do you make to keep your tone calm and avoid using harsh words?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S9",
+        "text": "If you promise to help a friend move house, but wake up feeling tired and lazy, how likely are you to go anyway simply because you gave your word?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S11",
+        "text": "How often do you treat the campus janitor/security guard with the exact same respect and patience as you do your Professor or Dean?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "R2",
+        "text": "If a friend invites you to a lecture on philosophy or spirituality, how likely are you to decline because you find it 'boring' or 'useless'?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R5",
+        "text": "Who do you follow/discuss more: Rich influencers & celebrities vs. Scientists & Social Workers?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R13",
+        "text": "If someone asks for a donation, do you feel annoyed or resentful, even if you eventually give a small amount?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "T1",
+        "text": "When things go wrong in your life, how often do you feel that it was completely someone else's fault at 'the world is against you'?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T4",
+        "text": "In your head or with friends, how often do you find yourself making fun of or judging strangers/acquaintances?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T11",
+        "text": "How many times a week do you feel a flash of rage (at traffic, people, or technology)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T15",
+        "text": "Do you feel like you are always the one giving in relationships while others just take from you?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T18",
+        "text": "When you talk to friends, how much of the conversation is you complaining about your problems vs. discussing ideas?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T19",
+        "text": "When a friend succeeds (gets a job/promotion), is your first feeling happiness for them, or a pang of 'Why not me?'",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T26",
+        "text": "I often neglect my responsibilities to my friends",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T27",
+        "text": "How often do you act aggressively or violently towards others when upset?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S1",
+        "text": "When given a choice at a buffet, how often do you naturally gravitate towards fresh fruits and salads over heavy or spicy dishes?",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S5",
+        "text": "If a cashier gives you too much change, how likely are you to immediately point out the mistake and return the money?",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R6",
+        "text": "To what extent do you live your life with the assumption that this physical existence is the only reality that matters?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R8",
+        "text": "How much do you crave spicy, salty, or very rich foods (like fried snacks or heavy desserts) compared to plain, simple meals?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R9",
+        "text": "If you lost your phone or favorite watch today, how strictly would it affect your mood and sense of self-worth for the next week?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R10",
+        "text": "Given a free Friday night, would you rather go to a busy club/party or take a quiet walk in nature?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R11",
+        "text": "How much of your daily mental energy is spent thinking about or pursuing romantic/sexual gratification?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R12",
+        "text": "When looking at a buffet or a sale, do you often take more than you actually need, just because it's available?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R14",
+        "text": "After buying something you really wanted, how quickly do you start wanting a better version of it?",
+        "category": "rajas"
+      },
+      {
+        "reverse": true,
+        "domain": "lifestyle",
+        "id": "R15",
+        "text": "How often do you feel you could be genuinely happy living in a simple house without luxury items?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R16",
+        "text": "How frequently do you prioritize physical enjoyment (like food, comfort, or sex) over your other responsibilities?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T2",
+        "text": "How often do you do something impulsive (like staying up late or skipping work) and regret it the next morning?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T5",
+        "text": "How often do you struggle to get out of bed because the day ahead feels pointless or too heavy?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T21",
+        "text": "If you could get away with not paying a bus fare or sneaking into a movie, would you do it?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T22",
+        "text": "If there is a box of cookies in front of you and you decided not to eat one, how long can you resist before giving in?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T23",
+        "text": "How often do you find yourself wishing you could escape to a quiet village rather than living in the busy city?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T24",
+        "text": "How often do you feel controlled by a physical or psychological habit/addiction that you can't break?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "S2",
+        "text": "When you look at an animal or another person, to what extent do you feel a deep, underlying connection or shared 'life force' with them?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S7",
+        "text": "When facing a difficult decision where you could gain personally by bending the rules, how often do you stop to ask yourself 'Is this the right thing to do?'",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S8",
+        "text": "Imagine you made a mistake at work/school that no one else noticed. How likely are you to admit it voluntarily?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S10",
+        "text": "Think about a time when you had nothing to do and no entertainment. How comfortable/happy were you just 'being' with yourself?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S13",
+        "text": "Before taking action, how often do you consult higher ethical or moral principles?",
+        "category": "sattva"
+      },
+      {
+        "reverse": true,
+        "domain": "inner",
+        "id": "S14",
+        "text": "How often do you feel that 'self-realization' or 'spiritual growth' is irrelevant to your real-life goals?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "T3",
+        "text": "On a typical day, what percentage of the time do you feel a general sense of 'blah' or dissatisfaction for no specific reason?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T10",
+        "text": "If you miss a bus or drop your coffee, does it ruin your entire morning?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T13",
+        "text": "Do you often feel a vague sense of dread or anxiety about the future without knowing exactly why?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T14",
+        "text": "Do your moods swing wildly during the day (e.g., fine one minute, crying/angry the next)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T16",
+        "text": "How often do you feel 'down in the dumps' or 'low energy' even when nothing bad has happened?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T17",
+        "text": "Do you often 'forget' or avoid doing chores/errands that your family asked you to do?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T25",
+        "text": "I often feel mentally unbalanced or chaotic inside",
+        "category": "tamas"
+      }
+    ],
+    "sessionId": "dbaf56b6-8c62-454d-889a-8b19d41b0a57",
+    "demographics": {
+      "gender": "Female",
+      "year": "4",
+      "major": "Electrical Engineering ",
+      "gpa": "8.6",
+      "age": "21"
+    },
+    "startTime": "2026-02-12T08:04:11.030Z",
+    "scenarioResponses": [
+      {
+        "choiceId": "rajas",
+        "scenarioId": "SC1",
+        "timeToSelectMs": 908,
+        "timestamp": "2026-02-12T08:05:58.487Z",
+        "hoverCount": 1
+      },
+      {
+        "choiceId": "tamas",
+        "scenarioId": "SC2",
+        "timeToSelectMs": 575,
+        "timestamp": "2026-02-12T08:05:59.062Z",
+        "hoverCount": 1
+      },
+      {
+        "choiceId": "rajas",
+        "scenarioId": "SC3",
+        "timeToSelectMs": 519,
+        "timestamp": "2026-02-12T08:05:59.581Z",
+        "hoverCount": 1
+      }
+    ],
+    "currentScenarioIndex": 2,
+    "view": "results",
+    "scenarios": [
+      {
+        "id": "SC1",
+        "options": [
+          {
+            "text": "Calmly talk to him to understand the issue, then divide his work among the group so we finish on time.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Get furious, yell at him in the group chat, and report him to the professor immediately.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ignore it. If we fail, we fail. Too much hassle to deal with it now.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You are working on a group project. One team member, Rahul, hasn't done any work for two weeks and is making excuses. The deadline is tomorrow. What is your immediate reaction?"
+      },
+      {
+        "id": "SC2",
+        "options": [
+          {
+            "text": "Buying a book or attending a workshop to learn something new.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Going out for a movie and expensive dinner with friends.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ordering junk food and sleeping/binge-watching TV at home.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You have a free Saturday and 1000 rupees. How would you prefer to spend it?"
+      },
+      {
+        "id": "SC3",
+        "options": [
+          {
+            "text": "Calmly use your phone hotspot or go to a neighbor's house to submit it.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Panic, scream at the ISP customer care, and throw the router.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Give up and go to sleep, hoping the professor accepts a late submission.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "Your internet connection stops working right before you need to submit an assignment. What do you do?"
+      }
+    ],
+    "firebase_id": "9BjKEAKpyv0IWx22g7qt"
+  },
+  {
+    "bigFiveItems": [
+      {
+        "reverse": true,
+        "trait": "extraversion",
+        "id": "BF1",
+        "text": "I see myself as someone who is reserved."
+      },
+      {
+        "reverse": false,
+        "trait": "agreeableness",
+        "id": "BF2",
+        "text": "I see myself as someone who is generally trusting."
+      },
+      {
+        "reverse": true,
+        "trait": "conscientiousness",
+        "id": "BF3",
+        "text": "I see myself as someone who tends to be lazy."
+      },
+      {
+        "reverse": true,
+        "trait": "neuroticism",
+        "id": "BF4",
+        "text": "I see myself as someone who is relaxed, handles stress well."
+      },
+      {
+        "reverse": true,
+        "trait": "openness",
+        "id": "BF5",
+        "text": "I see myself as someone who has few artistic interests."
+      },
+      {
+        "reverse": false,
+        "trait": "extraversion",
+        "id": "BF6",
+        "text": "I see myself as someone who is outgoing, sociable."
+      },
+      {
+        "reverse": true,
+        "trait": "agreeableness",
+        "id": "BF7",
+        "text": "I see myself as someone who tends to find fault with others."
+      },
+      {
+        "reverse": false,
+        "trait": "conscientiousness",
+        "id": "BF8",
+        "text": "I see myself as someone who does a thorough job."
+      },
+      {
+        "reverse": false,
+        "trait": "neuroticism",
+        "id": "BF9",
+        "text": "I see myself as someone who gets nervous easily."
+      },
+      {
+        "reverse": false,
+        "trait": "openness",
+        "id": "BF10",
+        "text": "I see myself as someone who has an active imagination."
+      }
+    ],
+    "gunaMetadata": {
+      "cursorDistancePx": 159141,
+      "answerChanges": 81,
+      "timeMs": 1410261
+    },
+    "gunaResponses": {
+      "T17": 2,
+      "S11": 5,
+      "T16": 2,
+      "S12": 3,
+      "T9": 4,
+      "R15": 4,
+      "T24": 5,
+      "T8": 1,
+      "R5": 1,
+      "S5": 3,
+      "R6": 2,
+      "T21": 2,
+      "T11": 3,
+      "T26": 3,
+      "T3": 2,
+      "S9": 4,
+      "R3": 2,
+      "T4": 4,
+      "R16": 4,
+      "T19": 2,
+      "S8": 3,
+      "R4": 2,
+      "R7": 2,
+      "R13": 2,
+      "T23": 2,
+      "R10": 1,
+      "S13": 3,
+      "T18": 3,
+      "T1": 2,
+      "S6": 3,
+      "S2": 3,
+      "R12": 3,
+      "T14": 2,
+      "R14": 1,
+      "S7": 2,
+      "R9": 2,
+      "T27": 3,
+      "T10": 2,
+      "T22": 3,
+      "R2": 1,
+      "R1": 4,
+      "S3": 2,
+      "S1": 3,
+      "T2": 3,
+      "T6": 1,
+      "T15": 3,
+      "S4": 3,
+      "T20": 2,
+      "T7": 3,
+      "S14": 1,
+      "T13": 2,
+      "R8": 2,
+      "T25": 2,
+      "R11": 3,
+      "T5": 1,
+      "S10": 3,
+      "T12": 5
+    },
+    "bigFiveResponses": {
+      "BF1": 3,
+      "BF9": 4,
+      "BF2": 4,
+      "BF7": 3,
+      "BF8": 4,
+      "BF6": 3,
+      "BF10": 4,
+      "BF4": 4,
+      "BF3": 4,
+      "BF5": 4
+    },
+    "bigFiveMetadata": {
+      "cursorDistancePx": 16264,
+      "answerChanges": 14,
+      "timeMs": 370466
+    },
+    "endTime": "2026-02-12T08:57:16.915Z",
+    "uploadedAt": "2026-02-12T08:57:17.771Z",
+    "gunaItems": [
+      {
+        "domain": "academic",
+        "id": "S12",
+        "text": "If you are working on a project that looks like it will fail, do you continue to put in your best effort until the very end?",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S6",
+        "text": "How much time per week do you spend voluntarily learning something new (reading, watching documentaries) just for the sake of understanding?",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "R1",
+        "text": "If taking a shortcut (like skipping a queue or bending a regulation) would guarantee you a major win, how likely are you to take it?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R3",
+        "text": "When solving a problem, how often do you dismiss traditional or old-fashioned approaches in favor of your own logic?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R4",
+        "text": "How often do you check your social media likes or exam grades and feel a sudden rush of pride or superiority?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R7",
+        "text": "After achieving a goal, how quickly do you feel restless and start chasing the next achievement?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "T6",
+        "text": "How often do you put off important tasks until the last minute, even when you know it will stress you out?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T7",
+        "text": "When faced with a complex problem, how often do you freeze up and wait for someone else to solve it for you?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T8",
+        "text": "Do you frequently look at your life and feel 'stuck' or like you are 'falling behind' everyone else?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T9",
+        "text": "If a gym workout or a study session gets difficult, how likely are you to quit early and tell yourself 'I'll do it tomorrow'?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T12",
+        "text": "How many New Year's resolutions or self-improvement plans have you started and dropped within 2 weeks?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T20",
+        "text": "On Sunday evening, do you feel a knot in your stomach thinking about work/school on Monday?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "S3",
+        "text": "If an elderly family member gives you advice that contradicts your own plans, how likely are you to listen respectfully and seriously consider their perspective?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S4",
+        "text": "In a heated argument, how much effort do you make to keep your tone calm and avoid using harsh words?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S9",
+        "text": "If you promise to help a friend move house, but wake up feeling tired and lazy, how likely are you to go anyway simply because you gave your word?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S11",
+        "text": "How often do you treat the campus janitor/security guard with the exact same respect and patience as you do your Professor or Dean?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "R2",
+        "text": "If a friend invites you to a lecture on philosophy or spirituality, how likely are you to decline because you find it 'boring' or 'useless'?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R5",
+        "text": "How often do you find yourself admiring or following rich influencers and celebrities rather than scientists or social workers?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R13",
+        "text": "If someone asks for a donation, do you feel annoyed or resentful, even if you eventually give a small amount?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "T1",
+        "text": "When things go wrong in your life, how often do you feel that it was completely someone else's fault at 'the world is against you'?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T4",
+        "text": "In your head or with friends, how often do you find yourself making fun of or judging strangers/acquaintances?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T11",
+        "text": "How many times a week do you feel a flash of rage (at traffic, people, or technology)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T15",
+        "text": "Do you feel like you are always the one giving in relationships while others just take from you?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T18",
+        "text": "When talking to friends, how often do you find yourself mostly complaining about your problems?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T19",
+        "text": "When a friend succeeds (gets a job/promotion), how often do you feel a pang of jealousy or 'Why not me?'",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T26",
+        "text": "I often neglect my responsibilities to my friends",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T27",
+        "text": "How often do you act aggressively or violently towards others when upset?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S1",
+        "text": "When given a choice at a buffet, how often do you naturally gravitate towards fresh fruits and salads over heavy or spicy dishes?",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S5",
+        "text": "If a cashier gives you too much change, how likely are you to immediately point out the mistake and return the money?",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R6",
+        "text": "To what extent do you live your life with the assumption that this physical existence is the only reality that matters?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R8",
+        "text": "How much do you crave spicy, salty, or very rich foods (like fried snacks or heavy desserts) compared to plain, simple meals?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R9",
+        "text": "If you lost your phone or favorite watch today, how strictly would it affect your mood and sense of self-worth for the next week?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R10",
+        "text": "On a free evening, how often do you choose loud social outings (parties, clubs) over quiet, solitary activities?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R11",
+        "text": "How much of your daily mental energy is spent thinking about or pursuing romantic/sexual gratification?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R12",
+        "text": "When looking at a buffet or a sale, do you often take more than you actually need, just because it's available?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R14",
+        "text": "After buying something you really wanted, how quickly do you start wanting a better version of it?",
+        "category": "rajas"
+      },
+      {
+        "reverse": true,
+        "domain": "lifestyle",
+        "id": "R15",
+        "text": "How often do you feel you could be genuinely happy living in a simple house without luxury items?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R16",
+        "text": "How frequently do you prioritize physical enjoyment (like food, comfort, or sex) over your other responsibilities?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T2",
+        "text": "How often do you do something impulsive (like staying up late or skipping work) and regret it the next morning?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T5",
+        "text": "How often do you struggle to get out of bed because the day ahead feels pointless or too heavy?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T21",
+        "text": "If you could get away with not paying a bus fare or sneaking into a movie, would you do it?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T22",
+        "text": "If there is a box of cookies in front of you and you decided not to eat one, how long can you resist before giving in?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T23",
+        "text": "How often do you find yourself wishing you could escape to a quiet village rather than living in the busy city?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T24",
+        "text": "How often do you feel controlled by a physical or psychological habit/addiction that you can't break?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "S2",
+        "text": "When you look at an animal or another person, to what extent do you feel a deep, underlying connection or shared 'life force' with them?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S7",
+        "text": "When facing a difficult decision where you could gain personally by bending the rules, how often do you stop to ask yourself 'Is this the right thing to do?'",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S8",
+        "text": "Imagine you made a mistake at work/school that no one else noticed. How likely are you to admit it voluntarily?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S10",
+        "text": "Think about a time when you had nothing to do and no entertainment. How comfortable/happy were you just 'being' with yourself?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S13",
+        "text": "Before taking action, how often do you consult higher ethical or moral principles?",
+        "category": "sattva"
+      },
+      {
+        "reverse": true,
+        "domain": "inner",
+        "id": "S14",
+        "text": "How often do you feel that 'self-realization' or 'spiritual growth' is irrelevant to your real-life goals?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "T3",
+        "text": "On a typical day, what percentage of the time do you feel a general sense of 'blah' or dissatisfaction for no specific reason?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T10",
+        "text": "If you miss a bus or drop your coffee, does it ruin your entire morning?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T13",
+        "text": "Do you often feel a vague sense of dread or anxiety about the future without knowing exactly why?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T14",
+        "text": "Do your moods swing wildly during the day (e.g., fine one minute, crying/angry the next)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T16",
+        "text": "How often do you feel 'down in the dumps' or 'low energy' even when nothing bad has happened?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T17",
+        "text": "Do you often 'forget' or avoid doing chores/errands that your family asked you to do?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T25",
+        "text": "I often feel mentally unbalanced or chaotic inside",
+        "category": "tamas"
+      }
+    ],
+    "sessionId": "2b56116d-7e9c-4e83-85b8-67b104c73f77",
+    "demographics": {
+      "gender": "Male",
+      "education": "PG (Pursuing)",
+      "gitaFamiliarity": "Very Familiar",
+      "spiritualPractice": "Regular",
+      "major": "Elelctrical Engineering",
+      "gpa": "10.0",
+      "year": "PG",
+      "occupation": "Student",
+      "age": "22"
+    },
+    "startTime": "2026-02-12T08:24:51.414Z",
+    "scenarioResponses": [
+      {
+        "choiceId": "sattva",
+        "scenarioId": "SC1",
+        "timeToSelectMs": 39492,
+        "timestamp": "2026-02-12T08:56:44.460Z",
+        "hoverCount": 10
+      },
+      {
+        "choiceId": "rajas",
+        "scenarioId": "SC2",
+        "timeToSelectMs": 14708,
+        "timestamp": "2026-02-12T08:56:59.169Z",
+        "hoverCount": 3
+      },
+      {
+        "choiceId": "sattva",
+        "scenarioId": "SC3",
+        "timeToSelectMs": 17746,
+        "timestamp": "2026-02-12T08:57:16.915Z",
+        "hoverCount": 7
+      }
+    ],
+    "currentScenarioIndex": 2,
+    "view": "results",
+    "computedScores": {
+      "dominantGuna": "Sattva",
+      "gunaNormalized": {
+        "Sattva": "0.379",
+        "Tamas": "0.331",
+        "Rajas": "0.291"
+      },
+      "gunaRaw": {
+        "Sattva": "2.93",
+        "Tamas": "2.56",
+        "Rajas": "2.25"
+      },
+      "bigFive": {
+        "Neuroticism": "3.0",
+        "Conscientiousness": "3.0",
+        "Extraversion": "3.0",
+        "Agreeableness": "3.5",
+        "Openness": "3.0"
+      }
+    },
+    "scenarios": [
+      {
+        "id": "SC1",
+        "options": [
+          {
+            "text": "Calmly talk to him to understand the issue, then divide his work among the group so we finish on time.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Get furious, yell at him in the group chat, and report him to the professor immediately.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ignore it. If we fail, we fail. Too much hassle to deal with it now.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You are working on a group project. One team member, Rahul, hasn't done any work for two weeks and is making excuses. The deadline is tomorrow. What is your immediate reaction?"
+      },
+      {
+        "id": "SC2",
+        "options": [
+          {
+            "text": "Buying a book or attending a workshop to learn something new.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Going out for a movie and expensive dinner with friends.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ordering junk food and sleeping/binge-watching TV at home.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You have a free Saturday and 1000 rupees. How would you prefer to spend it?"
+      },
+      {
+        "id": "SC3",
+        "options": [
+          {
+            "text": "Calmly use your phone hotspot or go to a neighbor's house to submit it.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Panic, scream at the ISP customer care, and throw the router.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Give up and go to sleep, hoping the professor accepts a late submission.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "Your internet connection stops working right before you need to submit an assignment. What do you do?"
+      }
+    ],
+    "firebase_id": "DqWVQrUlAk7N42ZaBgt0"
+  },
+  {
+    "bigFiveItems": [
+      {
+        "reverse": true,
+        "trait": "extraversion",
+        "id": "BF1",
+        "text": "I see myself as someone who is reserved."
+      },
+      {
+        "reverse": false,
+        "trait": "agreeableness",
+        "id": "BF2",
+        "text": "I see myself as someone who is generally trusting."
+      },
+      {
+        "reverse": true,
+        "trait": "conscientiousness",
+        "id": "BF3",
+        "text": "I see myself as someone who tends to be lazy."
+      },
+      {
+        "reverse": true,
+        "trait": "neuroticism",
+        "id": "BF4",
+        "text": "I see myself as someone who is relaxed, handles stress well."
+      },
+      {
+        "reverse": true,
+        "trait": "openness",
+        "id": "BF5",
+        "text": "I see myself as someone who has few artistic interests."
+      },
+      {
+        "reverse": false,
+        "trait": "extraversion",
+        "id": "BF6",
+        "text": "I see myself as someone who is outgoing, sociable."
+      },
+      {
+        "reverse": true,
+        "trait": "agreeableness",
+        "id": "BF7",
+        "text": "I see myself as someone who tends to find fault with others."
+      },
+      {
+        "reverse": false,
+        "trait": "conscientiousness",
+        "id": "BF8",
+        "text": "I see myself as someone who does a thorough job."
+      },
+      {
+        "reverse": false,
+        "trait": "neuroticism",
+        "id": "BF9",
+        "text": "I see myself as someone who gets nervous easily."
+      },
+      {
+        "reverse": false,
+        "trait": "openness",
+        "id": "BF10",
+        "text": "I see myself as someone who has an active imagination."
+      }
+    ],
+    "gunaMetadata": {
+      "cursorDistancePx": 12997,
+      "answerChanges": 57,
+      "timeMs": 69785
+    },
+    "gunaResponses": {
+      "T17": 4,
+      "S11": 3,
+      "T16": 3,
+      "S12": 3,
+      "T9": 5,
+      "R15": 4,
+      "T24": 3,
+      "T8": 4,
+      "R5": 5,
+      "S5": 2,
+      "R6": 3,
+      "T21": 4,
+      "T11": 1,
+      "T26": 5,
+      "T3": 4,
+      "S9": 2,
+      "R3": 3,
+      "T4": 2,
+      "R16": 3,
+      "T19": 4,
+      "S8": 4,
+      "R4": 4,
+      "R7": 3,
+      "R13": 4,
+      "T23": 4,
+      "R10": 2,
+      "S13": 4,
+      "T18": 3,
+      "T1": 3,
+      "S6": 4,
+      "S2": 3,
+      "R12": 4,
+      "T14": 1,
+      "R14": 5,
+      "S7": 4,
+      "R9": 3,
+      "T27": 4,
+      "T10": 2,
+      "T22": 5,
+      "R2": 4,
+      "R1": 3,
+      "S3": 2,
+      "S1": 3,
+      "T2": 2,
+      "T6": 2,
+      "T15": 2,
+      "S4": 1,
+      "T20": 3,
+      "T7": 3,
+      "S14": 3,
+      "T13": 4,
+      "R8": 2,
+      "T25": 3,
+      "R11": 3,
+      "T5": 3,
+      "S10": 3,
+      "T12": 4
+    },
+    "bigFiveResponses": {
+      "BF1": 3,
+      "BF9": 4,
+      "BF2": 4,
+      "BF7": 2,
+      "BF8": 3,
+      "BF6": 3,
+      "BF10": 3,
+      "BF4": 3,
+      "BF3": 2,
+      "BF5": 4
+    },
+    "bigFiveMetadata": {
+      "cursorDistancePx": 2251,
+      "answerChanges": 10,
+      "timeMs": 12050
+    },
+    "endTime": "2026-02-12T07:58:57.322Z",
+    "uploadedAt": "2026-02-12T07:58:57.544Z",
+    "gunaItems": [
+      {
+        "domain": "academic",
+        "id": "S12",
+        "text": "If you are working on a project that looks like it will fail, do you continue to put in your best effort until the very end?",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S6",
+        "text": "How much time per week do you spend voluntarily learning something new (reading, watching documentaries) just for the sake of understanding?",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "R1",
+        "text": "If taking a shortcut (like skipping a queue or bending a regulation) would guarantee you a major win, how likely are you to take it?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R3",
+        "text": "When solving a problem, do you prefer to rely entirely on your own logic/modern methods rather than looking at how things were traditionally done?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R4",
+        "text": "How often do you check your social media likes or exam grades and feel a sudden rush of pride or superiority?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R7",
+        "text": "When you achieve a goal, how long does the 'high' last before you start looking for the next big thing?",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "T6",
+        "text": "If you have a deadline in 3 days, do you start now, or wait until the night before (even if it stresses you out)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T7",
+        "text": "When faced with a complex problem, is your first instinct to try and solve it, or to freeze and wait for someone else to help?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T8",
+        "text": "Do you frequently look at your life and feel 'stuck' or like you are 'falling behind' everyone else?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T9",
+        "text": "If a gym workout or a study session gets difficult, how likely are you to quit early and tell yourself 'I'll do it tomorrow'?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T12",
+        "text": "How many New Year's resolutions or self-improvement plans have you started and dropped within 2 weeks?",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T20",
+        "text": "On Sunday evening, do you feel a knot in your stomach thinking about work/school on Monday?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "S3",
+        "text": "If an elderly family member gives you advice that contradicts your own plans, how likely are you to listen respectfully and seriously consider their perspective?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S4",
+        "text": "In a heated argument, how much effort do you make to keep your tone calm and avoid using harsh words?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S9",
+        "text": "If you promise to help a friend move house, but wake up feeling tired and lazy, how likely are you to go anyway simply because you gave your word?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S11",
+        "text": "How often do you treat the campus janitor/security guard with the exact same respect and patience as you do your Professor or Dean?",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "R2",
+        "text": "If a friend invites you to a lecture on philosophy or spirituality, how likely are you to decline because you find it 'boring' or 'useless'?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R5",
+        "text": "Who do you follow/discuss more: Rich influencers & celebrities vs. Scientists & Social Workers?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R13",
+        "text": "If someone asks for a donation, do you feel annoyed or resentful, even if you eventually give a small amount?",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "T1",
+        "text": "When things go wrong in your life, how often do you feel that it was completely someone else's fault at 'the world is against you'?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T4",
+        "text": "In your head or with friends, how often do you find yourself making fun of or judging strangers/acquaintances?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T11",
+        "text": "How many times a week do you feel a flash of rage (at traffic, people, or technology)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T15",
+        "text": "Do you feel like you are always the one giving in relationships while others just take from you?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T18",
+        "text": "When you talk to friends, how much of the conversation is you complaining about your problems vs. discussing ideas?",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T19",
+        "text": "When a friend succeeds (gets a job/promotion), is your first feeling happiness for them, or a pang of 'Why not me?'",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T26",
+        "text": "I often neglect my responsibilities to my friends",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T27",
+        "text": "How often do you act aggressively or violently towards others when upset?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S1",
+        "text": "When given a choice at a buffet, how often do you naturally gravitate towards fresh fruits and salads over heavy or spicy dishes?",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S5",
+        "text": "If a cashier gives you too much change, how likely are you to immediately point out the mistake and return the money?",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R6",
+        "text": "To what extent do you live your life with the assumption that this physical existence is the only reality that matters?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R8",
+        "text": "How much do you crave spicy, salty, or very rich foods (like fried snacks or heavy desserts) compared to plain, simple meals?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R9",
+        "text": "If you lost your phone or favorite watch today, how strictly would it affect your mood and sense of self-worth for the next week?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R10",
+        "text": "Given a free Friday night, would you rather go to a busy club/party or take a quiet walk in nature?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R11",
+        "text": "How much of your daily mental energy is spent thinking about or pursuing romantic/sexual gratification?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R12",
+        "text": "When looking at a buffet or a sale, do you often take more than you actually need, just because it's available?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R14",
+        "text": "After buying something you really wanted, how quickly do you start wanting a better version of it?",
+        "category": "rajas"
+      },
+      {
+        "reverse": true,
+        "domain": "lifestyle",
+        "id": "R15",
+        "text": "How often do you feel you could be genuinely happy living in a simple house without luxury items?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R16",
+        "text": "How frequently do you prioritize physical enjoyment (like food, comfort, or sex) over your other responsibilities?",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T2",
+        "text": "How often do you do something impulsive (like staying up late or skipping work) and regret it the next morning?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T5",
+        "text": "How often do you struggle to get out of bed because the day ahead feels pointless or too heavy?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T21",
+        "text": "If you could get away with not paying a bus fare or sneaking into a movie, would you do it?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T22",
+        "text": "If there is a box of cookies in front of you and you decided not to eat one, how long can you resist before giving in?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T23",
+        "text": "How often do you find yourself wishing you could escape to a quiet village rather than living in the busy city?",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T24",
+        "text": "How often do you feel controlled by a physical or psychological habit/addiction that you can't break?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "S2",
+        "text": "When you look at an animal or another person, to what extent do you feel a deep, underlying connection or shared 'life force' with them?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S7",
+        "text": "When facing a difficult decision where you could gain personally by bending the rules, how often do you stop to ask yourself 'Is this the right thing to do?'",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S8",
+        "text": "Imagine you made a mistake at work/school that no one else noticed. How likely are you to admit it voluntarily?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S10",
+        "text": "Think about a time when you had nothing to do and no entertainment. How comfortable/happy were you just 'being' with yourself?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S13",
+        "text": "Before taking action, how often do you consult higher ethical or moral principles?",
+        "category": "sattva"
+      },
+      {
+        "reverse": true,
+        "domain": "inner",
+        "id": "S14",
+        "text": "How often do you feel that 'self-realization' or 'spiritual growth' is irrelevant to your real-life goals?",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "T3",
+        "text": "On a typical day, what percentage of the time do you feel a general sense of 'blah' or dissatisfaction for no specific reason?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T10",
+        "text": "If you miss a bus or drop your coffee, does it ruin your entire morning?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T13",
+        "text": "Do you often feel a vague sense of dread or anxiety about the future without knowing exactly why?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T14",
+        "text": "Do your moods swing wildly during the day (e.g., fine one minute, crying/angry the next)?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T16",
+        "text": "How often do you feel 'down in the dumps' or 'low energy' even when nothing bad has happened?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T17",
+        "text": "Do you often 'forget' or avoid doing chores/errands that your family asked you to do?",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T25",
+        "text": "I often feel mentally unbalanced or chaotic inside",
+        "category": "tamas"
+      }
+    ],
+    "sessionId": "7227fbff-e393-4cbd-9a56-8a4c89c1b605",
+    "demographics": {
+      "gender": "Female",
+      "year": "4",
+      "major": "Electrical Engineering ",
+      "gpa": "8.7",
+      "age": "21"
+    },
+    "startTime": "2026-02-12T07:57:22.580Z",
+    "scenarioResponses": [
+      {
+        "choiceId": "sattva",
+        "scenarioId": "SC1",
+        "timeToSelectMs": 899,
+        "timestamp": "2026-02-12T07:58:56.258Z",
+        "hoverCount": 1
+      },
+      {
+        "choiceId": "rajas",
+        "scenarioId": "SC2",
+        "timeToSelectMs": 473,
+        "timestamp": "2026-02-12T07:58:56.731Z",
+        "hoverCount": 1
+      },
+      {
+        "choiceId": "rajas",
+        "scenarioId": "SC3",
+        "timeToSelectMs": 591,
+        "timestamp": "2026-02-12T07:58:57.322Z",
+        "hoverCount": 1
+      }
+    ],
+    "currentScenarioIndex": 2,
+    "view": "results",
+    "scenarios": [
+      {
+        "id": "SC1",
+        "options": [
+          {
+            "text": "Calmly talk to him to understand the issue, then divide his work among the group so we finish on time.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Get furious, yell at him in the group chat, and report him to the professor immediately.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ignore it. If we fail, we fail. Too much hassle to deal with it now.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You are working on a group project. One team member, Rahul, hasn't done any work for two weeks and is making excuses. The deadline is tomorrow. What is your immediate reaction?"
+      },
+      {
+        "id": "SC2",
+        "options": [
+          {
+            "text": "Buying a book or attending a workshop to learn something new.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Going out for a movie and expensive dinner with friends.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ordering junk food and sleeping/binge-watching TV at home.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You have a free Saturday and 1000 rupees. How would you prefer to spend it?"
+      },
+      {
+        "id": "SC3",
+        "options": [
+          {
+            "text": "Calmly use your phone hotspot or go to a neighbor's house to submit it.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Panic, scream at the ISP customer care, and throw the router.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Give up and go to sleep, hoping the professor accepts a late submission.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "Your internet connection stops working right before you need to submit an assignment. What do you do?"
+      }
+    ],
+    "firebase_id": "OXeP9MBNlHlh8JZbnRzc"
+  }
+]
