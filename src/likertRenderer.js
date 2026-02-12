@@ -7,8 +7,8 @@ export function renderLikertSection(container, type) {
   const items = type === 'guna' ? store.state.gunaItems : store.state.bigFiveItems;
   const title = type === 'guna' ? 'Part 1: Self-Reflection' : 'Part 2: Personality Traits';
   const desc = type === 'guna'
-    ? 'Please rate how much each statement applies to you (1 = Strongly Disagree, 5 = Strongly Agree).'
-    : 'I see myself as someone who...';
+    ? 'For each situation, choose the option that best describes your usual behavior (1 = Never, 5 = Always).'
+    : 'I see myself as someone who... (1 = Disagree Strongly, 5 = Agree Strongly)';
 
   const element = document.createElement('div');
   element.className = 'card fade-in';
@@ -21,15 +21,20 @@ export function renderLikertSection(container, type) {
   `;
 
   items.forEach(item => {
+    // Determine labels based on type
+    const labels = type === 'guna'
+      ? ['Never', 'Rarely', 'Sometimes', 'Often', 'Always']
+      : ['Disagree', 'Slightly Disagree', 'Neutral', 'Slightly Agree', 'Agree'];
+
     html += `
       <div class="likert-item">
         <p>${item.text}</p>
         <div class="likert-options">
-          <label><span>SD</span><input type="radio" name="${item.id}" value="1" required></label>
-          <label><span>D</span><input type="radio" name="${item.id}" value="2" required></label>
-          <label><span>N</span><input type="radio" name="${item.id}" value="3" required></label>
-          <label><span>A</span><input type="radio" name="${item.id}" value="4" required></label>
-          <label><span>SA</span><input type="radio" name="${item.id}" value="5" required></label>
+          <label><span>${labels[0]}</span><input type="radio" name="${item.id}" value="1" required></label>
+          <label><span>${labels[1]}</span><input type="radio" name="${item.id}" value="2" required></label>
+          <label><span>${labels[2]}</span><input type="radio" name="${item.id}" value="3" required></label>
+          <label><span>${labels[3]}</span><input type="radio" name="${item.id}" value="4" required></label>
+          <label><span>${labels[4]}</span><input type="radio" name="${item.id}" value="5" required></label>
         </div>
       </div>
     `;

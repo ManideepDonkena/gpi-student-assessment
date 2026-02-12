@@ -1,0 +1,5 @@
+analysis/firebase_service_account_key.json
+node_modules/
+.env
+.DS_Store
+firebase_service_account_key.json

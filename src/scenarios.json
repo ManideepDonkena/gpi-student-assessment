@@ -1,409 +1,55 @@
 [
     {
-        "id": "village_dilemma",
-        "category": "compassion",
-        "text": "You arrive at a village suffering from a severe drought. The villagers ask for your help to rebuild their well, but doing so will consume your supplies and delay your journey by a day.",
-        "choices": [
+        "id": "SC1",
+        "text": "You are working on a group project. One team member, Rahul, hasn't done any work for two weeks and is making excuses. The deadline is tomorrow. What is your immediate reaction?",
+        "options": [
             {
-                "id": "help",
-                "text": "Stay and help rebuild the well, sharing your supplies.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
+                "text": "Calmly talk to him to understand the issue, then divide his work among the group so we finish on time.",
+                "guna": "sattva"
             },
             {
-                "id": "trade",
-                "text": "Offer to sell them some water in exchange for a map shortcut.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
+                "text": "Get furious, yell at him in the group chat, and report him to the professor immediately.",
+                "guna": "rajas"
             },
             {
-                "id": "ignore",
-                "text": "Politely decline and continue your journey to save resources.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.2,
-                    "tamas": 0.8
-                }
+                "text": "Ignore it. If we fail, we fail. Too much hassle to deal with it now.",
+                "guna": "tamas"
             }
         ]
     },
     {
-        "id": "treasure_room",
-        "category": "honesty",
-        "text": "You find a hidden chamber filled with ancient gold. A faded inscription says: 'These belong to the temple of the ancestors.'",
-        "choices": [
+        "id": "SC2",
+        "text": "You have a free Saturday and 1000 rupees. How would you prefer to spend it?",
+        "options": [
             {
-                "id": "leave",
-                "text": "Leave the gold untouched out of respect.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
+                "text": "Buying a book or attending a workshop to learn something new.",
+                "guna": "sattva"
             },
             {
-                "id": "take_some",
-                "text": "Take only what you can carry easily to fund your mission.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
+                "text": "Going out for a movie and expensive dinner with friends.",
+                "guna": "rajas"
             },
             {
-                "id": "take_all",
-                "text": "Fill your pockets and mark the location to return for the rest.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.5,
-                    "tamas": 0.5
-                }
+                "text": "Ordering junk food and sleeping/binge-watching TV at home.",
+                "guna": "tamas"
             }
         ]
     },
     {
-        "id": "collapsed_bridge",
-        "category": "persistence",
-        "text": "A bridge you need to cross has collapsed. You can try to repair it (difficult), swim across (dangerous current), or wait for a caravan (safe but slow).",
-        "choices": [
+        "id": "SC3",
+        "text": "Your internet connection stops working right before you need to submit an assignment. What do you do?",
+        "options": [
             {
-                "id": "repair",
-                "text": "Spend hours meticulously repairing the bridge for yourself and others.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.2,
-                    "tamas": 0.0
-                }
+                "text": "Calmly use your phone hotspot or go to a neighbor's house to submit it.",
+                "guna": "sattva"
             },
             {
-                "id": "swim",
-                "text": "Risk the swim to get across immediately.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
+                "text": "Panic, scream at the ISP customer care, and throw the router.",
+                "guna": "rajas"
             },
             {
-                "id": "wait",
-                "text": "Set up camp and wait for someone else to fix it.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.0,
-                    "tamas": 1.0
-                }
-            }
-        ]
-    },
-    {
-        "id": "rival_merchant",
-        "category": "competition",
-        "text": "A rival merchant drops a bag of rare spices. No one else sees it.",
-        "choices": [
-            {
-                "id": "return",
-                "text": "Call out to him and return the bag.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "keep",
-                "text": "Keep it. Finders keepers, and it helps your business.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "ignore",
-                "text": "Ignore it. It's not your problem.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.0,
-                    "tamas": 1.0
-                }
-            }
-        ]
-    },
-    {
-        "id": "meditation_session",
-        "category": "focus",
-        "text": "You are trying to meditate or focus on a complex problem, but there is distracting noise outside.",
-        "choices": [
-            {
-                "id": "persist",
-                "text": "Accept the noise as part of the practice and deepen your focus.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "shout",
-                "text": "Go outside and angrily tell them to be quiet.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "give_up",
-                "text": "Stop meditating and take a nap instead.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.0,
-                    "tamas": 1.0
-                }
-            }
-        ]
-    },
-    {
-        "id": "team_credit",
-        "category": "humility",
-        "text": "Your team completes a project successfully, largely due to your idea. The leader praises the group without mentioning you specifically.",
-        "choices": [
-            {
-                "id": "share",
-                "text": "Smile and celebrate the team's success. The outcome matters more than credit.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "assert",
-                "text": "Speak up to ensure everyone knows it was your idea.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "resent",
-                "text": "Say nothing but feel resentful and disengage from the next task.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.3,
-                    "tamas": 0.7
-                }
-            }
-        ]
-    },
-    {
-        "id": "dietary_choice",
-        "category": "self_control",
-        "text": "You are offered a rich, heavy feast that you know makes you sluggish, or a simple, fresh meal.",
-        "choices": [
-            {
-                "id": "simple",
-                "text": "Choose the simple meal to stay alert and healthy.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "feast",
-                "text": "Eat the feast but promise to work it off later.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.8,
-                    "tamas": 0.2
-                }
-            },
-            {
-                "id": "overindulge",
-                "text": "Eat as much as possible and sleep afterwards.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.2,
-                    "tamas": 0.8
-                }
-            }
-        ]
-    },
-    {
-        "id": "broken_item",
-        "category": "reaction",
-        "text": "You accidentally break a valuable item belonging to a friend.",
-        "choices": [
-            {
-                "id": "confess",
-                "text": "Immediately apologize and offer to replace it.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "hide",
-                "text": "Hide the pieces and hope they don't notice it was you.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.4,
-                    "tamas": 0.6
-                }
-            },
-            {
-                "id": "blame",
-                "text": "Say it was already cracked when you touched it.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.8,
-                    "tamas": 0.2
-                }
-            }
-        ]
-    },
-    {
-        "id": "free_time",
-        "category": "lifestyle",
-        "text": "You have a completely free afternoon with no obligations.",
-        "choices": [
-            {
-                "id": "learn",
-                "text": "Read a book, learn a skill, or spend time in nature.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "adventure",
-                "text": "Go out to a busy place, shop, or seek entertainment.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "sleep",
-                "text": "Binge-watch shows or sleep the afternoon away.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.0,
-                    "tamas": 1.0
-                }
-            }
-        ]
-    },
-    {
-        "id": "advice_request",
-        "category": "communication",
-        "text": "A colleague asks for your honest opinion on their poor performance.",
-        "choices": [
-            {
-                "id": "constructive",
-                "text": "Gently explain the issues with constructive suggestions for improvement.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "blunt",
-                "text": "Tell them exactly how bad it is so they wake up.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "avoid",
-                "text": "Tell them it's fine to avoid an awkward conversation.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.0,
-                    "tamas": 1.0
-                }
-            }
-        ]
-    },
-    {
-        "id": "traffic_jam",
-        "category": "patience",
-        "text": "You are stuck in heavy traffic and will likely be late.",
-        "choices": [
-            {
-                "id": "calm",
-                "text": "Accept it's out of your control and listen to something educational.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "angry",
-                "text": "Constantly switch lanes and honk to get ahead.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "zone_out",
-                "text": "Feel hopeless and just stare blankly.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.0,
-                    "tamas": 1.0
-                }
-            }
-        ]
-    },
-    {
-        "id": "new_project",
-        "category": "work_style",
-        "text": "You are assigned a new, difficult project at work.",
-        "choices": [
-            {
-                "id": "plan",
-                "text": "Analyze the requirements and create a steady execution plan.",
-                "weights": {
-                    "sattva": 1.0,
-                    "rajas": 0.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "rush",
-                "text": "Dive in immediately to show how fast you can finish.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 1.0,
-                    "tamas": 0.0
-                }
-            },
-            {
-                "id": "procrastinate",
-                "text": "Wait until the deadline is close before starting.",
-                "weights": {
-                    "sattva": 0.0,
-                    "rajas": 0.0,
-                    "tamas": 1.0
-                }
+                "text": "Give up and go to sleep, hoping the professor accepts a late submission.",
+                "guna": "tamas"
             }
         ]
     }

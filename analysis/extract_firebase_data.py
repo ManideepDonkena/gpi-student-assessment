@@ -28,17 +28,28 @@ def fetch_data():
 
     db = firestore.client()
     
-    # Reference collection
-    assessments_ref = db.collection(u'assessments')
-    docs = assessments_ref.stream()
+    try:
+        # Reference collection
+        assessments_ref = db.collection(u'assessments')
+        docs = assessments_ref.stream()
 
-    data_list = []
-    
-    print("Fetching data from Firestore...")
-    for doc in docs:
-        session = doc.to_dict()
-        session['firebase_id'] = doc.id
-        data_list.append(session)
+        data_list = []
+        
+        print("Fetching data from Firestore...")
+        for doc in docs:
+            session = doc.to_dict()
+            session['firebase_id'] = doc.id
+            data_list.append(session)
+            
+    except Exception as e:
+        if "404" in str(e) or "NotFound" in str(e):
+            print("\n[CRITICAL ERROR] Firestore Database Not Found!")
+            print("You created the Firebase Project, but you haven't created the DATABASE yet.")
+            print(f"Please visit: https://console.firebase.google.com/project/{cred.project_id}/firestore")
+            print("Click 'Create Database' -> Start in Test Mode -> Choose a location.")
+            return None
+        else:
+            raise e
         
     print(f"Fetched {len(data_list)} sessions.")
     return data_list

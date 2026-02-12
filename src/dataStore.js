@@ -1,7 +1,7 @@
 
 export const store = {
     state: {
-        view: 'demographics', // demographics, guna-likert, bigfive-likert, scenario, results
+        view: 'intro', // intro, demographics, guna-likert, bigfive-likert, scenario, results
         sessionId: crypto.randomUUID(),
         startTime: new Date().toISOString(),
         demographics: {},

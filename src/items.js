@@ -14,10 +14,10 @@ export const studentGunaItems = [
     { id: "S8", text: "Imagine you made a mistake at work/school that no one else noticed. How likely are you to admit it voluntarily?", category: "sattva" },
     { id: "S9", text: "If you promise to help a friend move house, but wake up feeling tired and lazy, how likely are you to go anyway simply because you gave your word?", category: "sattva" },
     { id: "S10", text: "Think about a time when you had nothing to do and no entertainment. How comfortable/happy were you just 'being' with yourself?", category: "sattva" },
-    { id: "S11", text: "Do you believe that the life of a street cleaner has the same intrinsic spiritual value as the life of a CEO?", category: "sattva" },
+    { id: "S11", text: "How often do you remind yourself that every human being (from street cleaner to CEO) has equal spiritual value?", category: "sattva" },
     { id: "S12", text: "If you are working on a project that looks like it will fail, do you continue to put in your best effort until the very end?", category: "sattva" },
-    { id: "S13", text: "I take guidance from higher ethical and moral laws before I act", category: "sattva" }, // Kept original phrasing for checking
-    { id: "S14", text: "Self-realization is not important for me", category: "sattva", reverse: true },
+    { id: "S13", text: "Before taking action, how often do you consult higher ethical or moral principles?", category: "sattva" },
+    { id: "S14", text: "How often do you feel that 'self-realization' or 'spiritual growth' is irrelevant to your real-life goals?", category: "sattva", reverse: true },
 
     // --- RAJAS (Passion & Activity) ---
     { id: "R1", text: "If taking a shortcut (like skipping a queue or bending a regulation) would guarantee you a major win, how likely are you to take it?", category: "rajas" },
@@ -34,12 +34,12 @@ export const studentGunaItems = [
     { id: "R12", text: "When looking at a buffet or a sale, do you often take more than you actually need, just because it's available?", category: "rajas" },
     { id: "R13", text: "If someone asks for a donation, do you feel annoyed or resentful, even if you eventually give a small amount?", category: "rajas" },
     { id: "R14", text: "After buying something you really wanted, how quickly do you start wanting a better version of it?", category: "rajas" },
-    { id: "R15", text: "Could you imagine being happy living in a small, simple house with no luxury items?", category: "rajas", reverse: true }, // Framed as "I never think..." originally, this is "Could you imagine..."
-    { id: "R16", text: "The most important thing to know is how to increase one`s enjoyment of physical pleasures, like sex and eating", category: "rajas" },
+    { id: "R15", text: "How often do you feel you could be genuinely happy living in a simple house without luxury items?", category: "rajas", reverse: true },
+    { id: "R16", text: "How frequently do you prioritize physical enjoyment (like food, comfort, or sex) over your other responsibilities?", category: "rajas" },
 
 
     // --- TAMAS (Inertia & Ignorance) ---
-    { id: "T1", text: "When things go wrong in your life, how often do you feel that it was completely someone else's fault and 'the world is against you'?", category: "tamas" },
+    { id: "T1", text: "When things go wrong in your life, how often do you feel that it was completely someone else's fault at 'the world is against you'?", category: "tamas" },
     { id: "T2", text: "How often do you do something impulsive (like staying up late or skipping work) and regret it the next morning?", category: "tamas" },
     { id: "T3", text: "On a typical day, what percentage of the time do you feel a general sense of 'blah' or dissatisfaction for no specific reason?", category: "tamas" },
     { id: "T4", text: "In your head or with friends, how often do you find yourself making fun of or judging strangers/acquaintances?", category: "tamas" },
@@ -61,8 +61,8 @@ export const studentGunaItems = [
     { id: "T20", text: "On Sunday evening, do you feel a knot in your stomach thinking about work/school on Monday?", category: "tamas" },
     { id: "T21", text: "If you could get away with not paying a bus fare or sneaking into a movie, would you do it?", category: "tamas" },
     { id: "T22", text: "If there is a box of cookies in front of you and you decided not to eat one, how long can you resist before giving in?", category: "tamas" },
-    { id: "T23", text: "I prefer to live in the village rather than the city", category: "tamas" }, // Loaded on Tamas in EFA
-    { id: "T24", text: "I am currently struggling with an addiction, physical or psychological", category: "tamas" },
+    { id: "T23", text: "How often do you find yourself wishing you could escape to a quiet village rather than living in the busy city?", category: "tamas" },
+    { id: "T24", text: "How often do you feel controlled by a physical or psychological habit/addiction that you can't break?", category: "tamas" },
     { id: "T25", text: "I often feel mentally unbalanced", category: "tamas" },
     { id: "T26", text: "I often neglect my responsibilities to my friends", category: "tamas" },
     { id: "T27", text: "I often act violently towards others", category: "tamas" }
