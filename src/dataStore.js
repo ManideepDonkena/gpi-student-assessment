@@ -47,12 +47,11 @@ export async function initStore() {
         store.state.scenarios = [
             {
                 id: "fallback_1",
-                text: "You find a wallet on the ground with $50 inside. No ID. What do you do?",
-                category: "ethics",
-                choices: [
-                    { id: "opt1", text: "Keep it." },
-                    { id: "opt2", text: "Donate it." },
-                    { id: "opt3", text: "Leave it there." }
+                text: "You find a wallet on the ground with cash inside. No ID. What do you do?",
+                options: [
+                    { text: "Turn it in to the nearest authority.", guna: "sattva" },
+                    { text: "Keep the cash but leave the wallet.", guna: "rajas" },
+                    { text: "Walk past it. Not your problem.", guna: "tamas" }
                 ]
             }
         ];
