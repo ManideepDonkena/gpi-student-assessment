@@ -29,19 +29,51 @@ window.onerror = function (message, source, lineno, colno, error) {
 
 function renderIntro(container) {
     container.innerHTML = `
-    <div class="card fade-in" style="text-align: center;">
-      <h1>Welcome to the Journey of the Self</h1>
-      <p>This is not a test. It is a mirror.</p>
-      <div style="text-align: left; background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
-        <h3>Instructions:</h3>
-        <ul>
-            <li><strong>Be Honest:</strong> There are no "right" answers. Only your truth.</li>
-            <li><strong>Part 1 & 2:</strong> Choose the option that best describes your <em>actual behavior</em>.</li>
-            <li><strong>Part 3:</strong> You will face specific life scenarios. Choose your natural reaction.</li>
-            <li><strong>Privacy:</strong> Your data is anonymously stored for research.</li>
+    <div class="card fade-in" style="text-align: center; max-width: 700px; margin: 0 auto;">
+      
+      <p style="font-size: 1.1em; color: #888; font-style: italic; margin-bottom: 0;">त्रिविधा भवति श्रद्धा</p>
+      <h1 style="font-size: 2em; margin: 10px 0; color: #2c3e50;">Discover Your Inner Nature</h1>
+      <p style="font-size: 1.05em; color: #555; line-height: 1.7;">
+        According to the Bhagavad Gita, every person is a unique blend of three fundamental qualities — 
+        <strong style="color: #DAA520;">Sattva</strong> (harmony), 
+        <strong style="color: #FF4500;">Rajas</strong> (passion), and 
+        <strong style="color: #708090;">Tamas</strong> (inertia). 
+        This assessment reveals <em>your</em> unique balance.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 24px 0;">
+        <div style="background: linear-gradient(135deg, #FFF8DC, #FFEFD5); padding: 16px; border-radius: 12px;">
+          <div style="font-size: 2em;">🧘</div>
+          <p style="font-weight: bold; margin: 6px 0 2px; color: #B8860B;">Part 1</p>
+          <p style="font-size: 0.8em; color: #666;">Self-Reflection<br>(57 questions)</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #E8F4FD, #D6EAF8); padding: 16px; border-radius: 12px;">
+          <div style="font-size: 2em;">🧠</div>
+          <p style="font-weight: bold; margin: 6px 0 2px; color: #2980B9;">Part 2</p>
+          <p style="font-size: 0.8em; color: #666;">Personality Traits<br>(10 questions)</p>
+        </div>
+        <div style="background: linear-gradient(135deg, #F5EEF8, #EBDEF0); padding: 16px; border-radius: 12px;">
+          <div style="font-size: 2em;">🎭</div>
+          <p style="font-weight: bold; margin: 6px 0 2px; color: #8E44AD;">Part 3</p>
+          <p style="font-size: 0.8em; color: #666;">Life Scenarios<br>(3 situations)</p>
+        </div>
+      </div>
+
+      <div style="text-align: left; background: #f8f9fa; padding: 16px 20px; border-radius: 10px; margin: 16px 0; border-left: 4px solid #3498db;">
+        <p style="margin: 0 0 8px; font-weight: bold; color: #2c3e50;">📋 Before you begin:</p>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.8; color: #555;">
+            <li>There are <strong>no right or wrong answers</strong> — only your truth.</li>
+            <li>Answer based on your <strong>actual behavior</strong>, not what you think is ideal.</li>
+            <li>Takes approximately <strong>8 - 12 minutes</strong>.</li>
+            <li>Your data is <strong>100% anonymous</strong> and used only for academic research.</li>
         </ul>
       </div>
-      <button id="start-btn">Begin Assessment</button>
+
+      <p style="font-size: 0.9em; color: #888; margin-bottom: 20px;">
+        🎁 At the end, you'll receive your <strong>personalized Triguna profile</strong> with insights about your personality.
+      </p>
+
+      <button id="start-btn" style="font-size: 1.1em; padding: 14px 40px;">Begin the Journey →</button>
     </div>
   `;
 
