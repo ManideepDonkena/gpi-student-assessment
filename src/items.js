@@ -88,6 +88,7 @@ export const studentGunaItems = [
     { id: "T_FD", text: "I often feel mentally unbalanced.", category: "tamas", domain: "inner" },
     { id: "T_FF", text: "I don't have much will power.", category: "tamas", domain: "lifestyle" },
     { id: "T_FH", text: "I often neglect my responsibilities to my friends.", category: "tamas", domain: "social" },
+    { id: "T_ANGRY", text: "I am often angry.", category: "tamas", domain: "inner" },
     { id: "T_FJ", text: "I often act violently towards others.", category: "tamas", domain: "social" }
 ];
 
