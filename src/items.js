@@ -15,7 +15,7 @@ export const studentGunaItems = [
     { id: "T8", text: "Do you frequently look at your life and feel 'stuck' or like you are 'falling behind' everyone else?", category: "tamas", domain: "academic" },
     { id: "T9", text: "If a gym workout or a study session gets difficult, how likely are you to quit early and tell yourself 'I'll do it tomorrow'?", category: "tamas", domain: "academic" },
     { id: "T12", text: "How many New Year's resolutions or self-improvement plans have you started and dropped within 2 weeks?", category: "tamas", domain: "academic" },
-    { id: "T20", text: "On Sunday evening, do you feel a knot in your stomach thinking about work/school on Monday?", category: "tamas", domain: "academic" },
+    { id: "T20", text: "How often does your work or studies feel like a major source of anxiety for you?", category: "tamas", domain: "academic" },
 
     // --- SECTION 2: SOCIAL INTERACTIONS (Friends, Conflict, Status) ---
     { id: "S3", text: "If an elderly family member gives you advice that contradicts your own plans, how likely are you to listen respectfully and seriously consider their perspective?", category: "sattva", domain: "social" },
@@ -30,9 +30,9 @@ export const studentGunaItems = [
     { id: "T11", text: "How many times a week do you feel a flash of rage (at traffic, people, or technology)?", category: "tamas", domain: "social" },
     { id: "T15", text: "Do you feel like you are always the one giving in relationships while others just take from you?", category: "tamas", domain: "social" },
     { id: "T18", text: "When talking to friends, how often do you find yourself mostly complaining about your problems?", category: "tamas", domain: "social" },
-    { id: "T19", text: "When a friend succeeds (gets a job/promotion), how often do you feel a pang of jealousy or 'Why not me?'", category: "tamas", domain: "social" },
+    { id: "T19", text: "How often do you feel envious of what others have or have achieved?", category: "tamas", domain: "social" },
     { id: "T26", text: "I often neglect my responsibilities towards my friends", category: "tamas", domain: "social" },
-    { id: "T27", text: "How often do you act aggressively or violently towards others when upset?", category: "tamas", domain: "social" },
+    { id: "T27", text: "How often do you act aggressively or violently towards others?", category: "tamas", domain: "social" },
 
 
     // --- SECTION 3: LIFESTYLE & HABITS (Food, Money, Technology) ---
