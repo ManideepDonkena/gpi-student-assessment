@@ -8,12 +8,16 @@ export const store = {
 
         // Guna Likert Section
         gunaItems: [],
+        gunaItems: [],
         gunaResponses: {},
+        gunaDetails: {}, // Stores text + timestamp per question
         gunaMetadata: { timeMs: 0, cursorDistancePx: 0, answerChanges: 0 },
 
         // Big Five Section
         bigFiveItems: [],
+        bigFiveItems: [],
         bigFiveResponses: {},
+        bigFiveDetails: {},
         bigFiveMetadata: { timeMs: 0, cursorDistancePx: 0, answerChanges: 0 },
 
         // Scenario Section
@@ -68,15 +72,17 @@ export function setDemographics(data) {
     store.state.view = 'reflection';
 }
 
-export function submitGunaResponses(responses, metadata) {
+export function submitGunaResponses(responses, metadata, details) {
     store.state.gunaResponses = responses;
     store.state.gunaMetadata = metadata;
+    store.state.gunaDetails = details || {};
     store.state.view = 'bigfive-likert';
 }
 
-export function submitBigFiveResponses(responses, metadata) {
+export function submitBigFiveResponses(responses, metadata, details) {
     store.state.bigFiveResponses = responses;
     store.state.bigFiveMetadata = metadata;
+    store.state.bigFiveDetails = details || {};
     store.state.view = 'scenario';
 }
 

@@ -60,10 +60,24 @@ export function renderLikertSection(container, type) {
   let lastX = 0;
   let lastY = 0;
 
-  // Track Answer Changes
+  // Track Answer Changes & Details
+  const detailedResponses = {};
+
   element.querySelectorAll('input[type="radio"]').forEach(radio => {
-    radio.addEventListener('change', () => {
+    radio.addEventListener('change', (e) => {
       answerChanges++;
+
+      const qId = e.target.name;
+      const val = parseInt(e.target.value);
+      const item = items.find(i => i.id === qId);
+
+      detailedResponses[qId] = {
+        id: qId,
+        value: val,
+        text: item ? item.text : "Unknown",
+        reactionTimeMs: Date.now() - startTime, // Time since section load
+        timestamp: new Date().toISOString()
+      };
     });
   });
 
@@ -99,9 +113,9 @@ export function renderLikertSection(container, type) {
     };
 
     if (type === 'guna') {
-      submitGunaResponses(responses, metadata);
+      submitGunaResponses(responses, metadata, detailedResponses);
     } else {
-      submitBigFiveResponses(responses, metadata);
+      submitBigFiveResponses(responses, metadata, detailedResponses);
     }
     renderRoute();
   });

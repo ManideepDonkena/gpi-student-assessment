@@ -96,13 +96,26 @@ def flatten_session(session):
     
     # Guna Responses
     guna_res = session.get('gunaResponses', {})
+    guna_details = session.get('gunaDetails', {})
+
     for q_id, val in guna_res.items():
         row[f"Guna_{q_id}"] = val
+        detail = guna_details.get(q_id)
+        if detail:
+            # Note: generic script prefixes with Guna_
+            row[f"Guna_{q_id}_Text"] = detail.get('text')
+            row[f"Guna_{q_id}_TimeMs"] = detail.get('reactionTimeMs')
 
     # Big Five Responses
     bf_res = session.get('bigFiveResponses', {})
+    bf_details = session.get('bigFiveDetails', {})
+
     for q_id, val in bf_res.items():
         row[f"BigFive_{q_id}"] = val
+        detail = bf_details.get(q_id)
+        if detail:
+           row[f"BigFive_{q_id}_Text"] = detail.get('text')
+           row[f"BigFive_{q_id}_TimeMs"] = detail.get('reactionTimeMs')
         
     return row
 
