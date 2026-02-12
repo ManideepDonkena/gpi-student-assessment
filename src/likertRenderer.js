@@ -16,18 +16,24 @@ export function renderLikertSection(container, type) {
   // Render form
   let html = `
     <h2>${title}</h2>
-    <p>${desc}</p>
-    <form id="likert-form">
-  `;
-
+  let currentDomain = "";
   items.forEach(item => {
+    // Inject Header if domain changes (Only for Guna items)
+    if (type === 'guna' && item.domain !== currentDomain) {
+        currentDomain = item.domain;
+        let domainTitle = currentDomain.charAt(0).toUpperCase() + currentDomain.slice(1) + " Life";
+        if (currentDomain === 'inner') domainTitle = "Inner Thoughts & Ethics";
+        
+        html += `< h3 style = "margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 5px;" > ${ domainTitle }</h3> `;
+    }
+
     // Determine labels based on type
-    const labels = type === 'guna'
+    const labels = type === 'guna' 
       ? ['Never', 'Rarely', 'Sometimes', 'Often', 'Always']
       : ['Disagree', 'Slightly Disagree', 'Neutral', 'Slightly Agree', 'Agree'];
 
     html += `
-      <div class="likert-item">
+    < div class="likert-item" >
         <p>${item.text}</p>
         <div class="likert-options">
           <label><span>${labels[0]}</span><input type="radio" name="${item.id}" value="1" required></label>
@@ -36,11 +42,11 @@ export function renderLikertSection(container, type) {
           <label><span>${labels[3]}</span><input type="radio" name="${item.id}" value="4" required></label>
           <label><span>${labels[4]}</span><input type="radio" name="${item.id}" value="5" required></label>
         </div>
-      </div>
+      </div >
     `;
   });
 
-  html += `<br><button type="submit">Continue</button></form>`;
+  html += `< br > <button type="submit">Continue</button></form > `;
   element.innerHTML = html;
 
   // --- Behavioral Tracking ---
