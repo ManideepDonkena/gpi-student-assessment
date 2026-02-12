@@ -31,18 +31,18 @@ export const studentGunaItems = [
     { id: "T15", text: "Do you feel like you are always the one giving in relationships while others just take from you?", category: "tamas", domain: "social" },
     { id: "T18", text: "When talking to friends, how often do you find yourself mostly complaining about your problems?", category: "tamas", domain: "social" },
     { id: "T19", text: "When a friend succeeds (gets a job/promotion), how often do you feel a pang of jealousy or 'Why not me?'", category: "tamas", domain: "social" },
-    { id: "T26", text: "I often neglect my responsibilities to my friends", category: "tamas", domain: "social" },
+    { id: "T26", text: "I often neglect my responsibilities towards my friends", category: "tamas", domain: "social" },
     { id: "T27", text: "How often do you act aggressively or violently towards others when upset?", category: "tamas", domain: "social" },
 
 
     // --- SECTION 3: LIFESTYLE & HABITS (Food, Money, Technology) ---
     { id: "S1", text: "When given a choice at a buffet, how often do you naturally gravitate towards fresh fruits and salads over heavy or spicy dishes?", category: "sattva", domain: "lifestyle" },
-    { id: "S5", text: "If a cashier gives you too much change, how likely are you to immediately point out the mistake and return the money?", category: "sattva", domain: "lifestyle" },
+    { id: "S5", text: "If a cashier gives you extra money by mistake, how likely are you to immediately point out the error and return it?", category: "sattva", domain: "lifestyle" },
     { id: "R6", text: "To what extent do you live your life with the assumption that this physical existence is the only reality that matters?", category: "rajas", domain: "lifestyle" },
     { id: "R8", text: "How much do you crave spicy, salty, or very rich foods (like fried snacks or heavy desserts) compared to plain, simple meals?", category: "rajas", domain: "lifestyle" },
-    { id: "R9", text: "If you lost your phone or favorite watch today, how strictly would it affect your mood and sense of self-worth for the next week?", category: "rajas", domain: "lifestyle" },
+    { id: "R9", text: "If you lost your phone or favorite watch today, how strongly would it affect your mood and sense of self-worth for the next week?", category: "rajas", domain: "lifestyle" },
     { id: "R10", text: "On a free evening, how often do you choose loud social outings (parties, clubs) over quiet, solitary activities?", category: "rajas", domain: "lifestyle" },
-    { id: "R11", text: "How much of your daily mental energy is spent thinking about or pursuing romantic/sexual gratification?", category: "rajas", domain: "lifestyle" },
+    { id: "R11", text: "How often do you spend more than an hour a day thinking about or pursuing romantic/sexual gratification?", category: "rajas", domain: "lifestyle" },
     { id: "R12", text: "When looking at a buffet or a sale, do you often take more than you actually need, just because it's available?", category: "rajas", domain: "lifestyle" },
     { id: "R14", text: "After buying something you really wanted, how quickly do you start wanting a better version of it?", category: "rajas", domain: "lifestyle" },
     { id: "R15", text: "How often do you feel you could be genuinely happy living in a simple house without luxury items?", category: "rajas", reverse: true, domain: "lifestyle" },
@@ -50,7 +50,7 @@ export const studentGunaItems = [
     { id: "T2", text: "How often do you do something impulsive (like staying up late or skipping work) and regret it the next morning?", category: "tamas", domain: "lifestyle" },
     { id: "T5", text: "How often do you struggle to get out of bed because the day ahead feels pointless or too heavy?", category: "tamas", domain: "lifestyle" },
     { id: "T21", text: "If you could get away with not paying a bus fare or sneaking into a movie, would you do it?", category: "tamas", domain: "lifestyle" },
-    { id: "T22", text: "If there is a box of cookies in front of you and you decided not to eat one, how long can you resist before giving in?", category: "tamas", domain: "lifestyle" },
+    { id: "T22", text: "If there is a box of cookies in front of you and you decided not to eat one, how often do you end up giving in anyway?", category: "tamas", domain: "lifestyle" },
     { id: "T23", text: "How often do you find yourself wishing you could escape to a quiet village rather than living in the busy city?", category: "tamas", domain: "lifestyle" },
     { id: "T24", text: "How often do you feel controlled by a physical or psychological habit/addiction that you can't break?", category: "tamas", domain: "lifestyle" },
 
