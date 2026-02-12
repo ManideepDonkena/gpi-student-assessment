@@ -1,98 +1,107 @@
 
-// REFINED PROXY QUESTIONNAIRE (58 Items)
-// Based on "Proxy GPI Questionnaire" derived from Purified Factor Analysis
+// ORIGINAL GPI ITEMS (Wolf, 1998; Das, 1999)
+// Direct self-report statements as validated by Bhakti Rasamrita Maharaj
+// Using ORIGINAL Guna categories from the validated instrument
+// Scale: 1 (Disagree strongly) to 5 (Agree strongly)
 
 export const studentGunaItems = [
-    // --- SECTION 1: ACADEMIC & WORK LIFE (Deadlines, Success, Failure) ---
-    { id: "S12", text: "If you are working on a project that looks like it will fail, do you continue to put in your best effort until the very end?", category: "sattva", domain: "academic" },
-    { id: "S6", text: "How much time per week do you spend voluntarily learning something new (reading, watching documentaries) just for the sake of understanding?", category: "sattva", domain: "academic" },
-    { id: "R1", text: "If taking a shortcut (like skipping a queue or bending a regulation) would guarantee you a major win, how likely are you to take it?", category: "rajas", domain: "academic" },
-    { id: "R3", text: "When solving a problem, how often do you dismiss traditional or old-fashioned approaches in favor of your own logic?", category: "rajas", domain: "academic" },
-    { id: "R4", text: "How often do you feel a rush of happiness or pride when you think about the possessions or assets you own?", category: "rajas", domain: "academic" },
-    { id: "R7", text: "How often do you feel a surge of elation or excitement when things work out well for you?", category: "rajas", domain: "academic" },
-    { id: "T6", text: "How often do you put off important tasks until the last minute, even when you know it will stress you out?", category: "tamas", domain: "academic" },
-    { id: "T7", text: "When faced with a complex problem, how often do you freeze up and wait for someone else to solve it for you?", category: "tamas", domain: "academic" },
-    { id: "T8", text: "Do you frequently look at your life and feel 'stuck' or like you are 'falling behind' everyone else?", category: "tamas", domain: "academic" },
-    { id: "T9", text: "If a gym workout or a study session gets difficult, how likely are you to quit early and tell yourself 'I'll do it tomorrow'?", category: "tamas", domain: "academic" },
-    { id: "T12", text: "How many New Year's resolutions or self-improvement plans have you started and dropped within 2 weeks?", category: "tamas", domain: "academic" },
-    { id: "T20", text: "How often does your work or studies feel like a major source of anxiety for you?", category: "tamas", domain: "academic" },
+    // ================ SATTVA (Goodness) ================
+    { id: "S_J", text: "I prefer to live in the village rather than the city.", category: "sattva", domain: "lifestyle" },
+    { id: "S_R", text: "I am satisfied with my life.", category: "sattva", domain: "inner" },
+    { id: "S_T", text: "Fruits and vegetables are among my favorite foods.", category: "sattva", domain: "lifestyle" },
+    { id: "S_V", text: "All living entities are essentially spiritual.", category: "sattva", domain: "inner" },
+    { id: "S_AF", text: "I am not very much affected by the joys and sorrows of life.", category: "sattva", domain: "inner" },
+    { id: "S_AJ", text: "I am against violence.", category: "sattva", domain: "social" },
+    { id: "S_AP", text: "Cleanliness is very important to me.", category: "sattva", domain: "lifestyle" },
+    { id: "S_AR", text: "Spiritual advancement is very important for me.", category: "sattva", domain: "inner" },
+    { id: "S_AT", text: "Others say that my intelligence is very sharp.", category: "sattva", domain: "academic" },
+    { id: "S_BB", text: "Respecting ones elders is very important.", category: "sattva", domain: "social" },
+    { id: "S_BF", text: "When I speak, I really try not to irritate others.", category: "sattva", domain: "social" },
+    { id: "S_BV", text: "I am straightforward in my dealings with other people.", category: "sattva", domain: "social" },
+    { id: "S_BZ", text: "I feel that my knowledge is always increasing.", category: "sattva", domain: "academic" },
+    { id: "S_CB", text: "People should not have sex unless they are married and want children.", category: "sattva", domain: "lifestyle" },
+    { id: "S_CH", text: "I take guidance from higher ethical and moral laws before I act.", category: "sattva", domain: "inner" },
+    { id: "S_CL", text: "Being truthful is extremely important.", category: "sattva", domain: "inner" },
+    { id: "S_DB", text: "I do not have doubts about my responsibilities in life.", category: "sattva", domain: "academic" },
+    { id: "S_DD", text: "I often sacrifice my pleasure to please God.", category: "sattva", domain: "inner" },
+    { id: "S_DJ", text: "I often study books of traditional wisdom.", category: "sattva", domain: "academic" },
+    { id: "S_DN", text: "I am very dutiful.", category: "sattva", domain: "social" },
+    { id: "S_DL", text: "I am self-controlled.", category: "sattva", domain: "inner" },
+    { id: "S_DR", text: "I am generally even-tempered.", category: "sattva", domain: "inner" },
+    { id: "S_DT", text: "In my life I usually experience deep happiness that is not dependent on anything external.", category: "sattva", domain: "inner" },
+    { id: "S_DV", text: "Spiritually, all living entities are equal.", category: "sattva", domain: "inner" },
+    { id: "S_ED", text: "I carry out my responsibilities regardless of whether there is success or failure.", category: "sattva", domain: "academic" },
+    { id: "S_EP", text: "My determination is unbreakable.", category: "sattva", domain: "academic" },
+    { id: "S_FL", text: "I am good at controlling my senses and emotions.", category: "sattva", domain: "inner" },
 
-    // --- SECTION 2: SOCIAL INTERACTIONS (Friends, Conflict, Status) ---
-    { id: "S3", text: "If an elderly family member gives you advice that contradicts your own plans, how likely are you to listen respectfully and seriously consider their perspective?", category: "sattva", domain: "social" },
-    { id: "S4", text: "In everyday conversations, how much effort do you make to ensure your words don't irritate or hurt others?", category: "sattva", domain: "social" },
-    { id: "S9", text: "If you promise to help a friend move house, but wake up feeling tired and lazy, how likely are you to go anyway simply because you gave your word?", category: "sattva", domain: "social" },
-    { id: "S11", text: "How often do you treat the campus janitor/security guard with the exact same respect and patience as you do your Professor or Dean?", category: "sattva", domain: "social" },
-    { id: "R2", text: "If a friend invites you to a lecture on philosophy or spirituality, how likely are you to decline because you find it 'boring' or 'useless'?", category: "rajas", domain: "social" },
-    { id: "R5", text: "How often do you find yourself admiring or following rich influencers and celebrities rather than scientists or social workers?", category: "rajas", domain: "social" },
-    { id: "R13", text: "If someone asks for a donation, do you feel annoyed or resentful, even if you eventually give a small amount?", category: "rajas", domain: "social" },
-    { id: "T1", text: "When things go wrong in your life, how often do you feel that it was completely someone else's fault at 'the world is against you'?", category: "tamas", domain: "social" },
-    { id: "T4", text: "In your head or with friends, how often do you find yourself making fun of or judging strangers/acquaintances?", category: "tamas", domain: "social" },
-    { id: "T11", text: "How many times a week do you feel a flash of rage (at traffic, people, or technology)?", category: "tamas", domain: "social" },
-    { id: "T15", text: "Do you feel like you are always the one giving in relationships while others just take from you?", category: "tamas", domain: "social" },
-    { id: "T18", text: "When talking to friends, how often do you find yourself mostly complaining about your problems?", category: "tamas", domain: "social" },
-    { id: "T19", text: "How often do you feel envious of what others have or have achieved?", category: "tamas", domain: "social" },
-    { id: "T26", text: "I often neglect my responsibilities towards my friends", category: "tamas", domain: "social" },
-    { id: "T27", text: "How often do you act aggressively or violently towards others?", category: "tamas", domain: "social" },
+    // ================ RAJAS (Passion) ================
+    { id: "R_N", text: "I am willing to break the rules to achieve my goals.", category: "rajas", domain: "academic" },
+    { id: "R_AB", text: "I usually feel discontented with life.", category: "rajas", domain: "inner" },
+    { id: "R_AD", text: "I become happy when I think about the material assets I possess.", category: "rajas", domain: "lifestyle" },
+    { id: "R_AL", text: "I am good at using willpower to achieve goals.", category: "rajas", domain: "academic" },
+    { id: "R_AV", text: "I am a very active person.", category: "rajas", domain: "lifestyle" },
+    { id: "R_BD", text: "I greatly admire materially successful people.", category: "rajas", domain: "social" },
+    { id: "R_BH", text: "I believe life is over when the body dies.", category: "rajas", domain: "inner" },
+    { id: "R_BL", text: "I become elated when things work out well for me.", category: "rajas", domain: "inner" },
+    { id: "R_BN", text: "I enjoy foods with strong tastes.", category: "rajas", domain: "lifestyle" },
+    { id: "R_BP", text: "I am constantly dissatisfied with my position in life.", category: "rajas", domain: "inner" },
+    { id: "R_BR", text: "Having possessions is very important to me.", category: "rajas", domain: "lifestyle" },
+    { id: "R_BT", text: "When things are tough, I often bail out.", category: "rajas", domain: "academic" },
+    { id: "R_BX", text: "I have more energy than most people.", category: "rajas", domain: "lifestyle" },
+    { id: "R_CD", text: "I prefer city night life to a walk in the forest.", category: "rajas", domain: "lifestyle" },
+    { id: "R_CF", text: "For me, sex life is a major source of happiness.", category: "rajas", domain: "lifestyle" },
+    { id: "R_CN", text: "I feel proud when I give charity.", category: "rajas", domain: "social" },
+    { id: "R_CP", text: "I often feel greedy.", category: "rajas", domain: "inner" },
+    { id: "R_CR", text: "I become greatly distressed when things don't work out for me.", category: "rajas", domain: "inner" },
+    { id: "R_DP", text: "When I give charity, I often do it grudgingly.", category: "rajas", domain: "social" },
+    { id: "R_EH", text: "I am easily affected by the joys and sorrows of life.", category: "rajas", domain: "inner" },
+    { id: "R_EL", text: "Regardless of what I acquire or achieve, I have an uncontrollable desire to obtain more.", category: "rajas", domain: "lifestyle" },
+    { id: "R_ER", text: "I often envy others.", category: "rajas", domain: "social" },
+    { id: "R_ET", text: "My job is a source of anxiety.", category: "rajas", domain: "academic" },
+    { id: "R_EV", text: "I never think about giving up my wealth and position for a simpler life.", category: "rajas", domain: "lifestyle" },
+    { id: "R_EX", text: "It often happens that those things that brought me happiness later become the source of my suffering.", category: "rajas", domain: "inner" },
 
-
-    // --- SECTION 3: LIFESTYLE & HABITS (Food, Money, Technology) ---
-    { id: "S1", text: "When given a choice at a buffet, how often do you naturally gravitate towards fresh fruits and salads over heavy or spicy dishes?", category: "sattva", domain: "lifestyle" },
-    { id: "S5", text: "If a cashier gives you extra money by mistake, how likely are you to immediately point out the error and return it?", category: "sattva", domain: "lifestyle" },
-    { id: "R6", text: "To what extent do you live your life with the assumption that this physical existence is the only reality that matters?", category: "rajas", domain: "lifestyle" },
-    { id: "R8", text: "How much do you crave spicy, salty, or very rich foods (like fried snacks or heavy desserts) compared to plain, simple meals?", category: "rajas", domain: "lifestyle" },
-    { id: "R9", text: "If you lost your phone or favorite watch today, how strongly would it affect your mood and sense of self-worth for the next week?", category: "rajas", domain: "lifestyle" },
-    { id: "R10", text: "On a free evening, how often do you choose loud social outings (parties, clubs) over quiet, solitary activities?", category: "rajas", domain: "lifestyle" },
-    { id: "R11", text: "How often do you spend more than an hour a day thinking about or pursuing romantic/sexual gratification?", category: "rajas", domain: "lifestyle" },
-    { id: "R12", text: "When looking at a buffet or a sale, do you often take more than you actually need, just because it's available?", category: "rajas", domain: "lifestyle" },
-    { id: "R14", text: "After buying something you really wanted, how quickly do you start wanting a better version of it?", category: "rajas", domain: "lifestyle" },
-    { id: "R15", text: "How often do you feel you could be genuinely happy living in a simple house without luxury items?", category: "rajas", reverse: true, domain: "lifestyle" },
-    { id: "R16", text: "How frequently do you prioritize physical enjoyment (like food, comfort, or sex) over your other responsibilities?", category: "rajas", domain: "lifestyle" },
-    { id: "T2", text: "How often do you act on impulse without stopping to think about the consequences?", category: "tamas", domain: "lifestyle" },
-    { id: "T5", text: "How often do you struggle to get out of bed because the day ahead feels pointless or too heavy?", category: "tamas", domain: "lifestyle" },
-    { id: "T21", text: "If you could get away with not paying a bus fare or sneaking into a movie, would you do it?", category: "tamas", domain: "lifestyle" },
-    { id: "T22", text: "If there is a box of cookies in front of you and you decided not to eat one, how often do you end up giving in anyway?", category: "tamas", domain: "lifestyle" },
-    { id: "T23", text: "How often do you find yourself wishing you could escape to a quiet village rather than living in the busy city?", category: "tamas", domain: "lifestyle" },
-    { id: "T24", text: "How often do you feel controlled by a physical or psychological habit/addiction that you can't break?", category: "tamas", domain: "lifestyle" },
-
-
-    // --- SECTION 4: INNER SELF (Thoughts, Ethics, Anxiety) ---
-    { id: "S2", text: "When you look at an animal or another person, to what extent do you feel a deep, underlying connection or shared 'life force' with them?", category: "sattva", domain: "inner" },
-    { id: "S7", text: "When facing a difficult decision where you could gain personally by bending the rules, how often do you stop to ask yourself 'Is this the right thing to do?'", category: "sattva", domain: "inner" },
-    { id: "S8", text: "Imagine you made a mistake at work/school that no one else noticed. How likely are you to admit it voluntarily?", category: "sattva", domain: "inner" },
-    { id: "S10", text: "Think about a time when you had nothing to do and no entertainment. How comfortable/happy were you just 'being' with yourself?", category: "sattva", domain: "inner" },
-    { id: "S13", text: "Before taking action, how often do you consult higher ethical or moral principles?", category: "sattva", domain: "inner" },
-    { id: "S14", text: "How often do you feel that 'self-realization' or 'spiritual growth' is irrelevant to your real-life goals?", category: "sattva", reverse: true, domain: "inner" },
-    { id: "T3", text: "On a typical day, what percentage of the time do you feel a general sense of 'blah' or dissatisfaction for no specific reason?", category: "tamas", domain: "inner" },
-    { id: "T10", text: "How often do you become greatly upset or distressed when things don't go according to plan?", category: "tamas", domain: "inner" },
-    { id: "T13", text: "How often do you feel fearful or afraid, even when there is no immediate danger?", category: "tamas", domain: "inner" },
-    { id: "T14", text: "Do your moods swing wildly during the day (e.g., fine one minute, crying/angry the next)?", category: "tamas", domain: "inner" },
-    { id: "T16", text: "How often do you feel 'down in the dumps' or 'low energy' even when nothing bad has happened?", category: "tamas", domain: "inner" },
-    { id: "T17", text: "Do you often 'forget' or avoid doing chores/errands that your family asked you to do?", category: "tamas", domain: "inner" },
-    { id: "T25", text: "I often feel mentally unbalanced or chaotic inside", category: "tamas", domain: "inner" }
+    // ================ TAMAS (Ignorance) ================
+    { id: "T_L", text: "I often feel like a victim.", category: "tamas", domain: "inner" },
+    { id: "T_P", text: "I have very little interest in spiritual understanding.", category: "tamas", domain: "inner" },
+    { id: "T_X", text: "In conducting my activities, I do not consider traditional wisdom.", category: "tamas", domain: "academic" },
+    { id: "T_Z", text: "I often act without considering the consequences of my actions.", category: "tamas", domain: "lifestyle" },
+    { id: "T_AH", text: "I often criticize and insult other people.", category: "tamas", domain: "social" },
+    { id: "T_AN", text: "I enjoy spending time in bars.", category: "tamas", domain: "lifestyle" },
+    { id: "T_AX", text: "I often feel depressed.", category: "tamas", domain: "inner" },
+    { id: "T_AZ", text: "I often put off or delay my responsibilities.", category: "tamas", domain: "academic" },
+    { id: "T_BJ", text: "I often feel helpless.", category: "tamas", domain: "inner" },
+    { id: "T_CJ", text: "I enjoy intoxicating substances (including coffee, cigarettes and alcohol).", category: "tamas", domain: "lifestyle" },
+    { id: "T_CV", text: "I do not have strong determination.", category: "tamas", domain: "academic" },
+    { id: "T_CX", text: "I often feel fearful.", category: "tamas", domain: "inner" },
+    { id: "T_CZ", text: "I greatly enjoy sleeping.", category: "tamas", domain: "lifestyle" },
+    { id: "T_DF", text: "I often feel emotionally unbalanced.", category: "tamas", domain: "inner" },
+    { id: "T_DH", text: "I enjoy eating meat.", category: "tamas", domain: "lifestyle" },
+    { id: "T_DX", text: "I often get exploited in my relationships.", category: "tamas", domain: "social" },
+    { id: "T_DZ", text: "Self-realization is not important for me.", category: "tamas", domain: "inner" },
+    { id: "T_EB", text: "I often feel dejected.", category: "tamas", domain: "inner" },
+    { id: "T_EF", text: "I often neglect my responsibilities to my family.", category: "tamas", domain: "social" },
+    { id: "T_EJ", text: "I often whine.", category: "tamas", domain: "social" },
+    { id: "T_EN", text: "I am currently struggling with an addiction, physical or psychological, to some type of intoxicant (including caffeine, cigarettes and alcohol).", category: "tamas", domain: "lifestyle" },
+    { id: "T_EZ", text: "I sometimes cheat people.", category: "tamas", domain: "social" },
+    { id: "T_FB", text: "The most important thing to know is how to increase one's enjoyment of physical pleasures, like sex and eating.", category: "tamas", domain: "lifestyle" },
+    { id: "T_FD", text: "I often feel mentally unbalanced.", category: "tamas", domain: "inner" },
+    { id: "T_FF", text: "I don't have much will power.", category: "tamas", domain: "lifestyle" },
+    { id: "T_FH", text: "I often neglect my responsibilities to my friends.", category: "tamas", domain: "social" },
+    { id: "T_FJ", text: "I often act violently towards others.", category: "tamas", domain: "social" }
 ];
 
 export const bigFiveItems = [
-    // Reflective Big Five Items (adapted from BFI-10, Rammstedt & John, 2007)
-    // Rewritten as behavioral statements for deeper self-reflection
+    // BFI-10 Items (Rammstedt & John, 2007) — Original verbatim
     // Scale: 1 (Disagree strongly) to 5 (Agree strongly)
-
-    // Extraversion
-    { id: "BF1", text: "At social gatherings, I tend to stay quiet and observe rather than actively join conversations.", trait: "extraversion", reverse: true },
-    { id: "BF6", text: "I feel energized after spending time with a group of people, even if they are not close friends.", trait: "extraversion", reverse: false },
-
-    // Agreeableness
-    { id: "BF2", text: "When I meet someone new, I tend to give them the benefit of the doubt until proven otherwise.", trait: "agreeableness", reverse: false },
-    { id: "BF7", text: "When someone makes a mistake, my first instinct is to notice what they did wrong rather than understand why.", trait: "agreeableness", reverse: true },
-
-    // Conscientiousness
-    { id: "BF3", text: "When I have a free day with no obligations, I often spend it without accomplishing anything productive.", trait: "conscientiousness", reverse: true },
-    { id: "BF8", text: "When I take on a task, I make sure every detail is done properly before considering it finished.", trait: "conscientiousness", reverse: false },
-
-    // Neuroticism
-    { id: "BF4", text: "When unexpected problems arise, I usually stay calm and think clearly about what to do next.", trait: "neuroticism", reverse: true },
-    { id: "BF9", text: "Before important events (exams, interviews, presentations), I often feel anxious to the point where it affects my preparation.", trait: "neuroticism", reverse: false },
-
-    // Openness
-    { id: "BF5", text: "I rarely feel moved or inspired by art, music, or poetry — they don't hold much personal value for me.", trait: "openness", reverse: true },
-    { id: "BF10", text: "I often find myself imagining alternative scenarios or mentally exploring 'what if' possibilities.", trait: "openness", reverse: false }
+    { id: "BF1", text: "I see myself as someone who is reserved.", trait: "extraversion", reverse: true },
+    { id: "BF2", text: "I see myself as someone who is generally trusting.", trait: "agreeableness", reverse: false },
+    { id: "BF3", text: "I see myself as someone who tends to be lazy.", trait: "conscientiousness", reverse: true },
+    { id: "BF4", text: "I see myself as someone who is relaxed, handles stress well.", trait: "neuroticism", reverse: true },
+    { id: "BF5", text: "I see myself as someone who has few artistic interests.", trait: "openness", reverse: true },
+    { id: "BF6", text: "I see myself as someone who is outgoing, sociable.", trait: "extraversion", reverse: false },
+    { id: "BF7", text: "I see myself as someone who tends to find fault with others.", trait: "agreeableness", reverse: true },
+    { id: "BF8", text: "I see myself as someone who does a thorough job.", trait: "conscientiousness", reverse: false },
+    { id: "BF9", text: "I see myself as someone who gets nervous easily.", trait: "neuroticism", reverse: false },
+    { id: "BF10", text: "I see myself as someone who has an active imagination.", trait: "openness", reverse: false }
 ];
