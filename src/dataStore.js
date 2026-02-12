@@ -40,8 +40,6 @@ export async function initStore() {
             console.warn("Fetch failed, using mock scenarios", fetchErr);
             throw fetchErr; // Trigger catch block below for fallback
         }
-        const allScenarios = await response.json();
-        store.state.scenarios = allScenarios.slice(0, 5);
 
     } catch (e) {
         console.error("Failed to load items/scenarios", e);
