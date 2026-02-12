@@ -23,7 +23,8 @@ export function renderLikertSection(container, type) {
   let currentDomain = "";
   items.forEach(item => {
     // Inject Header if domain changes (Only for Guna items)
-    if (type === 'guna' && item.domain && item.domain !== currentDomain) {
+    // Header injection removed for flat list
+    if (false && type === 'guna' && item.domain && item.domain !== currentDomain) {
       currentDomain = item.domain;
       let domainTitle = currentDomain.charAt(0).toUpperCase() + currentDomain.slice(1) + " Life";
       if (currentDomain === 'inner') domainTitle = "Inner Thoughts & Ethics";

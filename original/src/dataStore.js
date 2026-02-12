@@ -19,8 +19,9 @@ export const store = {
         // Scenario Section
         scenarios: [],
         currentScenarioIndex: 0,
-        scenarioResponses: []
+        scenarioResponses: [],
         // Scenario metadata is stored per-response in logScenarioResponse
+        version: 'original-gpi' // Tag for filtering data later
     }
 };
 
