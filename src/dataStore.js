@@ -64,7 +64,7 @@ export function getStore() {
 
 export function setDemographics(data) {
     store.state.demographics = data;
-    store.state.view = 'guna-likert';
+    store.state.view = 'reflection';
 }
 
 export function submitGunaResponses(responses, metadata) {

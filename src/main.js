@@ -4,6 +4,7 @@ import { renderDemographics } from './demographics.js';
 import { renderLikertSection } from './likertRenderer.js';
 import { renderScenario } from './engine.js'; // Reusing existing engine
 import { renderResults } from './results.js';
+import { renderReflection } from './reflection.js';
 
 const app = document.getElementById('app');
 
@@ -107,6 +108,8 @@ export function renderRoute() {
         renderIntro(app);
     } else if (view === 'demographics') {
         renderDemographics(app);
+    } else if (view === 'reflection') {
+        renderReflection(app);
     } else if (view === 'guna-likert') {
         renderLikertSection(app, 'guna');
     } else if (view === 'bigfive-likert') {
