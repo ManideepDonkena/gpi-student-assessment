@@ -30,12 +30,34 @@ export async function initStore() {
         store.state.gunaItems = studentGunaItems;
         store.state.bigFiveItems = bigFiveItems;
 
-        const response = await fetch('src/scenarios.json');
+        // Try to fetch scenarios, handle GitHub Pages structure
+        try {
+            const response = await fetch('./src/scenarios.json');
+            if (!response.ok) throw new Error("404 Not Found");
+            const allScenarios = await response.json();
+            store.state.scenarios = allScenarios.slice(0, 5);
+        } catch (fetchErr) {
+            console.warn("Fetch failed, using mock scenarios", fetchErr);
+            throw fetchErr; // Trigger catch block below for fallback
+        }
         const allScenarios = await response.json();
         store.state.scenarios = allScenarios.slice(0, 5);
 
     } catch (e) {
         console.error("Failed to load items/scenarios", e);
+        // Fallback Scenarios to prevent crash
+        store.state.scenarios = [
+            {
+                id: "fallback_1",
+                text: "You find a wallet on the ground with $50 inside. No ID. What do you do?",
+                category: "ethics",
+                choices: [
+                    { id: "opt1", text: "Keep it." },
+                    { id: "opt2", text: "Donate it." },
+                    { id: "opt3", text: "Leave it there." }
+                ]
+            }
+        ];
     }
 }
 
