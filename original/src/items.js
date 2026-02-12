@@ -1,0 +1,108 @@
+
+// ORIGINAL GPI ITEMS (Wolf, 1998; Das, 1999)
+// Direct self-report statements as validated by Bhakti Rasamrita Maharaj
+// Using ORIGINAL Guna categories from the validated instrument
+// Scale: 1 (Disagree strongly) to 5 (Agree strongly)
+
+export const studentGunaItems = [
+    // ================ SATTVA (Goodness) ================
+    { id: "S_J", text: "I prefer to live in the village rather than the city.", category: "sattva", domain: "lifestyle" },
+    { id: "S_R", text: "I am satisfied with my life.", category: "sattva", domain: "inner" },
+    { id: "S_T", text: "Fruits and vegetables are among my favorite foods.", category: "sattva", domain: "lifestyle" },
+    { id: "S_V", text: "All living entities are essentially spiritual.", category: "sattva", domain: "inner" },
+    { id: "S_AF", text: "I am not very much affected by the joys and sorrows of life.", category: "sattva", domain: "inner" },
+    { id: "S_AJ", text: "I am against violence.", category: "sattva", domain: "social" },
+    { id: "S_AP", text: "Cleanliness is very important to me.", category: "sattva", domain: "lifestyle" },
+    { id: "S_AR", text: "Spiritual advancement is very important for me.", category: "sattva", domain: "inner" },
+    { id: "S_AT", text: "Others say that my intelligence is very sharp.", category: "sattva", domain: "academic" },
+    { id: "S_BB", text: "Respecting ones elders is very important.", category: "sattva", domain: "social" },
+    { id: "S_BF", text: "When I speak, I really try not to irritate others.", category: "sattva", domain: "social" },
+    { id: "S_BV", text: "I am straightforward in my dealings with other people.", category: "sattva", domain: "social" },
+    { id: "S_BZ", text: "I feel that my knowledge is always increasing.", category: "sattva", domain: "academic" },
+    { id: "S_CB", text: "People should not have sex unless they are married and want children.", category: "sattva", domain: "lifestyle" },
+    { id: "S_CH", text: "I take guidance from higher ethical and moral laws before I act.", category: "sattva", domain: "inner" },
+    { id: "S_CL", text: "Being truthful is extremely important.", category: "sattva", domain: "inner" },
+    { id: "S_DB", text: "I do not have doubts about my responsibilities in life.", category: "sattva", domain: "academic" },
+    { id: "S_DD", text: "I often sacrifice my pleasure to please God.", category: "sattva", domain: "inner" },
+    { id: "S_DJ", text: "I often study books of traditional wisdom.", category: "sattva", domain: "academic" },
+    { id: "S_DN", text: "I am very dutiful.", category: "sattva", domain: "social" },
+    { id: "S_DL", text: "I am self-controlled.", category: "sattva", domain: "inner" },
+    { id: "S_DR", text: "I am generally even-tempered.", category: "sattva", domain: "inner" },
+    { id: "S_DT", text: "In my life I usually experience deep happiness that is not dependent on anything external.", category: "sattva", domain: "inner" },
+    { id: "S_DV", text: "Spiritually, all living entities are equal.", category: "sattva", domain: "inner" },
+    { id: "S_ED", text: "I carry out my responsibilities regardless of whether there is success or failure.", category: "sattva", domain: "academic" },
+    { id: "S_EP", text: "My determination is unbreakable.", category: "sattva", domain: "academic" },
+    { id: "S_FL", text: "I am good at controlling my senses and emotions.", category: "sattva", domain: "inner" },
+
+    // ================ RAJAS (Passion) ================
+    { id: "R_N", text: "I am willing to break the rules to achieve my goals.", category: "rajas", domain: "academic" },
+    { id: "R_AB", text: "I usually feel discontented with life.", category: "rajas", domain: "inner" },
+    { id: "R_AD", text: "I become happy when I think about the material assets I possess.", category: "rajas", domain: "lifestyle" },
+    { id: "R_AL", text: "I am good at using willpower to achieve goals.", category: "rajas", domain: "academic" },
+    { id: "R_AV", text: "I am a very active person.", category: "rajas", domain: "lifestyle" },
+    { id: "R_BD", text: "I greatly admire materially successful people.", category: "rajas", domain: "social" },
+    { id: "R_BH", text: "I believe life is over when the body dies.", category: "rajas", domain: "inner" },
+    { id: "R_BL", text: "I become elated when things work out well for me.", category: "rajas", domain: "inner" },
+    { id: "R_BN", text: "I enjoy foods with strong tastes.", category: "rajas", domain: "lifestyle" },
+    { id: "R_BP", text: "I am constantly dissatisfied with my position in life.", category: "rajas", domain: "inner" },
+    { id: "R_BR", text: "Having possessions is very important to me.", category: "rajas", domain: "lifestyle" },
+    { id: "R_BT", text: "When things are tough, I often bail out.", category: "rajas", domain: "academic" },
+    { id: "R_BX", text: "I have more energy than most people.", category: "rajas", domain: "lifestyle" },
+    { id: "R_CD", text: "I prefer city night life to a walk in the forest.", category: "rajas", domain: "lifestyle" },
+    { id: "R_CF", text: "For me, sex life is a major source of happiness.", category: "rajas", domain: "lifestyle" },
+    { id: "R_CN", text: "I feel proud when I give charity.", category: "rajas", domain: "social" },
+    { id: "R_CP", text: "I often feel greedy.", category: "rajas", domain: "inner" },
+    { id: "R_CR", text: "I become greatly distressed when things don't work out for me.", category: "rajas", domain: "inner" },
+    { id: "R_DP", text: "When I give charity, I often do it grudgingly.", category: "rajas", domain: "social" },
+    { id: "R_EH", text: "I am easily affected by the joys and sorrows of life.", category: "rajas", domain: "inner" },
+    { id: "R_EL", text: "Regardless of what I acquire or achieve, I have an uncontrollable desire to obtain more.", category: "rajas", domain: "lifestyle" },
+    { id: "R_ER", text: "I often envy others.", category: "rajas", domain: "social" },
+    { id: "R_ET", text: "My job is a source of anxiety.", category: "rajas", domain: "academic" },
+    { id: "R_EV", text: "I never think about giving up my wealth and position for a simpler life.", category: "rajas", domain: "lifestyle" },
+    { id: "R_EX", text: "It often happens that those things that brought me happiness later become the source of my suffering.", category: "rajas", domain: "inner" },
+
+    // ================ TAMAS (Ignorance) ================
+    { id: "T_L", text: "I often feel like a victim.", category: "tamas", domain: "inner" },
+    { id: "T_P", text: "I have very little interest in spiritual understanding.", category: "tamas", domain: "inner" },
+    { id: "T_X", text: "In conducting my activities, I do not consider traditional wisdom.", category: "tamas", domain: "academic" },
+    { id: "T_Z", text: "I often act without considering the consequences of my actions.", category: "tamas", domain: "lifestyle" },
+    { id: "T_AH", text: "I often criticize and insult other people.", category: "tamas", domain: "social" },
+    { id: "T_AN", text: "I enjoy spending time in bars.", category: "tamas", domain: "lifestyle" },
+    { id: "T_AX", text: "I often feel depressed.", category: "tamas", domain: "inner" },
+    { id: "T_AZ", text: "I often put off or delay my responsibilities.", category: "tamas", domain: "academic" },
+    { id: "T_BJ", text: "I often feel helpless.", category: "tamas", domain: "inner" },
+    { id: "T_CJ", text: "I enjoy intoxicating substances (including coffee, cigarettes and alcohol).", category: "tamas", domain: "lifestyle" },
+    { id: "T_CV", text: "I do not have strong determination.", category: "tamas", domain: "academic" },
+    { id: "T_CX", text: "I often feel fearful.", category: "tamas", domain: "inner" },
+    { id: "T_CZ", text: "I greatly enjoy sleeping.", category: "tamas", domain: "lifestyle" },
+    { id: "T_DF", text: "I often feel emotionally unbalanced.", category: "tamas", domain: "inner" },
+    { id: "T_DH", text: "I enjoy eating meat.", category: "tamas", domain: "lifestyle" },
+    { id: "T_DX", text: "I often get exploited in my relationships.", category: "tamas", domain: "social" },
+    { id: "T_DZ", text: "Self-realization is not important for me.", category: "tamas", domain: "inner" },
+    { id: "T_EB", text: "I often feel dejected.", category: "tamas", domain: "inner" },
+    { id: "T_EF", text: "I often neglect my responsibilities to my family.", category: "tamas", domain: "social" },
+    { id: "T_EJ", text: "I often whine.", category: "tamas", domain: "social" },
+    { id: "T_EN", text: "I am currently struggling with an addiction, physical or psychological, to some type of intoxicant (including caffeine, cigarettes and alcohol).", category: "tamas", domain: "lifestyle" },
+    { id: "T_EZ", text: "I sometimes cheat people.", category: "tamas", domain: "social" },
+    { id: "T_FB", text: "The most important thing to know is how to increase one's enjoyment of physical pleasures, like sex and eating.", category: "tamas", domain: "lifestyle" },
+    { id: "T_FD", text: "I often feel mentally unbalanced.", category: "tamas", domain: "inner" },
+    { id: "T_FF", text: "I don't have much will power.", category: "tamas", domain: "lifestyle" },
+    { id: "T_FH", text: "I often neglect my responsibilities to my friends.", category: "tamas", domain: "social" },
+    { id: "T_ANGRY", text: "I am often angry.", category: "tamas", domain: "inner" },
+    { id: "T_FJ", text: "I often act violently towards others.", category: "tamas", domain: "social" }
+];
+
+export const bigFiveItems = [
+    // BFI-10 Items (Rammstedt & John, 2007) — Original verbatim
+    // Scale: 1 (Disagree strongly) to 5 (Agree strongly)
+    { id: "BF1", text: "I see myself as someone who is reserved.", trait: "extraversion", reverse: true },
+    { id: "BF2", text: "I see myself as someone who is generally trusting.", trait: "agreeableness", reverse: false },
+    { id: "BF3", text: "I see myself as someone who tends to be lazy.", trait: "conscientiousness", reverse: true },
+    { id: "BF4", text: "I see myself as someone who is relaxed, handles stress well.", trait: "neuroticism", reverse: true },
+    { id: "BF5", text: "I see myself as someone who has few artistic interests.", trait: "openness", reverse: true },
+    { id: "BF6", text: "I see myself as someone who is outgoing, sociable.", trait: "extraversion", reverse: false },
+    { id: "BF7", text: "I see myself as someone who tends to find fault with others.", trait: "agreeableness", reverse: true },
+    { id: "BF8", text: "I see myself as someone who does a thorough job.", trait: "conscientiousness", reverse: false },
+    { id: "BF9", text: "I see myself as someone who gets nervous easily.", trait: "neuroticism", reverse: false },
+    { id: "BF10", text: "I see myself as someone who has an active imagination.", trait: "openness", reverse: false }
+];

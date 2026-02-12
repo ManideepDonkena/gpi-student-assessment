@@ -1,0 +1,56 @@
+[
+    {
+        "id": "SC1",
+        "text": "You are working on a group project. One team member, Rahul, hasn't done any work for two weeks and is making excuses. The deadline is tomorrow. What is your immediate reaction?",
+        "options": [
+            {
+                "text": "Calmly talk to him to understand the issue, then divide his work among the group so we finish on time.",
+                "guna": "sattva"
+            },
+            {
+                "text": "Get furious, yell at him in the group chat, and report him to the professor immediately.",
+                "guna": "rajas"
+            },
+            {
+                "text": "Ignore it. If we fail, we fail. Too much hassle to deal with it now.",
+                "guna": "tamas"
+            }
+        ]
+    },
+    {
+        "id": "SC2",
+        "text": "You have a free Saturday and 1000 rupees. How would you prefer to spend it?",
+        "options": [
+            {
+                "text": "Buying a book or attending a workshop to learn something new.",
+                "guna": "sattva"
+            },
+            {
+                "text": "Going out for a movie and expensive dinner with friends.",
+                "guna": "rajas"
+            },
+            {
+                "text": "Ordering junk food and sleeping/binge-watching TV at home.",
+                "guna": "tamas"
+            }
+        ]
+    },
+    {
+        "id": "SC3",
+        "text": "Your internet connection stops working right before you need to submit an assignment. What do you do?",
+        "options": [
+            {
+                "text": "Calmly use your phone hotspot or go to a neighbor's house to submit it.",
+                "guna": "sattva"
+            },
+            {
+                "text": "Panic, scream at the ISP customer care, and throw the router.",
+                "guna": "rajas"
+            },
+            {
+                "text": "Give up and go to sleep, hoping the professor accepts a late submission.",
+                "guna": "tamas"
+            }
+        ]
+    }
+]
