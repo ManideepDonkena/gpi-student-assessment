@@ -37,7 +37,7 @@ export function renderLikertSection(container, type) {
       : ['Disagree', 'Slightly Disagree', 'Neutral', 'Slightly Agree', 'Agree'];
 
     html += `
-    < div class="likert-item" >
+    <div class="likert-item">
         <p>${item.text}</p>
         <div class="likert-options">
           <label><span>${labels[0]}</span><input type="radio" name="${item.id}" value="1" required></label>
@@ -46,11 +46,11 @@ export function renderLikertSection(container, type) {
           <label><span>${labels[3]}</span><input type="radio" name="${item.id}" value="4" required></label>
           <label><span>${labels[4]}</span><input type="radio" name="${item.id}" value="5" required></label>
         </div>
-      </div >
+      </div>
     `;
   });
 
-  html += `< br > <button type="submit">Continue</button></form > `;
+  html += `<br><button type="submit">Continue</button></form>`;
   element.innerHTML = html;
 
   // --- Behavioral Tracking ---
