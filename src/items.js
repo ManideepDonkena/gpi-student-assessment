@@ -72,16 +72,27 @@ export const studentGunaItems = [
 ];
 
 export const bigFiveItems = [
-    // BFI-10 Items (Rammstedt & John, 2007)
-    // Scale: 1 (Disagree strong) to 5 (Agree strong)
-    { id: "BF1", text: "I see myself as someone who is reserved.", trait: "extraversion", reverse: true },
-    { id: "BF2", text: "I see myself as someone who is generally trusting.", trait: "agreeableness", reverse: false },
-    { id: "BF3", text: "I see myself as someone who tends to be lazy.", trait: "conscientiousness", reverse: true },
-    { id: "BF4", text: "I see myself as someone who is relaxed, handles stress well.", trait: "neuroticism", reverse: true },
-    { id: "BF5", text: "I see myself as someone who has few artistic interests.", trait: "openness", reverse: true },
-    { id: "BF6", text: "I see myself as someone who is outgoing, sociable.", trait: "extraversion", reverse: false },
-    { id: "BF7", text: "I see myself as someone who tends to find fault with others.", trait: "agreeableness", reverse: true },
-    { id: "BF8", text: "I see myself as someone who does a thorough job.", trait: "conscientiousness", reverse: false },
-    { id: "BF9", text: "I see myself as someone who gets nervous easily.", trait: "neuroticism", reverse: false },
-    { id: "BF10", text: "I see myself as someone who has an active imagination.", trait: "openness", reverse: false }
+    // Reflective Big Five Items (adapted from BFI-10, Rammstedt & John, 2007)
+    // Rewritten as behavioral statements for deeper self-reflection
+    // Scale: 1 (Disagree strongly) to 5 (Agree strongly)
+
+    // Extraversion
+    { id: "BF1", text: "At social gatherings, I tend to stay quiet and observe rather than actively join conversations.", trait: "extraversion", reverse: true },
+    { id: "BF6", text: "I feel energized after spending time with a group of people, even if they are not close friends.", trait: "extraversion", reverse: false },
+
+    // Agreeableness
+    { id: "BF2", text: "When I meet someone new, I tend to give them the benefit of the doubt until proven otherwise.", trait: "agreeableness", reverse: false },
+    { id: "BF7", text: "When someone makes a mistake, my first instinct is to notice what they did wrong rather than understand why.", trait: "agreeableness", reverse: true },
+
+    // Conscientiousness
+    { id: "BF3", text: "When I have a free day with no obligations, I often spend it without accomplishing anything productive.", trait: "conscientiousness", reverse: true },
+    { id: "BF8", text: "When I take on a task, I make sure every detail is done properly before considering it finished.", trait: "conscientiousness", reverse: false },
+
+    // Neuroticism
+    { id: "BF4", text: "When unexpected problems arise, I usually stay calm and think clearly about what to do next.", trait: "neuroticism", reverse: true },
+    { id: "BF9", text: "Before important events (exams, interviews, presentations), I often feel anxious to the point where it affects my preparation.", trait: "neuroticism", reverse: false },
+
+    // Openness
+    { id: "BF5", text: "I rarely feel moved or inspired by art, music, or poetry — they don't hold much personal value for me.", trait: "openness", reverse: true },
+    { id: "BF10", text: "I often find myself imagining alternative scenarios or mentally exploring 'what if' possibilities.", trait: "openness", reverse: false }
 ];
