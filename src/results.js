@@ -141,17 +141,17 @@ export function renderResults(container) {
                 <tbody>
                     <tr style="border-bottom: 1px solid #eee;">
                         <td style="padding: 6px;">🟡 Sattva</td>
-                        <td style="text-align: center;">${rawGuna.Sattva}/5</td>
+                        <td style="text-align: center;">${rawGuna.Sattva}/7</td>
                         <td style="text-align: center;">${(normGuna.Sattva * 100).toFixed(1)}%</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #eee;">
                         <td style="padding: 6px;">🔴 Rajas</td>
-                        <td style="text-align: center;">${rawGuna.Rajas}/5</td>
+                        <td style="text-align: center;">${rawGuna.Rajas}/7</td>
                         <td style="text-align: center;">${(normGuna.Rajas * 100).toFixed(1)}%</td>
                     </tr>
                     <tr>
                         <td style="padding: 6px;">⚫ Tamas</td>
-                        <td style="text-align: center;">${rawGuna.Tamas}/5</td>
+                        <td style="text-align: center;">${rawGuna.Tamas}/7</td>
                         <td style="text-align: center;">${(normGuna.Tamas * 100).toFixed(1)}%</td>
                     </tr>
                 </tbody>
@@ -160,7 +160,7 @@ export function renderResults(container) {
 
         <!-- RIGHT: Big Five Profile -->
         <div class="chart-container">
-            <h3>Big Five Profile</h3>
+            <h3>Big Five Profile (1-5 Scale)</h3>
             <canvas id="bigFiveChart"></canvas>
             <div style="margin-top:1rem; text-align:center; font-size: 0.9em;">
                 ${Object.entries(finalBigFive).map(([k, v]) => `<span><strong>${k}:</strong> ${v}</span>`).join('<br>')}
@@ -296,7 +296,7 @@ export function renderResults(container) {
             label: function (context) {
               const pct = (context.parsed * 100).toFixed(1);
               const guna = context.label;
-              return `${guna}: ${pct}% (Mean: ${rawGuna[guna]}/5)`;
+              return `${guna}: ${pct}% (Mean: ${rawGuna[guna]}/7)`;
             }
           }
         }
