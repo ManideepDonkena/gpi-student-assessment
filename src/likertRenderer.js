@@ -17,8 +17,6 @@ export function renderLikertSection(container, type) {
   let html = `
     <h2>${title}</h2>
     <p>${desc}</p>
-    <h2>${title}</h2>
-    <p>${desc}</p>
     <form id="likert-form" novalidate>
   `;
 
