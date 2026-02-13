@@ -4,6 +4,7 @@ export const store = {
         view: 'intro', // intro, demographics, guna-likert, bigfive-likert, scenario, results
         sessionId: crypto.randomUUID(),
         startTime: new Date().toISOString(),
+        viewTimings: {}, // Track time spent on each view
         demographics: {},
 
         // Guna Likert Section
@@ -70,6 +71,13 @@ export function getStore() {
 export function setDemographics(data) {
     store.state.demographics = data;
     store.state.view = 'reflection';
+}
+
+export function logViewDuration(viewName, durationMs) {
+    if (!store.state.viewTimings[viewName]) {
+        store.state.viewTimings[viewName] = 0;
+    }
+    store.state.viewTimings[viewName] += durationMs;
 }
 
 export function submitGunaResponses(responses, metadata, details) {

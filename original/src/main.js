@@ -1,5 +1,5 @@
 
-import { initStore, getStore } from './dataStore.js';
+import { initStore, getStore, logViewDuration } from './dataStore.js';
 import { renderDemographics } from './demographics.js';
 import { renderLikertSection } from './likertRenderer.js';
 import { renderScenario } from './engine.js'; // Reusing existing engine
@@ -9,27 +9,27 @@ import { renderReflection } from './reflection.js';
 const app = document.getElementById('app');
 
 async function init() {
-    await initStore();
-    renderRoute();
+  await initStore();
+  renderRoute();
 }
 
 // --- DEBUG & ERROR HANDLING ---
 window.onerror = function (message, source, lineno, colno, error) {
-    const app = document.getElementById('app');
-    if (app) {
-        app.innerHTML += `<div style="color:red; list-style:none; padding:20px; border:1px solid red; margin:20px;">
+  const app = document.getElementById('app');
+  if (app) {
+    app.innerHTML += `<div style="color:red; list-style:none; padding:20px; border:1px solid red; margin:20px;">
         <h3>⚠️ Critical Error</h3>
         <p>${message}</p>
         <p>Source: ${source}:${lineno}</p>
         </div>`;
-    }
-    console.error("Global Catch:", error);
+  }
+  console.error("Global Catch:", error);
 };
 
 // --- RENDER FUNCTIONS ---
 
 function renderIntro(container) {
-    container.innerHTML = `
+  container.innerHTML = `
     <div class="card fade-in" style="text-align: center; max-width: 700px; margin: 0 auto;">
       
       <p style="font-size: 1.1em; color: #888; font-style: italic; margin-bottom: 0;">त्रिविधा भवति श्रद्धा</p>
@@ -78,49 +78,59 @@ function renderIntro(container) {
     </div>
   `;
 
-    document.getElementById('start-btn').addEventListener('click', () => {
-        // We need to update state, but "initStore" handles loading.
-        // Changing view directly here.
-        import('./dataStore.js').then(module => {
-            module.store.state.view = 'demographics';
-            renderRoute();
-        });
+  document.getElementById('start-btn').addEventListener('click', () => {
+    // We need to update state, but "initStore" handles loading.
+    // Changing view directly here.
+    import('./dataStore.js').then(module => {
+      module.store.state.view = 'demographics';
+      renderRoute();
     });
+  });
 }
 
 export function renderRoute() {
-    console.log("Rendering Route...");
-    const store = getStore();
-    const app = document.getElementById('app');
+  console.log("Rendering Route...");
+  const store = getStore();
+  const app = document.getElementById('app');
 
-    if (!app) {
-        console.error("App container not found!");
-        return;
-    }
+  if (!app) {
+    console.error("App container not found!");
+    return;
+  }
 
-    app.innerHTML = '';
-    window.scrollTo(0, 0);
+  // --- Timing Tracking ---
+  const now = Date.now();
+  if (window.lastView && window.lastView !== store.state.view) {
+    const duration = now - window.lastViewTime;
+    logViewDuration(window.lastView, duration);
+    console.log(`Time on ${window.lastView}: ${duration}ms`);
+  }
+  window.lastView = store.state.view;
+  window.lastViewTime = now;
 
-    const view = store.state.view;
-    console.log("Current View:", view);
+  app.innerHTML = '';
+  window.scrollTo(0, 0);
 
-    if (view === 'intro') {
-        renderIntro(app);
-    } else if (view === 'demographics') {
-        renderDemographics(app);
-    } else if (view === 'reflection') {
-        renderReflection(app);
-    } else if (view === 'guna-likert') {
-        renderLikertSection(app, 'guna');
-    } else if (view === 'bigfive-likert') {
-        renderLikertSection(app, 'bigfive');
-    } else if (view === 'scenario') {
-        renderScenario(app);
-    } else if (view === 'results') {
-        renderResults(app);
-    } else {
-        app.innerHTML = `<p style="color:red">Error: Unknown View '${view}'</p>`;
-    }
+  const view = store.state.view;
+  console.log("Current View:", view);
+
+  if (view === 'intro') {
+    renderIntro(app);
+  } else if (view === 'demographics') {
+    renderDemographics(app);
+  } else if (view === 'reflection') {
+    renderReflection(app);
+  } else if (view === 'guna-likert') {
+    renderLikertSection(app, 'guna');
+  } else if (view === 'bigfive-likert') {
+    renderLikertSection(app, 'bigfive');
+  } else if (view === 'scenario') {
+    renderScenario(app);
+  } else if (view === 'results') {
+    renderResults(app);
+  } else {
+    app.innerHTML = `<p style="color:red">Error: Unknown View '${view}'</p>`;
+  }
 }
 
 init();
