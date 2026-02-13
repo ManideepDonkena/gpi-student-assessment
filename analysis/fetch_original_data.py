@@ -6,12 +6,37 @@ import json
 import os
 import sys
 
+from datetime import datetime, timezone, timedelta
+
 # =========================================================
 # CONFIGURATION
 # =========================================================
 SERVICE_ACCOUNT_KEY = "../analysis/firebase_service_account_key.json" 
 if not os.path.exists(SERVICE_ACCOUNT_KEY):
     SERVICE_ACCOUNT_KEY = "firebase_service_account_key.json"
+
+def format_ms_to_min_sec(ms):
+    """Converts milliseconds to 'Xm Ys' format"""
+    if not ms: return "0s"
+    seconds = int(ms / 1000)
+    minutes = seconds // 60
+    rem_seconds = seconds % 60
+    if minutes > 0:
+        return f"{minutes}m {rem_seconds}s"
+    return f"{rem_seconds}s"
+
+def to_ist(iso_str):
+    """Converts ISO UTC string to IST string"""
+    if not iso_str: return ""
+    try:
+        # Parse ISO (handling Z)
+        dt_utc = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
+        # Add 5:30 for IST
+        ist_offset = timedelta(hours=5, minutes=30)
+        dt_ist = dt_utc.astimezone(timezone(ist_offset))
+        return dt_ist.strftime("%Y-%m-%d %H:%M:%S IST")
+    except Exception as e:
+        return iso_str # Fallback
 
 def fetch_original_data():
     """Fetches ONLY 'original-gpi' sessions from Firestore"""
@@ -50,10 +75,11 @@ def flatten_session(session):
     row = {
         "SessionID": session.get('sessionId'),
         "FirebaseID": session.get('firebase_id'),
-        "Timestamp": session.get('uploadedAt'),
+        "Timestamp": to_ist(session.get('uploadedAt')),
         "Version": session.get('version')
     }
 
+    # --- Demographics ---
     # --- Demographics ---
     demo = session.get('demographics', {})
     if not demo: demo = {}
@@ -74,7 +100,8 @@ def flatten_session(session):
     timings = session.get('viewTimings', {})
     if timings:
         for view, ms in timings.items():
-            row[f"Time_View_{view}_ms"] = ms
+            # row[f"Time_View_{view}_ms"] = ms  <-- Removed per user request
+            row[f"Time_View_{view}"] = format_ms_to_min_sec(ms)
 
     # --- Computed Scores ---
     computed = session.get('computedScores', {})
@@ -95,7 +122,10 @@ def flatten_session(session):
     
     # --- Metadata (Total Time) ---
     guna_meta = session.get('gunaMetadata', {})
-    row["Total_Guna_Time_ms"] = guna_meta.get('timeMs')
+    
+    total_time = guna_meta.get('timeMs')
+    row["Total_Guna_Time"] = format_ms_to_min_sec(total_time)
+    
     row["Guna_Changes"] = guna_meta.get('answerChanges')
     
     # --- Wide Format Questions (Header = Text) ---
@@ -110,8 +140,8 @@ def flatten_session(session):
             
             # Value
             row[text] = detail.get('value')
-            # Time for that specific question
-            row[f"Time: {text}"] = detail.get('reactionTimeMs')
+            # Time for that specific question (Formatted)
+            row[f"Time: {text}"] = format_ms_to_min_sec(detail.get('reactionTimeMs'))
 
     # Big Five
     bf_details = session.get('bigFiveDetails', {})
@@ -122,7 +152,7 @@ def flatten_session(session):
                 text = f"BigFive_{q_id}"
             
             row[text] = detail.get('value')
-            row[f"Time: {text}"] = detail.get('reactionTimeMs')
+            row[f"Time: {text}"] = format_ms_to_min_sec(detail.get('reactionTimeMs'))
 
     return row
 
@@ -148,8 +178,10 @@ def save_to_csv(data_list, filename="original_gpi_wide.csv"):
     # Sort remaining cols: put View Timings first, then Question columns
     # It's hard to distinguish Question cols from others without explicit lists,
     # but grouping View Timings is helpful.
-    view_cols = sorted([c for c in remaining_cols if c.startswith('Time_View')])
-    other_cols = [c for c in remaining_cols if not c.startswith('Time_View')]
+    # Sort remaining cols: put View Timings first, then Question columns
+    # Group formatted times with their ms counterparts
+    view_cols = sorted([c for c in remaining_cols if c.startswith('Time_View') or c.startswith('Total_Guna')])
+    other_cols = [c for c in remaining_cols if c not in view_cols]
     
     # Try to sort other_cols alphabetically to group similar questions?
     # Or keep insertion order? Insertion order in dict is reliable in Py3.7+, but DataFrame constructor might shuffle keys if rows differ.

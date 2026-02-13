@@ -74,6 +74,21 @@ export function renderLikertSection(container, type) {
 
   // --- Behavioral Tracking ---
   const startTime = Date.now();
+  let accumulatedHiddenTime = 0;
+  let lastHideTime = 0;
+
+  // Handle Tab Switching / Visibility
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      lastHideTime = Date.now();
+    } else {
+      if (lastHideTime > 0) {
+        accumulatedHiddenTime += (Date.now() - lastHideTime);
+        lastHideTime = 0;
+      }
+    }
+  });
+
   let cursorDistance = 0;
   let answerChanges = 0;
   let lastX = 0;
@@ -94,7 +109,8 @@ export function renderLikertSection(container, type) {
         id: qId,
         value: val,
         text: item ? item.text : "Unknown",
-        reactionTimeMs: Date.now() - startTime, // Time since section load
+        // Calculate reaction time relative to section load (minus hidden time)
+        reactionTimeMs: Math.max(0, (Date.now() - startTime) - accumulatedHiddenTime),
         timestamp: new Date().toISOString()
       };
 
@@ -156,7 +172,7 @@ export function renderLikertSection(container, type) {
     });
 
     const metadata = {
-      timeMs: Date.now() - startTime,
+      timeMs: Math.max(0, (Date.now() - startTime) - accumulatedHiddenTime),
       cursorDistancePx: Math.round(cursorDistance),
       answerChanges: answerChanges
     };
