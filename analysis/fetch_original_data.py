@@ -127,6 +127,11 @@ def flatten_session(session):
     row["Total_Guna_Time"] = format_ms_to_min_sec(total_time)
     
     row["Guna_Changes"] = guna_meta.get('answerChanges')
+    row["Tab_Switches"] = guna_meta.get('tabSwitches', 0)
+    
+    idle_ms = guna_meta.get('idleTimeMs', 0)
+    # row["Idle_Time_ms"] = idle_ms
+    row["Idle_Time_fmt"] = format_ms_to_min_sec(idle_ms)
     
     # --- Wide Format Questions (Header = Text) ---
     # Guna

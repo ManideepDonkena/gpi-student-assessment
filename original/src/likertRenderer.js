@@ -83,9 +83,11 @@ export function renderLikertSection(container, type) {
   let lastHideTime = 0;
 
   // Handle Tab Switching / Visibility
+  let switchCount = 0;
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       lastHideTime = Date.now();
+      switchCount++;
     } else {
       if (lastHideTime > 0) {
         accumulatedHiddenTime += (Date.now() - lastHideTime);
@@ -180,7 +182,9 @@ export function renderLikertSection(container, type) {
     const metadata = {
       timeMs: Math.max(0, (Date.now() - startTime) - accumulatedHiddenTime),
       cursorDistancePx: Math.round(cursorDistance),
-      answerChanges: answerChanges
+      answerChanges: answerChanges,
+      idleTimeMs: accumulatedHiddenTime,
+      tabSwitches: switchCount
     };
 
     if (type === 'guna') {
