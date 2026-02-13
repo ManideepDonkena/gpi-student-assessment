@@ -86,9 +86,12 @@ export function logViewDuration(viewName, durationMs) {
     store.state.viewTimings[viewName] += durationMs;
 }
 
-store.state.gunaDetails = details || {};
-store.state.view = 'bigfive-likert';
-saveSession();
+export function submitGunaResponses(responses, metadata, details) {
+    store.state.gunaResponses = responses;
+    store.state.gunaMetadata = metadata;
+    store.state.gunaDetails = details || {};
+    store.state.view = 'bigfive-likert';
+    saveSession();
 }
 
 export function submitBigFiveResponses(responses, metadata, details) {
