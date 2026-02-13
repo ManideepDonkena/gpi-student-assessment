@@ -1,10 +1,11 @@
 
-import { getStore, submitGunaResponses, submitBigFiveResponses } from './dataStore.js';
+import { getStore, submitGunaResponses, submitBigFiveResponses, updateGunaResponse, updateBigFiveResponse } from './dataStore.js';
 import { renderRoute } from './main.js';
 
 export function renderLikertSection(container, type) {
   const store = getStore();
   const items = type === 'guna' ? store.state.gunaItems : store.state.bigFiveItems;
+  const savedResponses = type === 'guna' ? store.state.gunaResponses : store.state.bigFiveResponses;
   const title = type === 'guna' ? 'Part 1: Self-Reflection' : 'Part 2: Personality Traits';
   const desc = type === 'guna'
     ? 'For each statement, indicate your level of agreement (1 = Strongly Disagree, 7 = Strongly Agree).'
@@ -58,10 +59,11 @@ export function renderLikertSection(container, type) {
     labels.forEach((label, index) => {
       // Value is index + 1
       const val = index + 1;
+      const isChecked = savedResponses && savedResponses[item.id] == val ? 'checked' : '';
       html += `
           <label style="flex: 1; text-align: center; font-size: 0.85em; cursor: pointer;">
             <div style="margin-bottom: 5px;">${val}</div>
-            <input type="radio" name="${item.id}" value="${val}" required>
+            <input type="radio" name="${item.id}" value="${val}" required ${isChecked}>
             <div style="margin-top: 5px; line-height: 1.2;">${label}</div>
           </label>
         `;
@@ -102,6 +104,13 @@ export function renderLikertSection(container, type) {
         reactionTimeMs: Date.now() - startTime,
         timestamp: new Date().toISOString()
       };
+
+      // Auto-save partial response
+      if (type === 'guna') {
+        updateGunaResponse(qId, val, detailedResponses[qId]);
+      } else {
+        updateBigFiveResponse(qId, val, detailedResponses[qId]);
+      }
     });
   });
 

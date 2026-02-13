@@ -94,11 +94,28 @@ export function submitGunaResponses(responses, metadata, details) {
     saveSession();
 }
 
+export function updateGunaResponse(id, value, detailed) {
+    store.state.gunaResponses[id] = value;
+    if (detailed) {
+        store.state.gunaDetails[id] = detailed;
+    }
+    saveSession();
+}
+
 export function submitBigFiveResponses(responses, metadata, details) {
     store.state.bigFiveResponses = responses;
     store.state.bigFiveMetadata = metadata;
     store.state.bigFiveDetails = details || {};
+    store.state.bigFiveDetails = details || {};
     store.state.view = 'scenario';
+    saveSession();
+}
+
+export function updateBigFiveResponse(id, value, detailed) {
+    store.state.bigFiveResponses[id] = value;
+    if (detailed) {
+        store.state.bigFiveDetails[id] = detailed;
+    }
     saveSession();
 }
 
