@@ -195,20 +195,25 @@ def flatten_session(session):
 
     # Big Five
     bf_details = session.get('bigFiveDetails', {})
+    bf_resps = session.get('bigFiveResponses', {})
+    
+    # Process details if they exist (provides text and durations)
     if bf_details:
         bf_durations = calculate_durations(bf_details)
-        
         for q_id, detail in bf_details.items():
-            text = detail.get('text')
-            if not text:
-                text = f"BigFive_{q_id}"
-            
-            row[text] = detail.get('value')
-            # Timestamp - SKIPPED
-            # row[f"Timestamp: {text}"] = format_ms_to_min_sec(detail.get('reactionTimeMs'))
-            # Duration
+            header = f"BFI_{q_id}"
+            text = detail.get('text', '')
+            row[header] = detail.get('value')
+            if text:
+                row[f"{header}_Text"] = text
             dur_ms = bf_durations.get(q_id, 0)
-            row[f"Duration: {text}"] = format_ms_to_min_sec(dur_ms)
+            row[f"Duration_{header}"] = format_ms_to_min_sec(dur_ms)
+    
+    # Fallback to pure responses if details are missing (early versions)
+    elif bf_resps:
+        for q_id, val in bf_resps.items():
+            header = f"BFI_{q_id}"
+            row[header] = val
 
     return row
 
@@ -225,11 +230,35 @@ def save_to_csv(data_list, filename="original_gpi_wide.csv"):
     
     # Prioritized prefix list
     priority = ['SessionID', 'FirebaseID', 'Timestamp', 'Version', 
-                'Age', 'Gender', 'Occupation', 'Spiritual_Practice', 'Gita_Familiarity',
-                'Score_Sattva_Raw', 'Score_Rajas_Raw', 'Score_Tamas_Raw', 'Dominant_Guna']
+                'Age', 'Gender', 'Occupation', 'Education', 'Major', 'Year', 'GPA',
+                'Spiritual_Practice', 'Gita_Familiarity',
+                'Score_Sattva_Raw', 'Score_Rajas_Raw', 'Score_Tamas_Raw', 'Dominant_Guna',
+                'Score_BigFive_extraversion', 'Score_BigFive_agreeableness', 
+                'Score_BigFive_conscientiousness', 'Score_BigFive_neuroticism', 
+                'Score_BigFive_openness']
     
     ordered_cols = [c for c in priority if c in cols]
     remaining_cols = [c for c in cols if c not in priority]
+    
+    # Group BFI columns together and sort them numerically
+    def bfi_sort_key(c):
+        if c.startswith('BFI_'):
+            part = c.replace('BFI_', '')
+        elif c.startswith('Duration_BFI_'):
+            part = c.replace('Duration_BFI_', '')
+        else:
+            return (999, c)
+            
+        # Extract number if possible (e.g. BFI1 -> 1)
+        num_str = ''.join(filter(str.isdigit, part))
+        if num_str:
+            return (int(num_str), c)
+        return (999, c)
+
+    bfi_cols = sorted([c for c in remaining_cols if c.startswith('BFI_') or c.startswith('Duration_BFI_')],
+                      key=bfi_sort_key)
+    
+    remaining_cols = [c for c in remaining_cols if c not in bfi_cols]
     
     # Sort remaining cols: put View Timings first, then Question columns
     # It's hard to distinguish Question cols from others without explicit lists,
@@ -243,7 +272,7 @@ def save_to_csv(data_list, filename="original_gpi_wide.csv"):
     # Or keep insertion order? Insertion order in dict is reliable in Py3.7+, but DataFrame constructor might shuffle keys if rows differ.
     # Let's keep DataFrame's default column order for the questions as it usually respects first appearance.
     
-    final_order = ordered_cols + view_cols + other_cols
+    final_order = ordered_cols + view_cols + bfi_cols + other_cols
     df = df[final_order]
     
     df.to_csv(filename, index=False)

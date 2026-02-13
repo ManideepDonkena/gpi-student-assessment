@@ -51,7 +51,7 @@ function renderIntro(container) {
     <div class="card fade-in" style="text-align: center; max-width: 700px; margin: 0 auto; position: relative;">
       
       <!-- Language Switcher -->
-      <button id="lang-switch-btn" style="position: absolute; top: 10px; right: 10px; background: transparent; border: 1px solid #ddd; font-size: 0.8em; padding: 4px 8px; border-radius: 4px; color: #666; cursor: pointer;">
+      <button id="lang-switch-btn" style="display: none; position: absolute; top: 10px; right: 10px; background: transparent; border: 1px solid #ddd; font-size: 0.8em; padding: 4px 8px; border-radius: 4px; color: #666; cursor: pointer;">
         🌐 ${common.change_lang || "Change Language"}
       </button>
 

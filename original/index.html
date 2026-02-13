@@ -27,7 +27,7 @@
           English
         </button>
         <button id="btn-hi"
-          style="padding: 15px 30px; font-size: 1.2em; border: 2px solid #e67e22; background: transparent; color: #e67e22; border-radius: 10px; cursor: pointer; transition: all 0.3s; font-family: 'Lato', sans-serif;">
+          style="display: none; padding: 15px 30px; font-size: 1.2em; border: 2px solid #e67e22; background: transparent; color: #e67e22; border-radius: 10px; cursor: pointer; transition: all 0.3s; font-family: 'Lato', sans-serif;">
           हिंदी (Hindi)
         </button>
       </div>
@@ -60,22 +60,17 @@
       }, 300);
     }
 
-    // Check if language was just selected (avoid loop)
-    if (localStorage.getItem('gpi_lang')) {
-      // If language exists, hide modal immediately to prevent flicker? 
-      // Actually, if we just reloaded, we want to skip modal.
-      // But we can allow re-selection if we want ("Change Language" button elsewhere).
-      // For now, prompt ONCE per session? 
-      // The user Requirement: "Upon opening... prompt".
-      // Let's prompt every time OR provide a "Change" button.
-      // If we persist indefinitely, they never see it again.
-      // Let's check session storage flag "lang_selected_this_session".
+    // Auto-select English if no language set (Hiding Hindi for now)
+    if (!localStorage.getItem('gpi_lang')) {
+      localStorage.setItem('gpi_lang', 'en');
+      sessionStorage.setItem('lang_selected', 'true');
+    }
 
+    if (localStorage.getItem('gpi_lang')) {
+      // If language exists and we've "selected" it (either manually or auto), hide modal
       if (sessionStorage.getItem('lang_selected')) {
         modal.style.display = 'none';
         app.style.display = 'block';
-      } else {
-        // Show modal
       }
     }
 

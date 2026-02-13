@@ -6,18 +6,23 @@ import os
 OUTPUT_DIR = "dummy_students"
 NUM_STUDENTS = 200
 
-# BFI-10 Item Map (Trait, Reverse?)
+# BFI-44 Item Map (Trait, Reverse?)
 BFI_MAP = {
-    "BF1": ("extraversion", True),
-    "BF2": ("agreeableness", False),
-    "BF3": ("conscientiousness", True),
-    "BF4": ("neuroticism", True),
-    "BF5": ("openness", True),
-    "BF6": ("extraversion", False),
-    "BF7": ("agreeableness", True),
-    "BF8": ("conscientiousness", False),
-    "BF9": ("neuroticism", False),
-    "BF10": ("openness", False)
+    "BFI1": ("extraversion", False), "BFI2": ("agreeableness", True), "BFI3": ("conscientiousness", False),
+    "BFI4": ("neuroticism", False), "BFI5": ("openness", False), "BFI6": ("extraversion", True),
+    "BFI7": ("agreeableness", False), "BFI8": ("conscientiousness", True), "BFI9": ("neuroticism", True),
+    "BFI10": ("openness", False), "BFI11": ("extraversion", False), "BFI12": ("agreeableness", True),
+    "BFI13": ("conscientiousness", False), "BFI14": ("neuroticism", False), "BFI15": ("openness", False),
+    "BFI16": ("extraversion", False), "BFI17": ("agreeableness", False), "BFI18": ("conscientiousness", True),
+    "BFI19": ("neuroticism", False), "BFI20": ("openness", False), "BFI21": ("extraversion", True),
+    "BFI22": ("agreeableness", False), "BFI23": ("conscientiousness", True), "BFI24": ("neuroticism", True),
+    "BFI25": ("openness", False), "BFI26": ("extraversion", False), "BFI27": ("agreeableness", True),
+    "BFI28": ("conscientiousness", False), "BFI29": ("neuroticism", False), "BFI30": ("openness", False),
+    "BFI31": ("extraversion", True), "BFI32": ("agreeableness", False), "BFI33": ("conscientiousness", False),
+    "BFI34": ("neuroticism", True), "BFI35": ("openness", True), "BFI36": ("extraversion", False),
+    "BFI37": ("agreeableness", True), "BFI38": ("conscientiousness", False), "BFI39": ("neuroticism", False),
+    "BFI40": ("openness", False), "BFI41": ("openness", True), "BFI42": ("agreeableness", False),
+    "BFI43": ("conscientiousness", True), "BFI44": ("openness", False)
 }
 
 def generate_student():
@@ -61,8 +66,8 @@ def generate_student():
         guna_resps[f"T{i}"] = to_likert(l_tamas + random.gauss(0, 0.15))
         
     bf_resps = {}
-    for i in range(1, 11):
-        iid = f"BF{i}"
+    for i in range(1, 45):
+        iid = f"BFI{i}"
         trait, reverse = BFI_MAP[iid]
         if trait == "extraversion": latent = l_extra
         elif trait == "agreeableness": latent = l_agree
