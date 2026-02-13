@@ -7,7 +7,7 @@ export function renderLikertSection(container, type) {
   const items = type === 'guna' ? store.state.gunaItems : store.state.bigFiveItems;
   const title = type === 'guna' ? 'Part 1: Self-Reflection' : 'Part 2: Personality Traits';
   const desc = type === 'guna'
-    ? 'For each statement, indicate your level of agreement (1 = Strongly Disagree, 5 = Strongly Agree).'
+    ? 'For each statement, indicate your level of agreement (1 = Strongly Disagree, 7 = Strongly Agree).'
     : 'I see myself as someone who... (1 = Disagree Strongly, 5 = Agree Strongly)';
 
   const element = document.createElement('div');
@@ -33,20 +33,40 @@ export function renderLikertSection(container, type) {
     }
 
     // Determine labels based on type
-    // Original GPI items are statements, so Agreement scale is better than Frequency
+    // Original GPI items use a 7-Point Agreement Scale for better sensitivity
     const labels = type === 'guna'
-      ? ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree']
-      : ['Disagree', 'Slightly Disagree', 'Neutral', 'Slightly Agree', 'Agree'];
+      ? [
+        'Strongly Disagree', // 1
+        'Disagree',          // 2
+        'Somewhat Disagree', // 3
+        'Neutral',           // 4
+        'Somewhat Agree',    // 5
+        'Agree',             // 6
+        'Strongly Agree'     // 7
+      ]
+      : ['Disagree', 'Slightly Disagree', 'Neutral', 'Slightly Agree', 'Agree']; // Big Five stays 5-point? Or update? User said "update", presumably referring to Guna.
+
+    // Big Five usually uses 5-point. I'll keep it 5-point unless asked.
+    // The Guna scale is the one being refined.
 
     html += `
-    <div class="likert-item">
-        <p>${item.text}</p>
-        <div class="likert-options">
-          <label><span>${labels[0]}</span><input type="radio" name="${item.id}" value="1" required></label>
-          <label><span>${labels[1]}</span><input type="radio" name="${item.id}" value="2" required></label>
-          <label><span>${labels[2]}</span><input type="radio" name="${item.id}" value="3" required></label>
-          <label><span>${labels[3]}</span><input type="radio" name="${item.id}" value="4" required></label>
-          <label><span>${labels[4]}</span><input type="radio" name="${item.id}" value="5" required></label>
+      <div class="question-card" data-id="${item.id}" data-type="${type}">
+        <p class="question-text">${item.text}</p>
+        <div class="likert-options" style="display: flex; justify-content: space-between; gap: 5px;">
+    `;
+
+    labels.forEach((label, index) => {
+      // Value is index + 1
+      const val = index + 1;
+      html += `
+          <label style="flex: 1; text-align: center; font-size: 0.85em; cursor: pointer;">
+            <div style="margin-bottom: 5px;">${val}</div>
+            <input type="radio" name="${item.id}" value="${val}" required>
+            <div style="margin-top: 5px; line-height: 1.2;">${label}</div>
+          </label>
+        `;
+    });
+    html += `
         </div>
       </div>
     `;
