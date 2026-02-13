@@ -1,4 +1,6 @@
 
+const STORAGE_KEY = 'gpi_original_session_v1';
+
 export const store = {
     state: {
         view: 'intro', // intro, demographics, guna-likert, bigfive-likert, scenario, results
@@ -47,6 +49,9 @@ export async function initStore() {
             throw fetchErr; // Trigger catch block below for fallback
         }
 
+        // Check for saved session
+        restoreSession();
+
     } catch (e) {
         console.error("Failed to load items/scenarios", e);
         // Fallback Scenarios to prevent crash
@@ -71,6 +76,7 @@ export function getStore() {
 export function setDemographics(data) {
     store.state.demographics = data;
     store.state.view = 'reflection';
+    saveSession();
 }
 
 export function logViewDuration(viewName, durationMs) {
@@ -80,11 +86,9 @@ export function logViewDuration(viewName, durationMs) {
     store.state.viewTimings[viewName] += durationMs;
 }
 
-export function submitGunaResponses(responses, metadata, details) {
-    store.state.gunaResponses = responses;
-    store.state.gunaMetadata = metadata;
-    store.state.gunaDetails = details || {};
-    store.state.view = 'bigfive-likert';
+store.state.gunaDetails = details || {};
+store.state.view = 'bigfive-likert';
+saveSession();
 }
 
 export function submitBigFiveResponses(responses, metadata, details) {
@@ -92,6 +96,7 @@ export function submitBigFiveResponses(responses, metadata, details) {
     store.state.bigFiveMetadata = metadata;
     store.state.bigFiveDetails = details || {};
     store.state.view = 'scenario';
+    saveSession();
 }
 
 export function logScenarioResponse(response) {
@@ -121,4 +126,45 @@ export function logScenarioResponse(response) {
 
 export function exportSessionData() {
     return JSON.stringify(store.state, null, 2);
+}
+
+// --- Persistence Logic ---
+function saveSession() {
+    try {
+        const s = store.state;
+        const dataToSave = {
+            view: s.view,
+            sessionId: s.sessionId,
+            startTime: s.startTime,
+            demographics: s.demographics,
+            viewTimings: s.viewTimings,
+            gunaResponses: s.gunaResponses,
+            gunaDetails: s.gunaDetails,
+            gunaMetadata: s.gunaMetadata,
+            bigFiveResponses: s.bigFiveResponses,
+            bigFiveDetails: s.bigFiveDetails,
+            bigFiveMetadata: s.bigFiveMetadata,
+            scenarioResponses: s.scenarioResponses,
+            computedScores: s.computedScores,
+            firebaseId: s.firebaseId
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToSave));
+    } catch (e) {
+        console.warn("LocalStorage save failed", e);
+    }
+}
+
+function restoreSession() {
+    try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            const data = JSON.parse(saved);
+            if (data.sessionId) {
+                console.log("Restoring session:", data.sessionId);
+                Object.assign(store.state, data);
+            }
+        }
+    } catch (e) {
+        console.warn("LocalStorage restore failed", e);
+    }
 }

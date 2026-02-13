@@ -17,7 +17,9 @@ export function renderLikertSection(container, type) {
   let html = `
     <h2>${title}</h2>
     <p>${desc}</p>
-    <form id="likert-form">
+    <h2>${title}</h2>
+    <p>${desc}</p>
+    <form id="likert-form" novalidate>
   `;
 
   let currentDomain = "";
@@ -121,6 +123,29 @@ export function renderLikertSection(container, type) {
   // Handle Submit
   element.querySelector('form').addEventListener('submit', (e) => {
     e.preventDefault();
+
+    // --- Manual Validation for iOS Safari ---
+    const form = e.target;
+    if (!form.checkValidity()) {
+      const firstInvalid = form.querySelector('input:invalid');
+      if (firstInvalid) {
+        // Scroll to the error
+        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Visual Cue
+        const card = firstInvalid.closest('.question-card');
+        if (card) {
+          card.style.transition = "background-color 0.3s";
+          const originalBg = card.style.backgroundColor;
+          card.style.backgroundColor = "#fff0f0"; // Light red
+          setTimeout(() => card.style.backgroundColor = originalBg, 2000);
+        }
+
+        alert("Please answer all questions to proceed.");
+      }
+      return;
+    }
+
     document.removeEventListener('mousemove', trackMouse); // Cleanup
 
     const formData = new FormData(e.target);
