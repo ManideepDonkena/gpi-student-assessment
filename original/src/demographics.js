@@ -1,56 +1,61 @@
 
 import { setDemographics } from './dataStore.js';
 import { renderRoute } from './main.js';
+import { translations } from './translations.js';
 
 export function renderDemographics(container) {
+  const lang = localStorage.getItem('gpi_lang') || 'en';
+  const t = translations[lang] || translations['en'];
+  const ui = t.demographics;
+
   const element = document.createElement('div');
   element.className = 'card fade-in';
 
   element.innerHTML = `
-    <h1>About You</h1>
-    <p>Help us understand your background. All data is <strong>anonymous</strong> and used only for research.</p>
+    <h1>${ui.title}</h1>
+    <p>${ui.desc}</p>
     
     <form id="demo-form">
       <label>
-        Age
+        ${ui.age}
         <input type="number" name="age" required min="14" max="80" placeholder="e.g., 21">
       </label>
       
       <label>
-        Gender
+        ${ui.gender}
         <select name="gender" required>
-          <option value="">Select...</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Non-binary">Non-binary</option>
-          <option value="Prefer not to say">Prefer not to say</option>
+          <option value="">${ui.select}</option>
+          <option value="Male">${ui.male}</option>
+          <option value="Female">${ui.female}</option>
+          <option value="Non-binary">${ui.nonbinary}</option>
+          <option value="Prefer not to say">${ui.prefer_not}</option>
         </select>
       </label>
 
       <label>
-        Highest Education
+        ${ui.education}
         <select name="education" required>
-          <option value="">Select...</option>
-          <option value="High School">High School / 12th</option>
-          <option value="UG (Pursuing)">Undergraduate (Pursuing)</option>
-          <option value="UG (Completed)">Undergraduate (Completed)</option>
-          <option value="PG (Pursuing)">Postgraduate (Pursuing)</option>
-          <option value="PG (Completed)">Postgraduate (Completed)</option>
-          <option value="PhD">PhD / Doctorate</option>
-          <option value="Other">Other</option>
+          <option value="">${ui.select}</option>
+          <option value="High School">${ui.highschool}</option>
+          <option value="UG (Pursuing)">${ui.ug_pursuing}</option>
+          <option value="UG (Completed)">${ui.ug_completed}</option>
+          <option value="PG (Pursuing)">${ui.pg_pursuing}</option>
+          <option value="PG (Completed)">${ui.pg_completed}</option>
+          <option value="PhD">${ui.phd}</option>
+          <option value="Other">${ui.other}</option>
         </select>
       </label>
 
       <label>
-        Current Occupation
+        ${ui.occupation}
         <select name="occupation" id="occupation-select" required>
-          <option value="">Select...</option>
-          <option value="Student">Student</option>
-          <option value="Working Professional">Working Professional</option>
-          <option value="Self-employed">Self-employed / Business</option>
-          <option value="Homemaker">Homemaker</option>
-          <option value="Retired">Retired</option>
-          <option value="Other">Other</option>
+          <option value="">${ui.select}</option>
+          <option value="Student">${ui.student}</option>
+          <option value="Working Professional">${ui.professional}</option>
+          <option value="Self-employed">${ui.self_employed}</option>
+          <option value="Homemaker">${ui.homemaker}</option>
+          <option value="Retired">${ui.retired}</option>
+          <option value="Other">${ui.other}</option>
         </select>
       </label>
 
@@ -59,7 +64,7 @@ export function renderDemographics(container) {
         <label>
           Year of Study
           <select name="year">
-            <option value="">Select...</option>
+            <option value="">${ui.select}</option>
             <option value="1">1st Year</option>
             <option value="2">2nd Year</option>
             <option value="3">3rd Year</option>
@@ -85,7 +90,7 @@ export function renderDemographics(container) {
         <label>
           Industry / Field
           <select name="industry">
-            <option value="">Select...</option>
+            <option value="">${ui.select}</option>
             <option value="IT / Software">IT / Software</option>
             <option value="Education">Education / Academia</option>
             <option value="Healthcare">Healthcare</option>
@@ -101,7 +106,7 @@ export function renderDemographics(container) {
         <label>
           Years of Experience
           <select name="experience">
-            <option value="">Select...</option>
+            <option value="">${ui.select}</option>
             <option value="0-2">0 - 2 years</option>
             <option value="3-5">3 - 5 years</option>
             <option value="6-10">6 - 10 years</option>
@@ -112,28 +117,28 @@ export function renderDemographics(container) {
 
       <!-- Universal Fields -->
       <label>
-        Spiritual / Meditation Practice
+        ${ui.spiritual}
         <select name="spiritualPractice" required>
-          <option value="">Select...</option>
-          <option value="Regular">Regular (Daily / Weekly)</option>
-          <option value="Occasional">Occasional</option>
-          <option value="Rarely">Rarely</option>
-          <option value="Never">Never</option>
+          <option value="">${ui.select}</option>
+          <option value="Regular">${ui.regular}</option>
+          <option value="Occasional">${ui.occasional}</option>
+          <option value="Rarely">${ui.rarely}</option>
+          <option value="Never">${ui.never}</option>
         </select>
       </label>
 
       <label>
-        Familiarity with Bhagavad Gita / Vedantic Philosophy
+        ${ui.gita}
         <select name="gitaFamiliarity" required>
-          <option value="">Select...</option>
-          <option value="Very Familiar">Very Familiar (Read / Studied)</option>
-          <option value="Somewhat">Somewhat Familiar</option>
-          <option value="Heard of it">Heard of it</option>
-          <option value="Not at all">Not at all</option>
+          <option value="">${ui.select}</option>
+          <option value="Very Familiar">${ui.familiar_very}</option>
+          <option value="Somewhat">${ui.familiar_some}</option>
+          <option value="Heard of it">${ui.familiar_heard}</option>
+          <option value="Not at all">${ui.familiar_not}</option>
         </select>
       </label>
       
-      <button type="submit">Start Assessment</button>
+      <button type="submit">${ui.start_btn}</button>
     </form>
   `;
 

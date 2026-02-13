@@ -37,6 +37,42 @@ def to_ist(iso_str):
         return dt_ist.strftime("%Y-%m-%d %H:%M:%S IST")
     except Exception as e:
         return iso_str # Fallback
+    except Exception as e:
+        return iso_str # Fallback
+
+def calculate_durations(details_dict):
+    """
+    Returns a dict mapping { q_id: duration_ms }
+    Duration is calculated as time delta from previous response.
+    """
+    if not details_dict: return {}
+    
+    # Convert to list of objects
+    responses = []
+    for q_id, detail in details_dict.items():
+        responses.append({
+            'id': q_id,
+            'ms': detail.get('reactionTimeMs', 0)
+        })
+    
+    # Sort by timestamp (ms) - Time of Action
+    responses.sort(key=lambda x: x['ms'])
+    
+    durations = {}
+    prev_ms = 0
+    for resp in responses:
+        curr_ms = resp['ms']
+        # If curr_ms < prev_ms, it implies out of order? 
+        # But we sort by ms, so curr_ms >= prev_ms always.
+        duration = curr_ms - prev_ms
+        
+        # Safety for very fast concurrent weirdness
+        if duration < 0: duration = 0 
+        
+        durations[resp['id']] = duration
+        prev_ms = curr_ms
+        
+    return durations
 
 def fetch_original_data():
     """Fetches ONLY 'original-gpi' sessions from Firestore"""
@@ -135,8 +171,12 @@ def flatten_session(session):
     
     # --- Wide Format Questions (Header = Text) ---
     # Guna
+    # Guna
     guna_details = session.get('gunaDetails', {})
     if guna_details:
+        # Calculate Durations First
+        guna_durations = calculate_durations(guna_details)
+        
         for q_id, detail in guna_details.items():
             # Use Question Text as Header if available, else Fallback ID
             text = detail.get('text')
@@ -145,19 +185,30 @@ def flatten_session(session):
             
             # Value
             row[text] = detail.get('value')
-            # Time for that specific question (Formatted)
-            row[f"Time: {text}"] = format_ms_to_min_sec(detail.get('reactionTimeMs'))
+            
+            # Timestamp (When answer occurred) - SKIPPED per user request
+            # row[f"Timestamp: {text}"] = format_ms_to_min_sec(detail.get('reactionTimeMs'))
+            
+            # Duration (How long it took)
+            dur_ms = guna_durations.get(q_id, 0)
+            row[f"Duration: {text}"] = format_ms_to_min_sec(dur_ms)
 
     # Big Five
     bf_details = session.get('bigFiveDetails', {})
     if bf_details:
+        bf_durations = calculate_durations(bf_details)
+        
         for q_id, detail in bf_details.items():
             text = detail.get('text')
             if not text:
                 text = f"BigFive_{q_id}"
             
             row[text] = detail.get('value')
-            row[f"Time: {text}"] = format_ms_to_min_sec(detail.get('reactionTimeMs'))
+            # Timestamp - SKIPPED
+            # row[f"Timestamp: {text}"] = format_ms_to_min_sec(detail.get('reactionTimeMs'))
+            # Duration
+            dur_ms = bf_durations.get(q_id, 0)
+            row[f"Duration: {text}"] = format_ms_to_min_sec(dur_ms)
 
     return row
 

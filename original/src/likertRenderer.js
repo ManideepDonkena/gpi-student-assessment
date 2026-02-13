@@ -1,12 +1,19 @@
 
 import { getStore, submitGunaResponses, submitBigFiveResponses, updateGunaResponse, updateBigFiveResponse } from './dataStore.js';
+import { translations } from './translations.js';
 import { renderRoute } from './main.js';
 
 export function renderLikertSection(container, type) {
+  /* --- Translation Logic --- */
+  const lang = localStorage.getItem('gpi_lang') || 'en';
+  const t = translations[lang] || translations['en'];
+
   const store = getStore();
   const items = type === 'guna' ? store.state.gunaItems : store.state.bigFiveItems;
   const savedResponses = type === 'guna' ? store.state.gunaResponses : store.state.bigFiveResponses;
-  const title = type === 'guna' ? 'Part 1: Self-Reflection' : 'Part 2: Personality Traits';
+
+  // Update Header (using translations)
+  const title = type === 'guna' ? t.ui.part1 : t.ui.part2;
   const desc = type === 'guna'
     ? 'For each statement, indicate your level of agreement (1 = Strongly Disagree, 7 = Strongly Agree).'
     : 'I see myself as someone who... (1 = Disagree Strongly, 5 = Agree Strongly)';
@@ -19,40 +26,52 @@ export function renderLikertSection(container, type) {
     <h2>${title}</h2>
     <p>${desc}</p>
     <form id="likert-form" novalidate>
+      <div id="items-container"></div>
+      <div style="text-align: center; margin-top: 30px;">
+        <button type="submit" class="btn-primary">${t.ui.next}</button>
+      </div>
+    </form>
   `;
 
+  // We construct the items HTML separately
+  let itemsHtml = "";
+
   let currentDomain = "";
-  items.forEach(item => {
+  items.forEach((item, idx) => {
     // Inject Header if domain changes (Only for Guna items)
-    // Header injection removed for flat list
     if (false && type === 'guna' && item.domain && item.domain !== currentDomain) {
       currentDomain = item.domain;
       let domainTitle = currentDomain.charAt(0).toUpperCase() + currentDomain.slice(1) + " Life";
       if (currentDomain === 'inner') domainTitle = "Inner Thoughts & Ethics";
 
-      html += `<h3 style="margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 5px;">${domainTitle}</h3>`;
+      itemsHtml += `<h3 style="margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 5px;">${domainTitle}</h3>`;
     }
 
     // Determine labels based on type
-    // Original GPI items use a 7-Point Agreement Scale for better sensitivity
     const labels = type === 'guna'
       ? [
-        'Strongly Disagree', // 1
-        'Disagree',          // 2
-        'Somewhat Disagree', // 3
-        'Neutral',           // 4
-        'Somewhat Agree',    // 5
-        'Agree',             // 6
-        'Strongly Agree'     // 7
+        (t.likert?.guna && t.likert.guna["1"]) || 'Strongly Disagree',
+        (t.likert?.guna && t.likert.guna["2"]) || 'Disagree',
+        (t.likert?.guna && t.likert.guna["3"]) || 'Somewhat Disagree',
+        (t.likert?.guna && t.likert.guna["4"]) || 'Neutral',
+        (t.likert?.guna && t.likert.guna["5"]) || 'Somewhat Agree',
+        (t.likert?.guna && t.likert.guna["6"]) || 'Agree',
+        (t.likert?.guna && t.likert.guna["7"]) || 'Strongly Agree'
       ]
-      : ['Disagree', 'Slightly Disagree', 'Neutral', 'Slightly Agree', 'Agree']; // Big Five stays 5-point? Or update? User said "update", presumably referring to Guna.
+      : [
+        (t.likert?.bigfive && t.likert.bigfive["1"]) || 'Disagree Strongly',
+        (t.likert?.bigfive && t.likert.bigfive["2"]) || 'Disagree a little',
+        (t.likert?.bigfive && t.likert.bigfive["3"]) || 'Neutral',
+        (t.likert?.bigfive && t.likert.bigfive["4"]) || 'Agree a little',
+        (t.likert?.bigfive && t.likert.bigfive["5"]) || 'Agree Strongly'
+      ];
 
-    // Big Five usually uses 5-point. I'll keep it 5-point unless asked.
-    // The Guna scale is the one being refined.
+    // Translation Lookup for Item Text
+    const itemText = (t.items && t.items[item.id]) ? t.items[item.id] : item.text;
 
-    html += `
+    itemsHtml += `
       <div class="question-card" data-id="${item.id}" data-type="${type}">
-        <p class="question-text">${item.text}</p>
+        <p class="question-text">${itemText}</p>
         <div class="likert-options" style="display: flex; justify-content: space-between; gap: 5px;">
     `;
 
@@ -60,7 +79,7 @@ export function renderLikertSection(container, type) {
       // Value is index + 1
       const val = index + 1;
       const isChecked = savedResponses && savedResponses[item.id] == val ? 'checked' : '';
-      html += `
+      itemsHtml += `
           <label style="flex: 1; text-align: center; font-size: 0.85em; cursor: pointer;">
             <div style="margin-bottom: 5px;">${val}</div>
             <input type="radio" name="${item.id}" value="${val}" required ${isChecked}>
@@ -68,14 +87,18 @@ export function renderLikertSection(container, type) {
           </label>
         `;
     });
-    html += `
+    itemsHtml += `
         </div>
       </div>
     `;
   });
 
-  html += `<br><button type="submit">Continue</button></form>`;
+  // Inject items HTML into the main structure (hacky but works with the original design)
+  // Actually, I'll just set innerHTML of element, but I need to insert itemsHtml into the form.
+  // The structure above had <div id="items-container"></div>
+
   element.innerHTML = html;
+  element.querySelector('#items-container').innerHTML = itemsHtml;
 
   // --- Behavioral Tracking ---
   const startTime = Date.now();

@@ -74,25 +74,48 @@ export const studentGunaItems = [
 export const bigFiveItems = [
     // Reflective Big Five Items (adapted from BFI-10, Rammstedt & John, 2007)
     // Rewritten as behavioral statements for deeper self-reflection
-    // Scale: 1 (Disagree strongly) to 5 (Agree strongly)
-
-    // Extraversion
-    { id: "BF1", text: "At social gatherings, I tend to stay quiet and observe rather than actively join conversations.", trait: "extraversion", reverse: true },
-    { id: "BF6", text: "I feel energized after spending time with a group of people, even if they are not close friends.", trait: "extraversion", reverse: false },
-
-    // Agreeableness
-    { id: "BF2", text: "When I meet someone new, I tend to give them the benefit of the doubt until proven otherwise.", trait: "agreeableness", reverse: false },
-    { id: "BF7", text: "When someone makes a mistake, my first instinct is to notice what they did wrong rather than understand why.", trait: "agreeableness", reverse: true },
-
-    // Conscientiousness
-    { id: "BF3", text: "When I have a free day with no obligations, I often spend it without accomplishing anything productive.", trait: "conscientiousness", reverse: true },
-    { id: "BF8", text: "When I take on a task, I make sure every detail is done properly before considering it finished.", trait: "conscientiousness", reverse: false },
-
-    // Neuroticism
-    { id: "BF4", text: "When unexpected problems arise, I usually stay calm and think clearly about what to do next.", trait: "neuroticism", reverse: true },
-    { id: "BF9", text: "Before important events (exams, interviews, presentations), I often feel anxious to the point where it affects my preparation.", trait: "neuroticism", reverse: false },
-
-    // Openness
-    { id: "BF5", text: "I rarely feel moved or inspired by art, music, or poetry — they don't hold much personal value for me.", trait: "openness", reverse: true },
-    { id: "BF10", text: "I often find myself imagining alternative scenarios or mentally exploring 'what if' possibilities.", trait: "openness", reverse: false }
+    { id: "BFI1", text: "Is talkative", trait: "Extraversion", reverse: false },
+    { id: "BFI2", text: "Tends to find fault with others", trait: "Agreeableness", reverse: true },
+    { id: "BFI3", text: "Does a thorough job", trait: "Conscientiousness", reverse: false },
+    { id: "BFI4", text: "Is depressed, blue", trait: "Neuroticism", reverse: false },
+    { id: "BFI5", text: "Is original, comes up with new ideas", trait: "Openness", reverse: false },
+    { id: "BFI6", text: "Is reserved", trait: "Extraversion", reverse: true },
+    { id: "BFI7", text: "Is helpful and unselfish with others", trait: "Agreeableness", reverse: false },
+    { id: "BFI8", text: "Can be somewhat careless", trait: "Conscientiousness", reverse: true },
+    { id: "BFI9", text: "Is relaxed, handles stress well", trait: "Neuroticism", reverse: true },
+    { id: "BFI10", text: "Is curious about many different things", trait: "Openness", reverse: false },
+    { id: "BFI11", text: "Is full of energy", trait: "Extraversion", reverse: false },
+    { id: "BFI12", text: "Starts quarrels with others", trait: "Agreeableness", reverse: true },
+    { id: "BFI13", text: "Is a reliable worker", trait: "Conscientiousness", reverse: false },
+    { id: "BFI14", text: "Can be tense", trait: "Neuroticism", reverse: false },
+    { id: "BFI15", text: "Is ingenious, a deep thinker", trait: "Openness", reverse: false },
+    { id: "BFI16", text: "Generates a lot of enthusiasm", trait: "Extraversion", reverse: false },
+    { id: "BFI17", text: "Has a forgiving nature", trait: "Agreeableness", reverse: false },
+    { id: "BFI18", text: "Tends to be disorganized", trait: "Conscientiousness", reverse: true },
+    { id: "BFI19", text: "Worries a lot", trait: "Neuroticism", reverse: false },
+    { id: "BFI20", text: "Has an active imagination", trait: "Openness", reverse: false },
+    { id: "BFI21", text: "Tends to be quiet", trait: "Extraversion", reverse: true },
+    { id: "BFI22", text: "Is generally trusting", trait: "Agreeableness", reverse: false },
+    { id: "BFI23", text: "Tends to be lazy", trait: "Conscientiousness", reverse: true },
+    { id: "BFI24", text: "Is emotionally stable, not easily upset", trait: "Neuroticism", reverse: true },
+    { id: "BFI25", text: "Is inventive", trait: "Openness", reverse: false },
+    { id: "BFI26", text: "Has an assertive personality", trait: "Extraversion", reverse: false },
+    { id: "BFI27", text: "Can be cold and aloof", trait: "Agreeableness", reverse: true },
+    { id: "BFI28", text: "Perseveres until the task is finished", trait: "Conscientiousness", reverse: false },
+    { id: "BFI29", text: "Can be moody", trait: "Neuroticism", reverse: false },
+    { id: "BFI30", text: "Values artistic, aesthetic experiences", trait: "Openness", reverse: false },
+    { id: "BFI31", text: "Is sometimes shy, inhibited", trait: "Extraversion", reverse: true },
+    { id: "BFI32", text: "Is considerate and kind to almost everyone", trait: "Agreeableness", reverse: false },
+    { id: "BFI33", text: "Does things efficiently", trait: "Conscientiousness", reverse: false },
+    { id: "BFI34", text: "Remains calm in tense situations", trait: "Neuroticism", reverse: true },
+    { id: "BFI35", text: "Prefers work that is routine", trait: "Openness", reverse: true },
+    { id: "BFI36", text: "Is outgoing, sociable", trait: "Extraversion", reverse: false },
+    { id: "BFI37", text: "Is sometimes rude to others", trait: "Agreeableness", reverse: true },
+    { id: "BFI38", text: "Makes plans and follows through with them", trait: "Conscientiousness", reverse: false },
+    { id: "BFI39", text: "Gets nervous easily", trait: "Neuroticism", reverse: false },
+    { id: "BFI40", text: "Likes to reflect, play with ideas", trait: "Openness", reverse: false },
+    { id: "BFI41", text: "Has few artistic interests", trait: "Openness", reverse: true },
+    { id: "BFI42", text: "Likes to cooperate with others", trait: "Agreeableness", reverse: false },
+    { id: "BFI43", text: "Is easily distracted", trait: "Conscientiousness", reverse: true },
+    { id: "BFI44", text: "Is sophisticated in art, music, or literature", trait: "Openness", reverse: false }
 ];

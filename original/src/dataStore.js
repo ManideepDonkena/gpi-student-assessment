@@ -10,6 +10,7 @@ export const store = {
         demographics: {},
 
         // Guna Likert Section
+        language: localStorage.getItem('gpi_lang') || 'en', // Store language preference
         gunaItems: [],
         gunaItems: [],
         gunaResponses: {},
@@ -148,6 +149,43 @@ export function exportSessionData() {
     return JSON.stringify(store.state, null, 2);
 }
 
+export function resetSession(options = {}) {
+    const keepDemographics = options.keepDemographics || false;
+    const lang = localStorage.getItem('gpi_lang'); // Preserve language
+    localStorage.removeItem(STORAGE_KEY);
+
+    const prevDemographics = keepDemographics ? { ...store.state.demographics } : {};
+
+    // Reset State
+    store.state = {
+        view: 'intro',
+        sessionId: crypto.randomUUID(),
+        startTime: new Date().toISOString(),
+        viewTimings: {},
+        language: localStorage.getItem('gpi_lang') || 'en', // Store language
+        demographics: prevDemographics,
+        gunaItems: store.state.gunaItems, // Keep loaded items
+        bigFiveItems: store.state.bigFiveItems, // Keep loaded items
+        gunaResponses: {},
+        gunaDetails: {},
+        gunaMetadata: { timeMs: 0, cursorDistancePx: 0, answerChanges: 0 },
+        bigFiveResponses: {},
+        bigFiveDetails: {},
+        bigFiveMetadata: { timeMs: 0, cursorDistancePx: 0, answerChanges: 0 },
+        scenarios: store.state.scenarios, // Keep loaded scenarios
+        currentScenarioIndex: 0,
+        scenarioResponses: [],
+        version: 'original-gpi'
+    };
+
+    if (lang) localStorage.setItem('gpi_lang', lang); // Restore language
+
+    // If we kept data, persist it immediately so it survives reload
+    if (Object.keys(prevDemographics).length > 0) {
+        saveSession();
+    }
+}
+
 // --- Persistence Logic ---
 function saveSession() {
     try {
@@ -156,6 +194,7 @@ function saveSession() {
             view: s.view,
             sessionId: s.sessionId,
             startTime: s.startTime,
+            language: s.language,
             demographics: s.demographics,
             viewTimings: s.viewTimings,
             gunaResponses: s.gunaResponses,
@@ -182,6 +221,13 @@ function restoreSession() {
             if (data.sessionId) {
                 console.log("Restoring session:", data.sessionId);
                 Object.assign(store.state, data);
+
+                // Ensure current language preference overrides stored session language
+                // (In case user switched language since last save)
+                const currentLang = localStorage.getItem('gpi_lang');
+                if (currentLang) {
+                    store.state.language = currentLang;
+                }
             }
         }
     } catch (e) {

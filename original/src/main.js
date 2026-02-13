@@ -1,16 +1,26 @@
 
-import { initStore, getStore, logViewDuration } from './dataStore.js';
+import { initStore, getStore, logViewDuration, resetSession } from './dataStore.js';
 import { renderDemographics } from './demographics.js';
 import { renderLikertSection } from './likertRenderer.js';
-import { renderScenario } from './engine.js'; // Reusing existing engine
+import { renderScenario } from './engine.js';
 import { renderResults } from './results.js';
 import { renderReflection } from './reflection.js';
+import { translations } from './translations.js';
 
 const app = document.getElementById('app');
 
 async function init() {
   await initStore();
-  renderRoute();
+  const store = getStore();
+
+  // If we have a session in progress (view != intro), force show Intro first
+  // so user can choose to Resume or Start New.
+  if (store.state.view && store.state.view !== 'intro') {
+    console.log("Session found, showing Intro for Resume/New choice.");
+    renderRoute('intro');
+  } else {
+    renderRoute();
+  }
 }
 
 // --- DEBUG & ERROR HANDLING ---
@@ -29,67 +39,112 @@ window.onerror = function (message, source, lineno, colno, error) {
 // --- RENDER FUNCTIONS ---
 
 function renderIntro(container) {
+  const lang = localStorage.getItem('gpi_lang') || 'en';
+  const t = translations[lang] || translations['en'];
+  const ui = t.intro;
+  const common = t.ui;
+
+  const store = getStore();
+  const hasSession = store.state.view && store.state.view !== 'intro';
+
   container.innerHTML = `
-    <div class="card fade-in" style="text-align: center; max-width: 700px; margin: 0 auto;">
+    <div class="card fade-in" style="text-align: center; max-width: 700px; margin: 0 auto; position: relative;">
       
-      <p style="font-size: 1.1em; color: #888; font-style: italic; margin-bottom: 0;">त्रिविधा भवति श्रद्धा</p>
-      <h1 style="font-size: 2em; margin: 10px 0; color: #2c3e50;">Discover Your Inner Nature</h1>
+      <!-- Language Switcher -->
+      <button id="lang-switch-btn" style="position: absolute; top: 10px; right: 10px; background: transparent; border: 1px solid #ddd; font-size: 0.8em; padding: 4px 8px; border-radius: 4px; color: #666; cursor: pointer;">
+        🌐 ${common.change_lang || "Change Language"}
+      </button>
+
+      <p style="font-size: 1.1em; color: #888; font-style: italic; margin-bottom: 0;">${ui.subtitle}</p>
+      <h1 style="font-size: 2em; margin: 10px 0; color: #2c3e50;">${ui.title}</h1>
       <p style="font-size: 1.05em; color: #555; line-height: 1.7;">
-        According to the Bhagavad Gita, every person is a unique blend of three fundamental qualities — 
-        <strong style="color: #DAA520;">Sattva</strong> (harmony), 
-        <strong style="color: #FF4500;">Rajas</strong> (passion), and 
-        <strong style="color: #708090;">Tamas</strong> (inertia). 
-        This assessment reveals <em>your</em> unique balance.
+        ${ui.desc}
       </p>
 
       <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 24px 0;">
         <div style="background: linear-gradient(135deg, #FFF8DC, #FFEFD5); padding: 16px; border-radius: 12px;">
           <div style="font-size: 2em;">🧘</div>
-          <p style="font-weight: bold; margin: 6px 0 2px; color: #B8860B;">Part 1</p>
-          <p style="font-size: 0.8em; color: #666;">Self-Reflection<br>(57 questions)</p>
+          <p style="font-weight: bold; margin: 6px 0 2px; color: #B8860B;">${ui.p1_title}</p>
+          <p style="font-size: 0.8em; color: #666;">${ui.p1_desc}</p>
         </div>
         <div style="background: linear-gradient(135deg, #E8F4FD, #D6EAF8); padding: 16px; border-radius: 12px;">
           <div style="font-size: 2em;">🧠</div>
-          <p style="font-weight: bold; margin: 6px 0 2px; color: #2980B9;">Part 2</p>
-          <p style="font-size: 0.8em; color: #666;">Personality Traits<br>(10 questions)</p>
+          <p style="font-weight: bold; margin: 6px 0 2px; color: #2980B9;">${ui.p2_title}</p>
+          <p style="font-size: 0.8em; color: #666;">${ui.p2_desc}</p>
         </div>
         <div style="background: linear-gradient(135deg, #F5EEF8, #EBDEF0); padding: 16px; border-radius: 12px;">
           <div style="font-size: 2em;">🎭</div>
-          <p style="font-weight: bold; margin: 6px 0 2px; color: #8E44AD;">Part 3</p>
-          <p style="font-size: 0.8em; color: #666;">Life Scenarios<br>(3 situations)</p>
+          <p style="font-weight: bold; margin: 6px 0 2px; color: #8E44AD;">${ui.p3_title}</p>
+          <p style="font-size: 0.8em; color: #666;">${ui.p3_desc}</p>
         </div>
       </div>
 
       <div style="text-align: left; background: #f8f9fa; padding: 16px 20px; border-radius: 10px; margin: 16px 0; border-left: 4px solid #3498db;">
-        <p style="margin: 0 0 8px; font-weight: bold; color: #2c3e50;">📋 Before you begin:</p>
+        <p style="margin: 0 0 8px; font-weight: bold; color: #2c3e50;">${ui.before_title}</p>
         <ul style="margin: 0; padding-left: 20px; line-height: 1.8; color: #555;">
-            <li>There are <strong>no right or wrong answers</strong> — only your truth.</li>
-            <li>Answer based on your <strong>actual behavior</strong>, not what you think is ideal.</li>
-            <li>Takes approximately <strong>8 - 12 minutes</strong>.</li>
-            <li>Your data is <strong>100% anonymous</strong> and used only for academic research.</li>
+            <li>${ui.li1}</li>
+            <li>${ui.li2}</li>
+            <li>${ui.li3}</li>
+            <li>${ui.li4}</li>
         </ul>
       </div>
 
       <p style="font-size: 0.9em; color: #888; margin-bottom: 20px;">
-        🎁 At the end, you'll receive your <strong>personalized Triguna profile</strong> with insights about your personality.
+        ${ui.footer}
       </p>
 
-      <button id="start-btn" style="font-size: 1.1em; padding: 14px 40px;">Begin the Journey →</button>
+      ${hasSession ? `
+        <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border: 1px solid #c8e6c9;">
+            <p style="margin: 0 0 15px; font-weight: bold; color: #2e7d32;">${common.session_msg}</p>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <button id="resume-btn" style="background: #2e7d32; color: white;">${common.resume_btn}</button>
+                <button id="new-btn" style="background: white; color: #d32f2f; border: 1px solid #d32f2f;">${common.new_session_btn}</button>
+            </div>
+        </div>
+      ` : `
+        <button id="start-btn" style="font-size: 1.1em; padding: 14px 40px;">${common.start_btn}</button>
+      `}
     </div>
   `;
 
-  document.getElementById('start-btn').addEventListener('click', () => {
-    // We need to update state, but "initStore" handles loading.
-    // Changing view directly here.
-    import('./dataStore.js').then(module => {
-      module.store.state.view = 'demographics';
-      renderRoute();
-    });
+  // Language Switcher Logic
+  document.getElementById('lang-switch-btn').addEventListener('click', () => {
+    // Clear language preference and reload to show modal
+    localStorage.removeItem('gpi_lang');
+    sessionStorage.removeItem('lang_selected');
+    location.reload();
   });
+
+  if (hasSession) {
+    document.getElementById('resume-btn').addEventListener('click', () => {
+      // Resume: User requested to start from Reflection to "re-prime"
+      renderRoute('reflection');
+    });
+    document.getElementById('new-btn').addEventListener('click', () => {
+      if (confirm('Are you sure? This will delete your answers but keep your demographics.\n\n(क्या आप सुनिश्चित हैं? यह आपके उत्तरों को हटा देगा लेकिन आपकी पृष्ठभूमि की जानकारी को सुरक्षित रखेगा।)')) {
+        // Start New: Keep Demographics = true
+        resetSession({ keepDemographics: true });
+        initStore().then(() => {
+          // If we kept demographics, go to Reflection.
+          if (Object.keys(store.state.demographics).length > 0) {
+            renderRoute('reflection');
+          } else {
+            renderRoute('demographics');
+          }
+        });
+      }
+    });
+  } else {
+    document.getElementById('start-btn').addEventListener('click', () => {
+      import('./dataStore.js').then(module => {
+        module.store.state.view = 'demographics';
+        renderRoute();
+      });
+    });
+  }
 }
 
-export function renderRoute() {
-  console.log("Rendering Route...");
+export function renderRoute(viewOverride) {
   const store = getStore();
   const app = document.getElementById('app');
 
@@ -98,21 +153,21 @@ export function renderRoute() {
     return;
   }
 
+  const view = viewOverride || store.state.view;
+  console.log("Rendering View:", view);
+
   // --- Timing Tracking ---
   const now = Date.now();
-  if (window.lastView && window.lastView !== store.state.view) {
+  if (window.lastView && window.lastView !== view) {
     const duration = now - window.lastViewTime;
     logViewDuration(window.lastView, duration);
     console.log(`Time on ${window.lastView}: ${duration}ms`);
   }
-  window.lastView = store.state.view;
+  window.lastView = view;
   window.lastViewTime = now;
 
   app.innerHTML = '';
   window.scrollTo(0, 0);
-
-  const view = store.state.view;
-  console.log("Current View:", view);
 
   if (view === 'intro') {
     renderIntro(app);

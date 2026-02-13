@@ -14,9 +14,84 @@
 </head>
 
 <body>
-  <div id="app">
+  <!-- Language Selection Modal -->
+  <div id="language-modal"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.95); z-index: 1000; display: flex; align-items: center; justify-content: center;">
+    <div
+      style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; max-width: 400px; width: 90%;">
+      <h2 style="font-family: 'Cinzel', serif; color: #2c3e50; margin-bottom: 30px;">Choose Language / भाषा चुनें</h2>
+
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <button id="btn-en"
+          style="padding: 15px 30px; font-size: 1.2em; border: 2px solid #3498db; background: transparent; color: #3498db; border-radius: 10px; cursor: pointer; transition: all 0.3s; font-family: 'Lato', sans-serif;">
+          English
+        </button>
+        <button id="btn-hi"
+          style="padding: 15px 30px; font-size: 1.2em; border: 2px solid #e67e22; background: transparent; color: #e67e22; border-radius: 10px; cursor: pointer; transition: all 0.3s; font-family: 'Lato', sans-serif;">
+          हिंदी (Hindi)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" style="display: none;">
     <!-- Content injected by main.js -->
   </div>
+
+  <script>
+    // Language Selection Logic
+    const modal = document.getElementById('language-modal');
+    const app = document.getElementById('app');
+
+    function selectLanguage(lang) {
+      localStorage.setItem('gpi_lang', lang);
+      modal.style.opacity = '0';
+      setTimeout(() => {
+        modal.style.display = 'none';
+        app.style.display = 'block';
+        // Trigger a re-render or reload if necessary, but initial load will catch the localStorage
+        // Since main.js runs as module, it might have already run using 'en' default.
+        // We might need to reload specific parts or reload page if main.js already executed.
+        // But main.js exports renderRoute, maybe we can access it? 
+        // Modules strictly scoped? Yes. 
+        // Safest: Reload page if language changed from default? 
+        // Or just reload page to apply preference cleanly:
+        location.reload();
+      }, 300);
+    }
+
+    // Check if language was just selected (avoid loop)
+    if (localStorage.getItem('gpi_lang')) {
+      // If language exists, hide modal immediately to prevent flicker? 
+      // Actually, if we just reloaded, we want to skip modal.
+      // But we can allow re-selection if we want ("Change Language" button elsewhere).
+      // For now, prompt ONCE per session? 
+      // The user Requirement: "Upon opening... prompt".
+      // Let's prompt every time OR provide a "Change" button.
+      // If we persist indefinitely, they never see it again.
+      // Let's check session storage flag "lang_selected_this_session".
+
+      if (sessionStorage.getItem('lang_selected')) {
+        modal.style.display = 'none';
+        app.style.display = 'block';
+      } else {
+        // Show modal
+      }
+    }
+
+    document.getElementById('btn-en').addEventListener('click', () => {
+      localStorage.setItem('gpi_lang', 'en');
+      sessionStorage.setItem('lang_selected', 'true');
+      selectLanguage('en');
+    });
+
+    document.getElementById('btn-hi').addEventListener('click', () => {
+      localStorage.setItem('gpi_lang', 'hi');
+      sessionStorage.setItem('lang_selected', 'true');
+      selectLanguage('hi');
+    });
+  </script>
+
   <script type="module" src="src/main.js"></script>
 </body>
 
