@@ -7,7 +7,7 @@ export function renderLikertSection(container, type) {
   const items = type === 'guna' ? store.state.gunaItems : store.state.bigFiveItems;
   const title = type === 'guna' ? 'Part 1: Self-Reflection' : 'Part 2: Personality Traits';
   const desc = type === 'guna'
-    ? 'For each situation, choose the option that best describes your usual behavior (1 = Never, 5 = Always).'
+    ? 'For each statement, indicate your level of agreement (1 = Strongly Disagree, 5 = Strongly Agree).'
     : 'I see myself as someone who... (1 = Disagree Strongly, 5 = Agree Strongly)';
 
   const element = document.createElement('div');
@@ -33,8 +33,9 @@ export function renderLikertSection(container, type) {
     }
 
     // Determine labels based on type
+    // Original GPI items are statements, so Agreement scale is better than Frequency
     const labels = type === 'guna'
-      ? ['Never', 'Rarely', 'Sometimes', 'Often', 'Always']
+      ? ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree']
       : ['Disagree', 'Slightly Disagree', 'Neutral', 'Slightly Agree', 'Agree'];
 
     html += `
