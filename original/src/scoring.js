@@ -48,11 +48,11 @@ export function calculateScores(state) {
         if (item.reverse) {
             val = 6 - val;
         }
-        // Handle trait names (lowercase in items.js, maybe?)
-        // items.js uses lowercase 'extraversion', but let's check.
-        // Assuming trait names in items.js match keys in bfScores.
-        if (bfScores[item.trait]) {
-            bfScores[item.trait].push(val);
+
+        // Case-insensitive trait matching
+        const traitKey = item.trait.toLowerCase();
+        if (bfScores[traitKey]) {
+            bfScores[traitKey].push(val);
         }
     });
 

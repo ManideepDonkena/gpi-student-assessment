@@ -77,9 +77,7 @@ export function renderResults(container) {
   for (const trait in bfScores) {
     const vals = bfScores[trait];
     const sum = vals.reduce((a, b) => a + b, 0);
-    // Capitalize trait name for finalBigFive keys to match translation keys if needed, 
-    // but bfItems usually have lowercase traits like 'extraversion'. 
-    // The translation keys are 'Extraversion'. Let's Ensure Capitalization.
+    // Capitalize trait name for finalBigFive keys (consistent with scoring.js)
     const traitKey = trait.charAt(0).toUpperCase() + trait.slice(1);
     finalBigFive[traitKey] = (sum / (vals.length || 1)).toFixed(1);
   }
