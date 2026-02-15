@@ -68,15 +68,23 @@ def clean_and_analyze(input_file="original_gpi_dump.json"):
 
     cleaned_data = []
     fake_count = 0
+    dummy_count = 0
 
     for session in data:
         bf_resps = session.get('bigFiveResponses', {})
         guna_resps = session.get('gunaResponses', {})
+        demos = session.get('demographics', {})
+        
         n_bf = len(bf_resps)
         n_guna = len(guna_resps)
         total_items = n_bf + n_guna
         
         if total_items == 0: continue
+
+        # Filter Dummy Data (Male + Homemaker)
+        if demos.get('gender') == 'Male' and demos.get('occupation') == 'Homemaker':
+            dummy_count += 1
+            continue
 
         timings = session.get('viewTimings', {})
         total_time_ms = timings.get('bigfive-likert', 0) + timings.get('guna-likert', 0)
@@ -93,6 +101,7 @@ def clean_and_analyze(input_file="original_gpi_dump.json"):
         session['recalculated_bfi'] = calculate_bfi_scores(bf_resps, n_bf)
         cleaned_data.append(session)
 
+    print(f"Dummy sessions removed (Male+Homemaker): {dummy_count}")
     print(f"Fake sessions removed (ART <= 1.5s): {fake_count}")
     print(f"Clean sessions remaining: {len(cleaned_data)}")
 
