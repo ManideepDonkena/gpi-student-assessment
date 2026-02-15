@@ -219,7 +219,7 @@ export function renderResults(container) {
         </p>
     </div>
 
-    <div style="text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
+    <div id="results-footer" style="text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
         <p style="margin-bottom: 20px; color: #27ae60; font-weight: bold;">${ui.thank_you}</p>
         
         <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
@@ -230,6 +230,9 @@ export function renderResults(container) {
   `;
 
   container.appendChild(element);
+
+  // Helper to find footer for insertion
+  const footer = element.querySelector('#results-footer');
 
   // --- 4. Gamification / Comparison (Simulated from N=80) ---
   // Note: Hardcoded English for new features as per user request to 'redo in original' quickly
@@ -285,7 +288,7 @@ export function renderResults(container) {
 
   // Add Comparison Card to UI
   const comparisonCard = document.createElement('div');
-  comparisonCard.style.cssText = 'margin-top: 2rem; padding: 20px; background: #fff; border: 2px dashed #ccc; border-radius: 12px; text-align: center;';
+  comparisonCard.style.cssText = 'margin-top: 2rem; margin-bottom: 2rem; padding: 20px; background: #fff; border: 2px dashed #ccc; border-radius: 12px; text-align: center;';
   comparisonCard.innerHTML = `
     <h3 style="margin-top: 0; color: #555;">📊 How do you compare?</h3>
     <p style="font-size: 0.9em; color: #777;">Compared to University Average (N=80)</p>
@@ -303,11 +306,12 @@ export function renderResults(container) {
         </div>
     </div>
   `;
-  container.insertBefore(comparisonCard, container.lastChild);
+  // Insert BEFORE footer
+  element.insertBefore(comparisonCard, footer);
 
   // --- Feedback Functionality ---
   const feedbackCard = document.createElement('div');
-  feedbackCard.style.cssText = 'margin-top: 2rem; background: #fff; border-radius: 12px; padding: 24px; border: 1px solid #e1e8ed; text-align: center;';
+  feedbackCard.style.cssText = 'margin-top: 2rem; margin-bottom: 2rem; background: #fff; border-radius: 12px; padding: 24px; border: 1px solid #e1e8ed; text-align: center;';
   feedbackCard.innerHTML = `
         <h3 style="margin-top: 0; color: #2c3e50;">💡 Help Us Improve</h3>
         <p style="color: #666; font-size: 0.9em; margin-bottom: 15px;">Do you have any suggestions or feedback for us?</p>
@@ -320,8 +324,8 @@ export function renderResults(container) {
             ✅ Thank you! Your feedback has been recorded.
         </div>
   `;
-  // Insert before the footer/buttons section
-  container.insertBefore(feedbackCard, container.lastChild);
+  // Insert BEFORE footer (after comparisonCard)
+  element.insertBefore(feedbackCard, footer);
 
   // Add event listener for feedback
   const feedbackBtn = feedbackCard.querySelector('#feedback-btn');
@@ -420,15 +424,11 @@ export function renderResults(container) {
   downloadBtn.innerHTML = "📄 Download Report"; // Update text
 
   downloadBtn.addEventListener('click', () => {
-    const btnContainer = element.querySelector('#download-btn').parentNode;
-    const shareBtn = element.querySelector('#share-btn');
+    // Hide footer (buttons) and feedback for PDF
+    const footer = element.querySelector('#results-footer');
 
-    // Hide buttons for PDF
-    btnContainer.style.display = 'none';
-    if (shareBtn) shareBtn.style.display = 'none'; // Should be inside btnContainer usually, but just in case
-    // Also hide feedback form if visible
-    const feedbackSection = element.querySelector('#feedback-form').parentNode;
-    feedbackSection.style.display = 'none';
+    footer.style.display = 'none';
+    feedbackCard.style.display = 'none';
 
     const opt = {
       margin: [10, 10, 10, 10], // top, left, bottom, right
@@ -440,10 +440,9 @@ export function renderResults(container) {
 
     // Generate PDF
     html2pdf().set(opt).from(element).save().then(() => {
-      // Show buttons again
-      btnContainer.style.display = 'flex';
-      if (shareBtn) shareBtn.style.display = 'inline-block';
-      feedbackSection.style.display = 'block';
+      // Show again
+      footer.style.display = 'block';
+      feedbackCard.style.display = 'block';
     });
   });
 

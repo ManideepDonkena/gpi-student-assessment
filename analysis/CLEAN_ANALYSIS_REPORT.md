@@ -16,15 +16,15 @@ Neuroticism          3.50
 Openness             3.40
 
 --- Preliminary Analysis: BFI-44 Group ---
-Sample Size: 84
-Genders: {'Male': 53, 'Female': 30, 'Prefer not to say': 1}
+Sample Size: 91
+Genders: {'Male': 59, 'Female': 31, 'Prefer not to say': 1}
 Avg Guna Scores:
-Sattva    4.966931
-Rajas     3.909048
-Tamas     3.093537
+Sattva    4.876272
+Rajas     3.881758
+Tamas     3.144819
 Avg Big Five Traits:
-Extraversion         2.894345
-Agreeableness        3.895503
-Conscientiousness    3.305556
-Neuroticism          2.903274
-Openness             3.586905
+Extraversion         2.905220
+Agreeableness        3.835165
+Conscientiousness    3.290598
+Neuroticism          2.935440
+Openness             3.549451
