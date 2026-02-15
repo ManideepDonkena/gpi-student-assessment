@@ -37,36 +37,47 @@ Bottom 5 Weakest Items (Guna):
 
 ---
 
-### Psychometric Validity: BFI-44 Cohort (N=92)
+### Psychometric Validity: BFI-44 Cohort (N=94)
 
 #### Internal Consistency (Cronbach's Alpha)
 | Scale | Items | Alpha |
 | :--- | :--- | :--- |
-| Sattva | 27 | 0.923 |
-| Rajas | 25 | 0.891 |
-| Tamas | 28 | 0.946 |
-| Extraversion | 8 | 0.590 |
-| Agreeableness | 9 | 0.758 |
-| Conscientiousness | 9 | 0.814 |
-| Neuroticism | 8 | 0.786 |
-| Openness | 10 | 0.575 |
+| Sattva | 27 | 0.908 |
+| Rajas | 25 | 0.888 |
+| Tamas | 28 | 0.943 |
+| Extraversion | 8 | 0.630 |
+| Agreeableness | 9 | 0.686 |
+| Conscientiousness | 9 | 0.822 |
+| Neuroticism | 8 | 0.791 |
+| Openness | 10 | 0.486 |
 
 #### Item-Total Analysis (Strengths & Weaknesses)
 
 Top 5 Strongest Items (Guna):
 | Scale | Item | ITC |
 | :--- | :--- | :--- |
-| Tamas | T_CX | 0.749 |
-| Sattva | S_CH | 0.744 |
-| Tamas | T_FF | 0.740 |
-| Tamas | T_AX | 0.728 |
-| Tamas | T_DZ | 0.721 |
+| Sattva | S_CH | 0.727 |
+| Tamas | T_FF | 0.727 |
+| Tamas | T_AX | 0.708 |
+| Tamas | T_FD | 0.707 |
+| Tamas | T_CV | 0.704 |
 
 Bottom 5 Weakest Items (Guna):
 | Scale | Item | ITC |
 | :--- | :--- | :--- |
-| Sattva | S_BF | 0.328 |
-| Rajas | R_BH | 0.321 |
-| Rajas | R_BX | 0.108 |
-| Rajas | R_AL | 0.056 |
-| Rajas | R_AV | 0.016 |
+| Sattva | S_BF | 0.256 |
+| Sattva | S_J | 0.224 |
+| Rajas | R_BX | -0.012 |
+| Rajas | R_AL | -0.035 |
+| Rajas | R_AV | -0.059 |
+
+### Interpretation Guide
+- **Cronbach's Alpha**: Measures how well a set of questions (items) measures the same underlying construct (Reliability).
+    - **> 0.90**: Excellent internal consistency.
+    - **0.80 - 0.89**: Good.
+    - **0.70 - 0.79**: Acceptable.
+    - **< 0.60**: Questionable / Poor. The items may not be related enough.
+- **Item-Total Correlation (ITC)**: How well one specific question correlates with the total score of its group.
+    - **> 0.30**: Good item. It fits well with the others.
+    - **< 0.30**: Weak item. It might be confusing or irrelevant.
+    - **Negative**: **BAD ITEM**. It is measuring the OPPOSITE of what we want. Needs to be removed or reverse-coded.

@@ -110,8 +110,8 @@ def analyze_phase4():
             
             report.append(f"| {guna} | {f_stat:.2f} | {p_val:.4f} | {sig} |")
             
-            # Plot Trend if interesting
-            if p_val < 0.15:
+            # Plot Trend (Always plot for visibility as per user request)
+            if True:
                 plt.figure(figsize=(6, 5))
                 # Boxplot per year
                 plt.boxplot(groups, labels=sorted(valid_years['Year_Num'].unique()))

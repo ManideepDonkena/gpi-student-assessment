@@ -74,6 +74,7 @@ def flatten_session(session):
         "GPA": session.get('demographics', {}).get('gpa'),
         "Spiritual_Practice": session.get('demographics', {}).get('spiritualPractice'),
         "Gita_Familiarity": session.get('demographics', {}).get('gitaFamiliarity'),
+        "Feedback": session.get('feedback'),
     }
 
     # Computed Scores
@@ -123,7 +124,7 @@ def save_to_csv(data_list, filename="firebase_data.csv"):
     # Prioritized prefix list
     priority = ['SessionID', 'FirebaseID', 'Timestamp', 'Version', 
                 'Age', 'Gender', 'Occupation', 'Education', 'Major', 'Year', 'GPA',
-                'Spiritual_Practice', 'Gita_Familiarity',
+                'Spiritual_Practice', 'Gita_Familiarity', 'Feedback',
                 'Score_Sattva_Raw', 'Score_Rajas_Raw', 'Score_Tamas_Raw', 'Dominant_Guna',
                 'Score_BigFive_extraversion', 'Score_BigFive_agreeableness', 
                 'Score_BigFive_conscientiousness', 'Score_BigFive_neuroticism', 
