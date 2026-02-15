@@ -1,4 +1,4 @@
-import { exportSessionData, getStore } from './dataStore.js';
+import { exportSessionData, getStore, submitFeedback } from './dataStore.js';
 import { studentGunaItems, bigFiveItems } from './items.js';
 import { translations } from './translations.js';
 
@@ -230,6 +230,128 @@ export function renderResults(container) {
   `;
 
   container.appendChild(element);
+
+  // --- 4. Gamification / Comparison (Simulated from N=80) ---
+  // Note: Hardcoded English for new features as per user request to 'redo in original' quickly
+  const populationStats = {
+    Sattva: { mean: 5.00, sd: 0.91 },
+    Rajas: { mean: 3.94, sd: 0.96 },
+    Tamas: { mean: 3.09, sd: 1.17 }
+  };
+
+  function getPercentile(score, mean, sd) {
+    const z = (score - mean) / sd;
+    const p = 0.5 * (1 + Math.erf(z / Math.sqrt(2)));
+    return Math.round(p * 100);
+  }
+
+  // Calculate user percentiles
+  const pSattva = getPercentile(parseFloat(rawGuna.Sattva), populationStats.Sattva.mean, populationStats.Sattva.sd);
+  const pRajas = getPercentile(parseFloat(rawGuna.Rajas), populationStats.Rajas.mean, populationStats.Rajas.sd);
+  const pTamas = getPercentile(parseFloat(rawGuna.Tamas), populationStats.Tamas.mean, populationStats.Tamas.sd);
+
+  // Generate a "Badge"
+  let badgeHTML = '';
+  let shareStat = '';
+
+  if (pSattva >= 80) {
+    badgeHTML = `<div style="background: #eaffea; border: 1px solid #27ae60; color: #27ae60; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">🏆 <strong>Top ${100 - pSattva}%</strong> in Sattva (Harmonious Balance)</div>`;
+    shareStat = `I'm in the Top ${100 - pSattva}% for Focus & Balance (Sattva)! 🧘‍♂️`;
+  } else if (pRajas >= 80) {
+    badgeHTML = `<div style="background: #fff0eb; border: 1px solid #e74c3c; color: #e74c3c; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">🔥 <strong>Top ${100 - pRajas}%</strong> in Rajas (Passion & Drive)</div>`;
+    shareStat = `I have higher Drive (Rajas) than ${pRajas}% of students! 🔥`;
+  } else if (pTamas <= 20) {
+    badgeHTML = `<div style="background: #f0f4f8; border: 1px solid #34495e; color: #34495e; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">⚡ <strong>Top ${pTamas}%</strong> in Energy (Low Inertia)</div>`;
+    shareStat = `I have less Inertia (Tamas) than ${100 - pTamas}% of students! ⚡`;
+  }
+
+  // Add Comparison Card to UI
+  const comparisonCard = document.createElement('div');
+  comparisonCard.style.cssText = 'margin-top: 2rem; padding: 20px; background: #fff; border: 2px dashed #ccc; border-radius: 12px; text-align: center;';
+  comparisonCard.innerHTML = `
+    <h3 style="margin-top: 0; color: #555;">📊 How do you compare?</h3>
+    <p style="font-size: 0.9em; color: #777;">Compared to University Average (N=80)</p>
+    ${badgeHTML}
+    <div style="display: flex; justify-content: space-around; margin-top: 10px; font-size: 0.9em;">
+        <div>
+            <strong>Sattva</strong><br>
+            You are higher than<br>
+            <span style="font-size: 1.2em; color: #27ae60; font-weight: bold;">${pSattva}%</span> of peers
+        </div>
+        <div>
+            <strong>Rajas</strong><br>
+            You are higher than<br>
+            <span style="font-size: 1.2em; color: #e67e22; font-weight: bold;">${pRajas}%</span> of peers
+        </div>
+    </div>
+  `;
+  container.insertBefore(comparisonCard, container.lastChild);
+
+  // --- Feedback Functionality ---
+  const feedbackCard = document.createElement('div');
+  feedbackCard.style.cssText = 'margin-top: 2rem; background: #fff; border-radius: 12px; padding: 24px; border: 1px solid #e1e8ed; text-align: center;';
+  feedbackCard.innerHTML = `
+        <h3 style="margin-top: 0; color: #2c3e50;">💡 Help Us Improve</h3>
+        <p style="color: #666; font-size: 0.9em; margin-bottom: 15px;">Do you have any suggestions or feedback for us?</p>
+        
+        <div id="feedback-form">
+            <textarea id="feedback-text" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; resize: vertical;" placeholder="Type your suggestions here..."></textarea>
+            <button id="feedback-btn" style="margin-top: 10px; background: #34495e; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer;">Submit Feedback</button>
+        </div>
+        <div id="feedback-success" style="display: none; color: #27ae60; font-weight: bold; margin-top: 10px;">
+            ✅ Thank you! Your feedback has been recorded.
+        </div>
+  `;
+  // Insert before the footer/buttons section
+  container.insertBefore(feedbackCard, container.lastChild);
+
+  // Add event listener for feedback
+  const feedbackBtn = feedbackCard.querySelector('#feedback-btn');
+  const feedbackText = feedbackCard.querySelector('#feedback-text');
+  const feedbackForm = feedbackCard.querySelector('#feedback-form');
+  const feedbackSuccess = feedbackCard.querySelector('#feedback-success');
+
+  feedbackBtn.addEventListener('click', async () => {
+    const text = feedbackText.value.trim();
+    await submitFeedback(text || "No suggestions provided");
+    feedbackForm.style.display = 'none';
+    feedbackSuccess.style.display = 'block';
+  });
+
+  // --- Share Functionality ---
+  // Create Share Button and inject into the button container
+  const buttonContainer = element.querySelector('#download-btn').parentNode;
+  const shareBtn = document.createElement('button');
+  shareBtn.id = 'share-btn';
+  shareBtn.style.cssText = 'background: linear-gradient(135deg, #8e44ad, #9b59b6); border: none; margin-right: 1rem; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;';
+  shareBtn.innerHTML = '📤 Share My Profile';
+
+  // Insert as first button
+  buttonContainer.insertBefore(shareBtn, buttonContainer.firstChild);
+
+  shareBtn.addEventListener('click', async () => {
+    const smartText = shareStat ? `${shareStat}\n\nMy Dominant Guna: ${dominantName}` : `I discovered my cognitive architecture! 🧠\n\nMy Dominant Guna: ${dominantName}`;
+    const shareData = {
+      title: 'My Guna Personality Profile',
+      text: `${smartText}\n\nDiscover your profile here:`,
+      url: 'https://manideepdonkena.github.io/gpi-student-assessment/original/'
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        const textToCopy = `${shareData.text} ${shareData.url}`;
+        await navigator.clipboard.writeText(textToCopy);
+        const originalText = shareBtn.innerHTML;
+        shareBtn.innerHTML = "✅ Copied to Clipboard!";
+        setTimeout(() => shareBtn.innerHTML = originalText, 2000);
+      }
+    } catch (err) {
+      console.error('Error sharing:', err);
+    }
+  });
+
 
   // --- 4. Render Charts ---
   new Chart(document.getElementById('gunsChart'), {

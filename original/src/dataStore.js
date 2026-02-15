@@ -29,9 +29,21 @@ export const store = {
         currentScenarioIndex: 0,
         scenarioResponses: [],
         // Scenario metadata is stored per-response in logScenarioResponse
-        version: 'original-gpi' // Tag for filtering data later
+        version: 'original-gpi', // Tag for filtering data later
+        feedback: null // User feedback/suggestion at the end
     }
 };
+
+export async function submitFeedback(feedbackText) {
+    store.state.feedback = feedbackText;
+    saveSession();
+
+    // If we have a firebase ID, update the doc
+    if (store.state.firebaseId) {
+        const { updateSessionData } = await import('./firebase.js');
+        await updateSessionData(store.state.firebaseId, { feedback: feedbackText });
+    }
+}
 
 export async function initStore() {
     try {

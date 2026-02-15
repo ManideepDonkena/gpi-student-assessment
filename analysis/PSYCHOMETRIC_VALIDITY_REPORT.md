@@ -37,19 +37,19 @@ Bottom 5 Weakest Items (Guna):
 
 ---
 
-### Psychometric Validity: BFI-44 Cohort (N=80)
+### Psychometric Validity: BFI-44 Cohort (N=84)
 
 #### Internal Consistency (Cronbach's Alpha)
 | Scale | Items | Alpha |
 | :--- | :--- | :--- |
-| Sattva | 27 | 0.907 |
-| Rajas | 25 | 0.895 |
-| Tamas | 28 | 0.947 |
-| Extraversion | 8 | 0.604 |
-| Agreeableness | 9 | 0.717 |
-| Conscientiousness | 9 | 0.811 |
-| Neuroticism | 8 | 0.778 |
-| Openness | 10 | 0.487 |
+| Sattva | 27 | 0.916 |
+| Rajas | 25 | 0.892 |
+| Tamas | 28 | 0.948 |
+| Extraversion | 8 | 0.609 |
+| Agreeableness | 9 | 0.732 |
+| Conscientiousness | 9 | 0.823 |
+| Neuroticism | 8 | 0.787 |
+| Openness | 10 | 0.533 |
 
 #### Item-Total Analysis (Strengths & Weaknesses)
 
@@ -57,16 +57,16 @@ Top 5 Strongest Items (Guna):
 | Scale | Item | ITC |
 | :--- | :--- | :--- |
 | Tamas | T_CX | 0.756 |
-| Sattva | S_EP | 0.736 |
-| Sattva | S_CH | 0.735 |
-| Tamas | T_FF | 0.726 |
-| Tamas | T_AX | 0.723 |
+| Sattva | S_CH | 0.751 |
+| Tamas | T_FF | 0.734 |
+| Tamas | T_AX | 0.719 |
+| Tamas | T_CV | 0.710 |
 
 Bottom 5 Weakest Items (Guna):
 | Scale | Item | ITC |
 | :--- | :--- | :--- |
-| Sattva | S_BF | 0.295 |
-| Sattva | S_J | 0.230 |
-| Rajas | R_BX | 0.109 |
-| Rajas | R_AV | -0.036 |
-| Rajas | R_AL | -0.036 |
+| Sattva | S_BF | 0.309 |
+| Sattva | S_J | 0.251 |
+| Rajas | R_BX | 0.092 |
+| Rajas | R_AL | -0.011 |
+| Rajas | R_AV | -0.019 |
