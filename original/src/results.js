@@ -397,18 +397,36 @@ export function renderResults(container) {
     }
   });
 
-  // Handle Download
-  element.querySelector('#download-btn').addEventListener('click', () => {
-    const data = exportSessionData();
-    const blob = new Blob([data], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `session-${getStore().state.sessionId}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+  // Handle PDF Download
+  const downloadBtn = element.querySelector('#download-btn');
+  downloadBtn.innerHTML = "📄 Download Report"; // Update text
+
+  downloadBtn.addEventListener('click', () => {
+    const btnContainer = element.querySelector('#download-btn').parentNode;
+    const shareBtn = element.querySelector('#share-btn');
+
+    // Hide buttons for PDF
+    btnContainer.style.display = 'none';
+    if (shareBtn) shareBtn.style.display = 'none'; // Should be inside btnContainer usually, but just in case
+    // Also hide feedback form if visible
+    const feedbackSection = element.querySelector('#feedback-form').parentNode;
+    feedbackSection.style.display = 'none';
+
+    const opt = {
+      margin: [10, 10, 10, 10], // top, left, bottom, right
+      filename: `Guna_Profile_${getStore().state.sessionId.slice(0, 6)}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Generate PDF
+    html2pdf().set(opt).from(element).save().then(() => {
+      // Show buttons again
+      btnContainer.style.display = 'flex';
+      if (shareBtn) shareBtn.style.display = 'inline-block';
+      feedbackSection.style.display = 'block';
+    });
   });
 
   // Handle Restart
