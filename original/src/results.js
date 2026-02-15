@@ -430,17 +430,26 @@ export function renderResults(container) {
     footer.style.display = 'none';
     feedbackCard.style.display = 'none';
 
+    // Temporarily remove animation and shadow for clean print
+    const originalAnimation = element.style.animation;
+    const originalBoxShadow = element.style.boxShadow;
+    element.style.animation = 'none';
+    element.style.boxShadow = 'none';
+
     const opt = {
-      margin: [10, 10, 10, 10], // top, left, bottom, right
+      margin: [10, 10, 10, 10],
       filename: `Guna_Profile_${getStore().state.sessionId.slice(0, 6)}.pdf`,
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
     };
 
     // Generate PDF
     html2pdf().set(opt).from(element).save().then(() => {
-      // Show again
+      // Restore styles and buttons
+      element.style.animation = originalAnimation;
+      element.style.boxShadow = originalBoxShadow;
       footer.style.display = 'block';
       feedbackCard.style.display = 'block';
     });

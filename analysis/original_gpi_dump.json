@@ -173819,6 +173819,1024 @@
     "gunaMetadata": {
       "idleTimeMs": 0,
       "tabSwitches": 0,
+      "cursorDistancePx": 0,
+      "answerChanges": 0,
+      "timeMs": 6385
+    },
+    "viewTimings": {
+      "scenario": 306,
+      "intro": 54037829,
+      "bigfive-likert": 3375,
+      "guna-likert": 474363,
+      "reflection": 132147
+    },
+    "gunaResponses": {
+      "T_EZ": 4,
+      "S_AT": 2,
+      "R_EX": 3,
+      "S_CH": 4,
+      "T_ANGRY": 4,
+      "T_DZ": 3,
+      "T_CJ": 3,
+      "S_BV": 3,
+      "R_CF": 3,
+      "S_AJ": 5,
+      "R_BH": 3,
+      "R_EV": 4,
+      "S_CL": 5,
+      "R_BN": 2,
+      "T_Z": 3,
+      "S_R": 4,
+      "S_EP": 3,
+      "T_AX": 5,
+      "S_J": 1,
+      "T_FH": 5,
+      "T_X": 5,
+      "R_AL": 2,
+      "T_AN": 5,
+      "T_FF": 5,
+      "S_FL": 3,
+      "R_AD": 5,
+      "T_EN": 5,
+      "R_BP": 3,
+      "S_T": 3,
+      "T_FD": 4,
+      "T_CV": 4,
+      "S_DL": 3,
+      "T_DX": 2,
+      "T_DF": 5,
+      "S_DT": 5,
+      "T_EB": 3,
+      "T_EJ": 5,
+      "S_AP": 2,
+      "R_N": 4,
+      "T_P": 5,
+      "T_BJ": 3,
+      "T_CX": 5,
+      "R_BL": 2,
+      "R_AV": 3,
+      "S_ED": 5,
+      "S_V": 3,
+      "S_DB": 4,
+      "R_CR": 3,
+      "R_EL": 2,
+      "R_DP": 2,
+      "S_DD": 3,
+      "R_ER": 5,
+      "R_AB": 5,
+      "S_BZ": 3,
+      "R_BR": 4,
+      "R_CN": 3,
+      "S_AR": 4,
+      "S_DV": 3,
+      "T_L": 3,
+      "R_BT": 4,
+      "T_DH": 4,
+      "S_BF": 5,
+      "T_FB": 4,
+      "S_DJ": 3,
+      "S_CB": 4,
+      "R_CP": 2,
+      "R_BD": 4,
+      "T_EF": 4,
+      "S_DR": 4,
+      "T_AH": 4,
+      "R_BX": 3,
+      "R_EH": 3,
+      "T_FJ": 4,
+      "R_ET": 3,
+      "S_AF": 4,
+      "T_AZ": 4,
+      "S_DN": 2,
+      "T_CZ": 4,
+      "R_CD": 2,
+      "S_BB": 3
+    },
+    "bigFiveResponses": {
+      "BFI21": 3,
+      "BFI40": 3,
+      "BFI7": 4,
+      "BFI1": 4,
+      "BFI18": 4,
+      "BFI26": 2,
+      "BFI37": 3,
+      "BFI13": 3,
+      "BFI27": 3,
+      "BFI31": 3,
+      "BFI11": 3,
+      "BFI33": 3,
+      "BFI4": 3,
+      "BFI15": 3,
+      "BFI23": 4,
+      "BFI6": 4,
+      "BFI35": 3,
+      "BFI17": 3,
+      "BFI5": 4,
+      "BFI25": 1,
+      "BFI28": 4,
+      "BFI36": 3,
+      "BFI43": 2,
+      "BFI34": 3,
+      "BFI19": 4,
+      "BFI20": 3,
+      "BFI30": 2,
+      "BFI29": 3,
+      "BFI44": 2,
+      "BFI2": 4,
+      "BFI22": 2,
+      "BFI41": 3,
+      "BFI14": 4,
+      "BFI3": 3,
+      "BFI38": 4,
+      "BFI9": 3,
+      "BFI12": 4,
+      "BFI24": 4,
+      "BFI42": 3,
+      "BFI10": 4,
+      "BFI8": 4,
+      "BFI16": 4,
+      "BFI32": 4,
+      "BFI39": 4
+    },
+    "bigFiveMetadata": {
+      "idleTimeMs": 0,
+      "tabSwitches": 0,
+      "cursorDistancePx": 0,
+      "answerChanges": 0,
+      "timeMs": 3359
+    },
+    "endTime": "2026-02-15T06:38:13.202Z",
+    "version": "original-gpi",
+    "gunaItems": [
+      {
+        "domain": "lifestyle",
+        "id": "S_J",
+        "text": "I prefer to live in the village rather than the city.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_R",
+        "text": "I am satisfied with my life.",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S_T",
+        "text": "Fruits and vegetables are among my favorite foods.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_V",
+        "text": "All living entities are essentially spiritual.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_AF",
+        "text": "I am not very much affected by the joys and sorrows of life.",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S_AJ",
+        "text": "I am against violence.",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S_AP",
+        "text": "Cleanliness is very important to me.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_AR",
+        "text": "Spiritual advancement is very important for me.",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S_AT",
+        "text": "Others say that my intelligence is very sharp.",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S_BB",
+        "text": "Respecting ones elders is very important.",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S_BF",
+        "text": "When I speak, I really try not to irritate others.",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S_BV",
+        "text": "I am straightforward in my dealings with other people.",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S_BZ",
+        "text": "I feel that my knowledge is always increasing.",
+        "category": "sattva"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "S_CB",
+        "text": "People should not have sex unless they are married and want children.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_CH",
+        "text": "I take guidance from higher ethical and moral laws before I act.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_CL",
+        "text": "Being truthful is extremely important.",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S_DB",
+        "text": "I do not have doubts about my responsibilities in life.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_DD",
+        "text": "I often sacrifice my pleasure to please God.",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S_DJ",
+        "text": "I often study books of traditional wisdom.",
+        "category": "sattva"
+      },
+      {
+        "domain": "social",
+        "id": "S_DN",
+        "text": "I am very dutiful.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_DL",
+        "text": "I am self-controlled.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_DR",
+        "text": "I am generally even-tempered.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_DT",
+        "text": "In my life I usually experience deep happiness that is not dependent on anything external.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_DV",
+        "text": "Spiritually, all living entities are equal.",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S_ED",
+        "text": "I carry out my responsibilities regardless of whether there is success or failure.",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "S_EP",
+        "text": "My determination is unbreakable.",
+        "category": "sattva"
+      },
+      {
+        "domain": "inner",
+        "id": "S_FL",
+        "text": "I am good at controlling my senses and emotions.",
+        "category": "sattva"
+      },
+      {
+        "domain": "academic",
+        "id": "R_N",
+        "text": "I am willing to break the rules to achieve my goals.",
+        "category": "rajas"
+      },
+      {
+        "domain": "inner",
+        "id": "R_AB",
+        "text": "I usually feel discontented with life.",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R_AD",
+        "text": "I become happy when I think about the material assets I possess.",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R_AL",
+        "text": "I am good at using willpower to achieve goals.",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R_AV",
+        "text": "I am a very active person.",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R_BD",
+        "text": "I greatly admire materially successful people.",
+        "category": "rajas"
+      },
+      {
+        "domain": "inner",
+        "id": "R_BH",
+        "text": "I believe life is over when the body dies.",
+        "category": "rajas"
+      },
+      {
+        "domain": "inner",
+        "id": "R_BL",
+        "text": "I become elated when things work out well for me.",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R_BN",
+        "text": "I enjoy foods with strong tastes.",
+        "category": "rajas"
+      },
+      {
+        "domain": "inner",
+        "id": "R_BP",
+        "text": "I am constantly dissatisfied with my position in life.",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R_BR",
+        "text": "Having possessions is very important to me.",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R_BT",
+        "text": "When things are tough, I often bail out.",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R_BX",
+        "text": "I have more energy than most people.",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R_CD",
+        "text": "I prefer city night life to a walk in the forest.",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R_CF",
+        "text": "For me, sex life is a major source of happiness.",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R_CN",
+        "text": "I feel proud when I give charity.",
+        "category": "rajas"
+      },
+      {
+        "domain": "inner",
+        "id": "R_CP",
+        "text": "I often feel greedy.",
+        "category": "rajas"
+      },
+      {
+        "domain": "inner",
+        "id": "R_CR",
+        "text": "I become greatly distressed when things don't work out for me.",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R_DP",
+        "text": "When I give charity, I often do it grudgingly.",
+        "category": "rajas"
+      },
+      {
+        "domain": "inner",
+        "id": "R_EH",
+        "text": "I am easily affected by the joys and sorrows of life.",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R_EL",
+        "text": "Regardless of what I acquire or achieve, I have an uncontrollable desire to obtain more.",
+        "category": "rajas"
+      },
+      {
+        "domain": "social",
+        "id": "R_ER",
+        "text": "I often envy others.",
+        "category": "rajas"
+      },
+      {
+        "domain": "academic",
+        "id": "R_ET",
+        "text": "My job is a source of anxiety.",
+        "category": "rajas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "R_EV",
+        "text": "I never think about giving up my wealth and position for a simpler life.",
+        "category": "rajas"
+      },
+      {
+        "domain": "inner",
+        "id": "R_EX",
+        "text": "It often happens that those things that brought me happiness later become the source of my suffering.",
+        "category": "rajas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_L",
+        "text": "I often feel like a victim.",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_P",
+        "text": "I have very little interest in spiritual understanding.",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T_X",
+        "text": "In conducting my activities, I do not consider traditional wisdom.",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T_Z",
+        "text": "I often act without considering the consequences of my actions.",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T_AH",
+        "text": "I often criticize and insult other people.",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T_AN",
+        "text": "I enjoy spending time in bars.",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_AX",
+        "text": "I often feel depressed.",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T_AZ",
+        "text": "I often put off or delay my responsibilities.",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_BJ",
+        "text": "I often feel helpless.",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T_CJ",
+        "text": "I enjoy intoxicating substances (including coffee, cigarettes and alcohol).",
+        "category": "tamas"
+      },
+      {
+        "domain": "academic",
+        "id": "T_CV",
+        "text": "I do not have strong determination.",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_CX",
+        "text": "I often feel fearful.",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T_CZ",
+        "text": "I greatly enjoy sleeping.",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_DF",
+        "text": "I often feel emotionally unbalanced.",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T_DH",
+        "text": "I enjoy eating meat.",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T_DX",
+        "text": "I often get exploited in my relationships.",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_DZ",
+        "text": "Self-realization is not important for me.",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_EB",
+        "text": "I often feel dejected.",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T_EF",
+        "text": "I often neglect my responsibilities to my family.",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T_EJ",
+        "text": "I often whine.",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T_EN",
+        "text": "I am currently struggling with an addiction, physical or psychological, to some type of intoxicant (including caffeine, cigarettes and alcohol).",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T_EZ",
+        "text": "I sometimes cheat people.",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T_FB",
+        "text": "The most important thing to know is how to increase one's enjoyment of physical pleasures, like sex and eating.",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_FD",
+        "text": "I often feel mentally unbalanced.",
+        "category": "tamas"
+      },
+      {
+        "domain": "lifestyle",
+        "id": "T_FF",
+        "text": "I don't have much will power.",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T_FH",
+        "text": "I often neglect my responsibilities to my friends.",
+        "category": "tamas"
+      },
+      {
+        "domain": "inner",
+        "id": "T_ANGRY",
+        "text": "I am often angry.",
+        "category": "tamas"
+      },
+      {
+        "domain": "social",
+        "id": "T_FJ",
+        "text": "I often act violently towards others.",
+        "category": "tamas"
+      }
+    ],
+    "uploadedAt": "2026-02-15T06:38:15.655Z",
+    "sessionId": "cc20648a-b9bf-4d01-8bc9-422f25407d92",
+    "bigFiveDetails": {},
+    "feedback": null,
+    "startTime": "2026-02-13T04:20:20.721Z",
+    "gunaDetails": {},
+    "scenarioResponses": [
+      {
+        "choiceId": "rajas",
+        "scenarioId": "SC1",
+        "timeToSelectMs": 956,
+        "timestamp": "2026-02-15T06:38:12.588Z",
+        "hoverCount": 1
+      },
+      {
+        "choiceId": "tamas",
+        "scenarioId": "SC2",
+        "timeToSelectMs": 308,
+        "timestamp": "2026-02-15T06:38:12.896Z",
+        "hoverCount": 1
+      },
+      {
+        "choiceId": "sattva",
+        "scenarioId": "SC3",
+        "timeToSelectMs": 306,
+        "timestamp": "2026-02-15T06:38:13.202Z",
+        "hoverCount": 1
+      }
+    ],
+    "demographics": {
+      "gender": "Male",
+      "education": "UG (Pursuing)",
+      "gitaFamiliarity": "Somewhat",
+      "occupation": "Homemaker",
+      "spiritualPractice": "Rarely",
+      "age": "21"
+    },
+    "currentScenarioIndex": 2,
+    "view": "results",
+    "computedScores": {
+      "dominantGuna": "Tamas",
+      "gunaNormalized": {
+        "Sattva": "0.322",
+        "Tamas": "0.381",
+        "Rajas": "0.296"
+      },
+      "gunaRaw": {
+        "Sattva": "3.44",
+        "Tamas": "4.07",
+        "Rajas": "3.16"
+      },
+      "bigFive": {
+        "Neuroticism": "3.3",
+        "Conscientiousness": "3.0",
+        "Extraversion": "3.0",
+        "Agreeableness": "2.9",
+        "Openness": "2.8"
+      }
+    },
+    "language": "en",
+    "scenarios": [
+      {
+        "id": "SC1",
+        "options": [
+          {
+            "text": "Calmly talk to him to understand the issue, then divide his work among the group so we finish on time.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Get furious, yell at him in the group chat, and report him to the professor immediately.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ignore it. If we fail, we fail. Too much hassle to deal with it now.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You are working on a group project. One team member, Rahul, hasn't done any work for two weeks and is making excuses. The deadline is tomorrow. What is your immediate reaction?"
+      },
+      {
+        "id": "SC2",
+        "options": [
+          {
+            "text": "Buying a book or attending a workshop to learn something new.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Going out for a movie and expensive dinner with friends.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Ordering junk food and sleeping/binge-watching TV at home.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "You have a free Saturday and 1000 rupees. How would you prefer to spend it?"
+      },
+      {
+        "id": "SC3",
+        "options": [
+          {
+            "text": "Calmly use your phone hotspot or go to a neighbor's house to submit it.",
+            "guna": "sattva"
+          },
+          {
+            "text": "Panic, scream at the ISP customer care, and throw the router.",
+            "guna": "rajas"
+          },
+          {
+            "text": "Give up and go to sleep, hoping the professor accepts a late submission.",
+            "guna": "tamas"
+          }
+        ],
+        "text": "Your internet connection stops working right before you need to submit an assignment. What do you do?"
+      }
+    ],
+    "firebase_id": "y3WtNkF77X12hWgmO4zA"
+  },
+  {
+    "bigFiveItems": [
+      {
+        "reverse": false,
+        "trait": "Extraversion",
+        "id": "BFI1",
+        "text": "Is talkative"
+      },
+      {
+        "reverse": true,
+        "trait": "Agreeableness",
+        "id": "BFI2",
+        "text": "Tends to find fault with others"
+      },
+      {
+        "reverse": false,
+        "trait": "Conscientiousness",
+        "id": "BFI3",
+        "text": "Does a thorough job"
+      },
+      {
+        "reverse": false,
+        "trait": "Neuroticism",
+        "id": "BFI4",
+        "text": "Is depressed, blue"
+      },
+      {
+        "reverse": false,
+        "trait": "Openness",
+        "id": "BFI5",
+        "text": "Is original, comes up with new ideas"
+      },
+      {
+        "reverse": true,
+        "trait": "Extraversion",
+        "id": "BFI6",
+        "text": "Is reserved"
+      },
+      {
+        "reverse": false,
+        "trait": "Agreeableness",
+        "id": "BFI7",
+        "text": "Is helpful and unselfish with others"
+      },
+      {
+        "reverse": true,
+        "trait": "Conscientiousness",
+        "id": "BFI8",
+        "text": "Can be somewhat careless"
+      },
+      {
+        "reverse": true,
+        "trait": "Neuroticism",
+        "id": "BFI9",
+        "text": "Is relaxed, handles stress well"
+      },
+      {
+        "reverse": false,
+        "trait": "Openness",
+        "id": "BFI10",
+        "text": "Is curious about many different things"
+      },
+      {
+        "reverse": false,
+        "trait": "Extraversion",
+        "id": "BFI11",
+        "text": "Is full of energy"
+      },
+      {
+        "reverse": true,
+        "trait": "Agreeableness",
+        "id": "BFI12",
+        "text": "Starts quarrels with others"
+      },
+      {
+        "reverse": false,
+        "trait": "Conscientiousness",
+        "id": "BFI13",
+        "text": "Is a reliable worker"
+      },
+      {
+        "reverse": false,
+        "trait": "Neuroticism",
+        "id": "BFI14",
+        "text": "Can be tense"
+      },
+      {
+        "reverse": false,
+        "trait": "Openness",
+        "id": "BFI15",
+        "text": "Is ingenious, a deep thinker"
+      },
+      {
+        "reverse": false,
+        "trait": "Extraversion",
+        "id": "BFI16",
+        "text": "Generates a lot of enthusiasm"
+      },
+      {
+        "reverse": false,
+        "trait": "Agreeableness",
+        "id": "BFI17",
+        "text": "Has a forgiving nature"
+      },
+      {
+        "reverse": true,
+        "trait": "Conscientiousness",
+        "id": "BFI18",
+        "text": "Tends to be disorganized"
+      },
+      {
+        "reverse": false,
+        "trait": "Neuroticism",
+        "id": "BFI19",
+        "text": "Worries a lot"
+      },
+      {
+        "reverse": false,
+        "trait": "Openness",
+        "id": "BFI20",
+        "text": "Has an active imagination"
+      },
+      {
+        "reverse": true,
+        "trait": "Extraversion",
+        "id": "BFI21",
+        "text": "Tends to be quiet"
+      },
+      {
+        "reverse": false,
+        "trait": "Agreeableness",
+        "id": "BFI22",
+        "text": "Is generally trusting"
+      },
+      {
+        "reverse": true,
+        "trait": "Conscientiousness",
+        "id": "BFI23",
+        "text": "Tends to be lazy"
+      },
+      {
+        "reverse": true,
+        "trait": "Neuroticism",
+        "id": "BFI24",
+        "text": "Is emotionally stable, not easily upset"
+      },
+      {
+        "reverse": false,
+        "trait": "Openness",
+        "id": "BFI25",
+        "text": "Is inventive"
+      },
+      {
+        "reverse": false,
+        "trait": "Extraversion",
+        "id": "BFI26",
+        "text": "Has an assertive personality"
+      },
+      {
+        "reverse": true,
+        "trait": "Agreeableness",
+        "id": "BFI27",
+        "text": "Can be cold and aloof"
+      },
+      {
+        "reverse": false,
+        "trait": "Conscientiousness",
+        "id": "BFI28",
+        "text": "Perseveres until the task is finished"
+      },
+      {
+        "reverse": false,
+        "trait": "Neuroticism",
+        "id": "BFI29",
+        "text": "Can be moody"
+      },
+      {
+        "reverse": false,
+        "trait": "Openness",
+        "id": "BFI30",
+        "text": "Values artistic, aesthetic experiences"
+      },
+      {
+        "reverse": true,
+        "trait": "Extraversion",
+        "id": "BFI31",
+        "text": "Is sometimes shy, inhibited"
+      },
+      {
+        "reverse": false,
+        "trait": "Agreeableness",
+        "id": "BFI32",
+        "text": "Is considerate and kind to almost everyone"
+      },
+      {
+        "reverse": false,
+        "trait": "Conscientiousness",
+        "id": "BFI33",
+        "text": "Does things efficiently"
+      },
+      {
+        "reverse": true,
+        "trait": "Neuroticism",
+        "id": "BFI34",
+        "text": "Remains calm in tense situations"
+      },
+      {
+        "reverse": true,
+        "trait": "Openness",
+        "id": "BFI35",
+        "text": "Prefers work that is routine"
+      },
+      {
+        "reverse": false,
+        "trait": "Extraversion",
+        "id": "BFI36",
+        "text": "Is outgoing, sociable"
+      },
+      {
+        "reverse": true,
+        "trait": "Agreeableness",
+        "id": "BFI37",
+        "text": "Is sometimes rude to others"
+      },
+      {
+        "reverse": false,
+        "trait": "Conscientiousness",
+        "id": "BFI38",
+        "text": "Makes plans and follows through with them"
+      },
+      {
+        "reverse": false,
+        "trait": "Neuroticism",
+        "id": "BFI39",
+        "text": "Gets nervous easily"
+      },
+      {
+        "reverse": false,
+        "trait": "Openness",
+        "id": "BFI40",
+        "text": "Likes to reflect, play with ideas"
+      },
+      {
+        "reverse": true,
+        "trait": "Openness",
+        "id": "BFI41",
+        "text": "Has few artistic interests"
+      },
+      {
+        "reverse": false,
+        "trait": "Agreeableness",
+        "id": "BFI42",
+        "text": "Likes to cooperate with others"
+      },
+      {
+        "reverse": true,
+        "trait": "Conscientiousness",
+        "id": "BFI43",
+        "text": "Is easily distracted"
+      },
+      {
+        "reverse": false,
+        "trait": "Openness",
+        "id": "BFI44",
+        "text": "Is sophisticated in art, music, or literature"
+      }
+    ],
+    "gunaMetadata": {
+      "idleTimeMs": 0,
+      "tabSwitches": 0,
       "cursorDistancePx": 11366,
       "answerChanges": 91,
       "timeMs": 580146
