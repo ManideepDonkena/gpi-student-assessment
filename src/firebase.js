@@ -1,6 +1,7 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getFirestore, collection, addDoc, updateDoc, doc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 // TODO: User must replace this with their own Firebase Config
 
@@ -46,5 +47,26 @@ export async function saveSessionData(sessionData) {
     } catch (e) {
         console.error("Error adding document: ", e);
         throw e;
+    }
+}
+
+/**
+ * Updates an existing session document in Firestore.
+ * @param {string} docId - The ID of the document to update
+ * @param {Object} data - The data to merge into the document (e.g. { feedback: "..." })
+ */
+export async function updateSessionData(docId, data) {
+    if (!db) {
+        console.warn("Cannot update Firebase: DB not initialized.");
+        return;
+    }
+
+    try {
+        const docRef = doc(db, "assessments", docId);
+        await updateDoc(docRef, data);
+        console.log("Document updated with ID: ", docId);
+    } catch (e) {
+        console.error("Error updating document: ", e);
+        // non-critical, don't throw to avoid user confusion
     }
 }

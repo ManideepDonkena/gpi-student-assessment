@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guna Assessment - Social Media Post</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .poster-container {
+            width: 800px;
+            height: 800px;
+            /* Square Aspect Ratio */
+            position: relative;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Abstract Background Elements */
+        .bg-element {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .bg-1 {
+            width: 400px;
+            height: 400px;
+            background: #3b82f6;
+            top: -100px;
+            right: -100px;
+            opacity: 0.2;
+        }
+
+        .bg-2 {
+            width: 400px;
+            height: 400px;
+            background: #ef4444;
+            bottom: -100px;
+            left: -100px;
+            opacity: 0.15;
+        }
+
+        .content {
+            z-index: 10;
+            padding: 40px;
+            /* Reduced padding for square */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        header {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            /* Slightly smaller */
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 0;
+            background: linear-gradient(to right, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            font-weight: 400;
+            margin-top: 8px;
+        }
+
+        .main-stat-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 20px;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-family: monospace;
+            color: #4ade80;
+        }
+
+        .stat-value.red {
+            color: #f87171;
+        }
+
+        .visualization {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .orb-container {
+            text-align: center;
+        }
+
+        .orb {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin: 0 auto 5px;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            color: #0f172a;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .cta-text h3 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 900;
+        }
+
+        .cta-text p {
+            margin: 5px 0 0 0;
+            font-size: 1rem;
+            color: #475569;
+        }
+
+        .qr-placeholder {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="poster-container">
+        <div class="bg-element bg-1"></div>
+        <div class="bg-element bg-2"></div>
+
+        <div class="content">
+            <header>
+                <h1>Know Yourself.<br>Achieve More.</h1>
+                <h2>"The better you introspect, the higher you perform."</h2>
+            </header>
+
+            <div class="main-stat-box">
+                <div class="stat-row">
+                    <span class="stat-label">High Sattva</span>
+                    <span class="stat-value">Peak Focus 🧘‍♂️</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">High Tamas</span>
+                    <span class="stat-value red">Hidden Stress 😴</span>
+                </div>
+            </div>
+
+            <!-- Compact Triguna Viz + Mini Mockup -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+
+                <!-- Orbs -->
+                <div class="visualization" style="margin-bottom: 0;">
+                    <div class="orb-container">
+                        <div class="orb" style="background: #fbbf24; box-shadow: 0 0 15px #fbbf24;"></div>
+                        <span style="font-size: 0.8rem; color: #fbbf24; font-weight: bold;">Sattva</span>
+                    </div>
+                    <div class="orb-container">
+                        <div class="orb" style="background: #f87171; box-shadow: 0 0 15px #f87171; opacity: 0.8;"></div>
+                        <span style="font-size: 0.8rem; color: #f87171; font-weight: bold;">Rajas</span>
+                    </div>
+                    <div class="orb-container">
+                        <div class="orb" style="background: #94a3b8; box-shadow: 0 0 15px #94a3b8; opacity: 0.6;"></div>
+                        <span style="font-size: 0.8rem; color: #94a3b8; font-weight: bold;">Tamas</span>
+                    </div>
+                </div>
+
+                <!-- Mini Result Mockup -->
+                <div
+                    style="width: 140px; background: white; border-radius: 12px; padding: 10px; color: #333; transform: rotate(-5deg); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border: 2px solid #fff;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        <div
+                            style="width: 30px; height: 30px; border-radius: 50%; background: conic-gradient(#fbbf24 0% 60%, #eee 60% 100%);">
+                        </div>
+                        <div style="font-size: 10px; font-weight: bold; line-height: 1.2;">
+                            Sattva<br><span style="color:#27ae60;">Top 10%</span>
+                        </div>
+                    </div>
+                    <div style="height: 4px; background: #e2e8f0; border-radius: 2px; width: 100%; margin-bottom: 4px;">
+                        <div style="height: 100%; width: 70%; background: #fbbf24; border-radius: 2px;"></div>
+                    </div>
+                    <div style="font-size: 8px; color: #64748b;">"Calm & Driven"</div>
+                </div>
+
+            </div>
+
+            <div style="font-size: 1.1rem; line-height: 1.5; color: #cbd5e1; margin-bottom: 20px;">
+                <p style="margin: 0;"><strong>Diagnose your drivers.</strong> Are you fueled by anxiety or purpose? Find
+                    the hidden inertia holding you back.</p>
+            </div>
+
+            <footer>
+                <div class="cta-text">
+                    <h3>Take the Test</h3>
+                    <p>5 min. Free. Instant Results.</p>
+                </div>
+                <div class="qr-placeholder" style="background: white;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://manideepdonkena.github.io/gpi-student-assessment/"
+                        alt="Scan QR">
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
