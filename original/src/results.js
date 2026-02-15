@@ -234,12 +234,11 @@ export function renderResults(container) {
   // Helper to find footer for insertion
   const footer = element.querySelector('#results-footer');
 
-  // --- 4. Gamification / Comparison (Simulated from N=80) ---
-  // Note: Hardcoded English for new features as per user request to 'redo in original' quickly
+  // --- 4. Gamification / Comparison (Calculated from N=92) ---
   const populationStats = {
-    Sattva: { mean: 5.00, sd: 0.91 },
-    Rajas: { mean: 3.94, sd: 0.96 },
-    Tamas: { mean: 3.09, sd: 1.17 }
+    Sattva: { mean: 4.86, sd: 0.96 },
+    Rajas: { mean: 3.87, sd: 1.15 },
+    Tamas: { mean: 3.15, sd: 1.15 }
   };
 
   function erf(x) {
@@ -291,7 +290,7 @@ export function renderResults(container) {
   comparisonCard.style.cssText = 'margin-top: 2rem; margin-bottom: 2rem; padding: 20px; background: #fff; border: 2px dashed #ccc; border-radius: 12px; text-align: center;';
   comparisonCard.innerHTML = `
     <h3 style="margin-top: 0; color: #555;">📊 How do you compare?</h3>
-    <p style="font-size: 0.9em; color: #777;">Compared to University Average (N=80)</p>
+    <p style="font-size: 0.9em; color: #777;">Compared to University Average (N=92)</p>
     ${badgeHTML}
     <div style="display: flex; justify-content: space-around; margin-top: 10px; font-size: 0.9em;">
         <div>
