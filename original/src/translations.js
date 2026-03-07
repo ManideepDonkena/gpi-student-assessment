@@ -10,17 +10,17 @@ export const translations = {
             "loading": "Loading...",
             "continue": "Continue",
             "change_lang": "Change Language",
-            "part1": "Part 1: Self-Reflection",
-            "part2": "Part 2: Personality Traits"
+            "part1": "Part 1: Personality Traits",
+            "part2": "Part 2: Self-Reflection"
         },
         "intro": {
             "subtitle": "Trividha Bhavati Shraddha",
             "title": "Discover Your Inner Nature",
             "desc": "According to the Bhagavad Gita, every person is a unique blend of three fundamental qualities — <strong>Sattva</strong> (harmony), <strong>Rajas</strong> (passion), and <strong>Tamas</strong> (inertia). This assessment reveals <em>your</em> unique balance.",
             "p1_title": "Part 1",
-            "p1_desc": "Self-Reflection<br>(57 questions)",
+            "p1_desc": "Personality Traits<br>(44 questions)",
             "p2_title": "Part 2",
-            "p2_desc": "Personality Traits<br>(44 questions)",
+            "p2_desc": "Self-Reflection<br>(57 questions)",
             "p3_title": "Part 3",
             "p3_desc": "Life Scenarios<br>(3 situations)",
             "before_title": "📋 Before you begin:",
@@ -343,17 +343,17 @@ export const translations = {
             "loading": "लोड हो रहा है...",
             "continue": "जारी रखें",
             "change_lang": "भाषा बदलें",
-            "part1": "भाग 1: आत्म-चिंतन",
-            "part2": "भाग 2: व्यक्तित्व लक्षण"
+            "part1": "भाग 1: व्यक्तित्व लक्षण",
+            "part2": "भाग 2: आत्म-चिंतन"
         },
         "intro": {
             "subtitle": "त्रिविधा भवति श्रद्धा",
             "title": "अपनी आंतरिक प्रकृति को खोजें",
             "desc": "भगवद गीता के अनुसार, प्रत्येक व्यक्ति तीन मौलिक गुणों का एक अनूठा मिश्रण है — <strong>सत्व</strong> (सद्भाव), <strong>राजस</strong> (जुनून), और <strong>तामस</strong> (जड़ता)। यह मूल्यांकन <em>आपके</em> अनूठे संतुलन को प्रकट करता है।",
             "p1_title": "भाग 1",
-            "p1_desc": "आत्म-चिंतन<br>(57 प्रश्न)",
+            "p1_desc": "व्यक्तित्व लक्षण<br>(10 प्रश्न)",
             "p2_title": "भाग 2",
-            "p2_desc": "व्यक्तित्व लक्षण<br>(10 प्रश्न)",
+            "p2_desc": "आत्म-चिंतन<br>(57 प्रश्न)",
             "p3_title": "भाग 3",
             "p3_desc": "जीवन की स्थितियाँ<br>(3 स्थितियाँ)",
             "before_title": "📋 शुरू करने से पहले:",

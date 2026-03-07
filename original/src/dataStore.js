@@ -88,7 +88,7 @@ export function getStore() {
 
 export function setDemographics(data) {
     store.state.demographics = data;
-    store.state.view = 'reflection';
+    store.state.view = 'bigfive-likert';
     saveSession();
 }
 
@@ -103,7 +103,7 @@ export function submitGunaResponses(responses, metadata, details) {
     store.state.gunaResponses = responses;
     store.state.gunaMetadata = metadata;
     store.state.gunaDetails = details || {};
-    store.state.view = 'bigfive-likert';
+    store.state.view = 'scenario';
     saveSession();
 }
 
@@ -119,8 +119,7 @@ export function submitBigFiveResponses(responses, metadata, details) {
     store.state.bigFiveResponses = responses;
     store.state.bigFiveMetadata = metadata;
     store.state.bigFiveDetails = details || {};
-    store.state.bigFiveDetails = details || {};
-    store.state.view = 'scenario';
+    store.state.view = 'reflection';
     saveSession();
 }
 

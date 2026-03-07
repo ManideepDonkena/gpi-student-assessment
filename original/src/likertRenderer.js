@@ -13,7 +13,7 @@ export function renderLikertSection(container, type) {
   const savedResponses = type === 'guna' ? store.state.gunaResponses : store.state.bigFiveResponses;
 
   // Update Header (using translations)
-  const title = type === 'guna' ? t.ui.part1 : t.ui.part2;
+  const title = type === 'guna' ? t.ui.part2 : t.ui.part1;
   const desc = type === 'guna'
     ? 'For each statement, indicate your level of agreement (1 = Strongly Disagree, 7 = Strongly Agree).'
     : 'I see myself as someone who... (1 = Disagree Strongly, 5 = Agree Strongly)';

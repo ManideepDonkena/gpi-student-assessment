@@ -1,6 +1,6 @@
 # Phase 1: Demographics & Distributions Analysis
 
-**Cohort**: BFI-44 | **Sample Size**: N=94
+**Cohort**: BFI-44 | **Sample Size**: N=112
 
 ## 1. Demographic Profile
 
@@ -8,9 +8,9 @@
 
 | Guna | Mean | Std Dev | Skewness | Kurtosis | Shapiro-Wilk p-value | Normality |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Sattva | 4.94 | 0.93 | 0.21 | -0.24 | 0.2054 | Yes |
-| Rajas | 4.00 | 0.93 | 0.28 | 2.20 | 0.0053 | No (Significant Deviation) |
-| Tamas | 3.11 | 1.15 | 0.78 | 1.56 | 0.0016 | No (Significant Deviation) |
+| Sattva | 4.94 | 0.91 | 0.26 | -0.34 | 0.1429 | Yes |
+| Rajas | 3.99 | 0.92 | 0.21 | 1.80 | 0.0132 | No (Significant Deviation) |
+| Tamas | 3.13 | 1.14 | 0.73 | 1.26 | 0.0018 | No (Significant Deviation) |
 
 ### Interpretation Guide
 - **Mean & Standard Deviation (SD)**: The average score and the spread. Low SD (< 1.0) means most students score close to the average. High SD (> 1.0) means scores are very spread out.

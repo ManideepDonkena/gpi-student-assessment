@@ -6,7 +6,7 @@ export function renderLikertSection(container, type) {
   const store = getStore();
   const items = type === 'guna' ? store.state.gunaItems : store.state.bigFiveItems;
   const savedResponses = type === 'guna' ? store.state.gunaResponses : store.state.bigFiveResponses;
-  const title = type === 'guna' ? 'Part 1: Self-Reflection' : 'Part 2: Personality Traits';
+  const title = type === 'guna' ? 'Part 2: Self-Reflection' : 'Part 1: Personality Traits';
   const desc = type === 'guna'
     ? 'For each statement, indicate your level of agreement (1 = Strongly Disagree, 7 = Strongly Agree).'
     : 'I see myself as someone who... (1 = Disagree Strongly, 5 = Agree Strongly)';

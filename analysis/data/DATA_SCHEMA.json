@@ -1,0 +1,496 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "GPI Assessment Session",
+    "description": "Schema for a single respondent session in the Guna Personality Inventory (GPI) assessment. Each session captures Guna trait ratings, BFI-44 personality ratings, scenario-based behavioral choices, demographics, computed scores, and implicit behavioral metadata.",
+    "version": "1.0.0",
+    "lastUpdated": "2026-02-15",
+    "type": "object",
+    "properties": {
+        "firebase_id": {
+            "type": "string",
+            "description": "Unique Firestore document ID for this session"
+        },
+        "sessionId": {
+            "type": "string",
+            "description": "UUID generated at session start"
+        },
+        "cohort": {
+            "type": "string",
+            "description": "Assessment version/cohort identifier",
+            "examples": [
+                "BFI-44"
+            ]
+        },
+        "version": {
+            "type": "string",
+            "description": "Application version string"
+        },
+        "language": {
+            "type": "string",
+            "description": "Language code used during assessment",
+            "examples": [
+                "en"
+            ]
+        },
+        "startTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp when the session started"
+        },
+        "endTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp when the session ended"
+        },
+        "uploadedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 timestamp when data was uploaded to Firestore"
+        },
+        "view": {
+            "type": "string",
+            "description": "Last UI view the respondent was on",
+            "examples": [
+                "results"
+            ]
+        },
+        "demographics": {
+            "type": "object",
+            "description": "Self-reported demographic information",
+            "properties": {
+                "age": {
+                    "type": "string",
+                    "description": "Age in years"
+                },
+                "gender": {
+                    "type": "string",
+                    "examples": [
+                        "Male",
+                        "Female",
+                        "Other"
+                    ]
+                },
+                "education": {
+                    "type": "string",
+                    "examples": [
+                        "UG (Pursuing)",
+                        "PG (Pursuing)",
+                        "UG (Complete)"
+                    ]
+                },
+                "occupation": {
+                    "type": "string",
+                    "examples": [
+                        "Student",
+                        "Homemaker",
+                        "Employed"
+                    ]
+                },
+                "major": {
+                    "type": "string",
+                    "description": "Field of study"
+                },
+                "year": {
+                    "type": "string",
+                    "description": "Year of study (for students)"
+                },
+                "gpa": {
+                    "type": "string",
+                    "description": "Self-reported GPA"
+                },
+                "gitaFamiliarity": {
+                    "type": "string",
+                    "description": "Familiarity with Bhagavad Gita",
+                    "examples": [
+                        "Very Familiar",
+                        "Somewhat",
+                        "Heard of it",
+                        "Not at all"
+                    ]
+                },
+                "spiritualPractice": {
+                    "type": "string",
+                    "description": "Frequency of spiritual practice",
+                    "examples": [
+                        "Regular",
+                        "Occasional",
+                        "Rarely",
+                        "Never"
+                    ]
+                }
+            }
+        },
+        "gunaResponses": {
+            "type": "object",
+            "description": "Aggregated Guna item scores (item_id → score). Keys are item IDs like 'S_AT', 'R_EX', 'T_EZ'. Values are Likert scale integers (1-7).",
+            "additionalProperties": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 7
+            }
+        },
+        "gunaDetails": {
+            "type": "object",
+            "description": "Detailed per-item Guna response data including implicit behavioral measures",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "Item ID (matches key)"
+                    },
+                    "text": {
+                        "type": "string",
+                        "description": "Item text shown to respondent"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 7,
+                        "description": "Likert response (1=Strongly Disagree, 7=Strongly Agree)"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "When this item was answered"
+                    },
+                    "reactionTimeMs": {
+                        "type": "integer",
+                        "description": "⏱️ IMPLICIT: Time in milliseconds from item display to response"
+                    }
+                },
+                "required": [
+                    "id",
+                    "value",
+                    "reactionTimeMs"
+                ]
+            }
+        },
+        "gunaItems": {
+            "type": "array",
+            "description": "Ordered list of Guna item IDs as presented to the respondent",
+            "items": {
+                "type": "string"
+            }
+        },
+        "gunaMetadata": {
+            "type": "object",
+            "description": "⏱️ IMPLICIT: Aggregate behavioral metadata for the Guna section",
+            "properties": {
+                "timeMs": {
+                    "type": "integer",
+                    "description": "Total active time spent on Guna section (ms)"
+                },
+                "idleTimeMs": {
+                    "type": "integer",
+                    "description": "Total idle/inactive time (ms)"
+                },
+                "answerChanges": {
+                    "type": "integer",
+                    "description": "🔄 Total number of times the respondent changed an answer"
+                },
+                "tabSwitches": {
+                    "type": "integer",
+                    "description": "🔄 Number of browser tab switches during this section"
+                },
+                "cursorDistancePx": {
+                    "type": "integer",
+                    "description": "Total cursor/mouse movement in pixels"
+                }
+            }
+        },
+        "bigFiveResponses": {
+            "type": "object",
+            "description": "Aggregated BFI-44 item scores (item_id → score). Keys like 'BFI1'...'BFI44'. Values are Likert integers (1-5).",
+            "additionalProperties": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+            }
+        },
+        "bigFiveDetails": {
+            "type": "object",
+            "description": "Detailed per-item BFI response data including implicit behavioral measures",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 5
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "reactionTimeMs": {
+                        "type": "integer",
+                        "description": "⏱️ IMPLICIT: Per-item reaction time (ms)"
+                    }
+                }
+            }
+        },
+        "bigFiveItems": {
+            "type": "array",
+            "description": "Ordered list of BFI item IDs as presented",
+            "items": {
+                "type": "string"
+            }
+        },
+        "bigFiveMetadata": {
+            "type": "object",
+            "description": "⏱️ IMPLICIT: Aggregate behavioral metadata for the BFI section",
+            "properties": {
+                "timeMs": {
+                    "type": "integer"
+                },
+                "idleTimeMs": {
+                    "type": "integer"
+                },
+                "answerChanges": {
+                    "type": "integer"
+                },
+                "tabSwitches": {
+                    "type": "integer"
+                },
+                "cursorDistancePx": {
+                    "type": "integer"
+                }
+            }
+        },
+        "scenarioResponses": {
+            "type": "array",
+            "description": "Responses to situational judgment scenarios",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "scenarioId": {
+                        "type": "string",
+                        "description": "Scenario identifier (SC1, SC2, SC3)",
+                        "examples": [
+                            "SC1",
+                            "SC2",
+                            "SC3"
+                        ]
+                    },
+                    "choiceId": {
+                        "type": "string",
+                        "description": "Selected choice type",
+                        "enum": [
+                            "sattva",
+                            "rajas",
+                            "tamas"
+                        ]
+                    },
+                    "timeToSelectMs": {
+                        "type": "integer",
+                        "description": "⏱️ IMPLICIT: Time from scenario display to final selection (ms)"
+                    },
+                    "hoverCount": {
+                        "type": "integer",
+                        "description": "🔄 IMPLICIT: Number of times respondent hovered/changed options before finalizing"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "scenarioId",
+                    "choiceId",
+                    "timeToSelectMs",
+                    "hoverCount"
+                ]
+            }
+        },
+        "scenarios": {
+            "type": "array",
+            "description": "Scenario definitions (text + options) as shown to respondent",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string",
+                        "description": "Scenario prompt text"
+                    },
+                    "options": {
+                        "type": "array",
+                        "description": "Available choices"
+                    }
+                }
+            }
+        },
+        "currentScenarioIndex": {
+            "type": "integer",
+            "description": "Index of the last completed scenario"
+        },
+        "viewTimings": {
+            "type": "object",
+            "description": "⏱️ IMPLICIT: Time spent on each assessment section/view (ms)",
+            "properties": {
+                "demographics": {
+                    "type": "integer",
+                    "description": "Time on demographics page (ms)"
+                },
+                "guna-likert": {
+                    "type": "integer",
+                    "description": "Time on Guna Likert section (ms)"
+                },
+                "bigfive-likert": {
+                    "type": "integer",
+                    "description": "Time on BFI Likert section (ms)"
+                },
+                "scenario": {
+                    "type": "integer",
+                    "description": "Time on scenarios section (ms)"
+                },
+                "reflection": {
+                    "type": "integer",
+                    "description": "Time on reflection/results page (ms)"
+                }
+            }
+        },
+        "computedScores": {
+            "type": "object",
+            "description": "Client-side computed scores (for display to respondent)",
+            "properties": {
+                "dominantGuna": {
+                    "type": "string",
+                    "examples": [
+                        "Sattva",
+                        "Rajas",
+                        "Tamas"
+                    ]
+                },
+                "gunaRaw": {
+                    "type": "object",
+                    "properties": {
+                        "Sattva": {
+                            "type": "string"
+                        },
+                        "Rajas": {
+                            "type": "string"
+                        },
+                        "Tamas": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "gunaNormalized": {
+                    "type": "object",
+                    "properties": {
+                        "Sattva": {
+                            "type": "string"
+                        },
+                        "Rajas": {
+                            "type": "string"
+                        },
+                        "Tamas": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "bigFive": {
+                    "type": "object",
+                    "properties": {
+                        "Extraversion": {
+                            "type": "string"
+                        },
+                        "Agreeableness": {
+                            "type": "string"
+                        },
+                        "Conscientiousness": {
+                            "type": "string"
+                        },
+                        "Neuroticism": {
+                            "type": "string"
+                        },
+                        "Openness": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "avg_reaction_time": {
+            "type": "number",
+            "description": "⏱️ IMPLICIT: Average reaction time per Guna item (seconds)"
+        },
+        "time_guna_min": {
+            "type": "number",
+            "description": "Total time spent on Guna section (minutes)"
+        },
+        "time_bfi_min": {
+            "type": "number",
+            "description": "Total time spent on BFI section (minutes)"
+        },
+        "recalculated_guna": {
+            "type": "object",
+            "description": "Server-side recalculated Guna trait scores (using refined item set)",
+            "properties": {
+                "Sattva": {
+                    "type": "number",
+                    "description": "Mean Sattva score (1-7 scale)"
+                },
+                "Rajas": {
+                    "type": "number",
+                    "description": "Mean Rajas score (1-7 scale)"
+                },
+                "Tamas": {
+                    "type": "number",
+                    "description": "Mean Tamas score (1-7 scale)"
+                }
+            }
+        },
+        "recalculated_bfi": {
+            "type": "object",
+            "description": "Server-side recalculated BFI-44 trait scores (using refined item set)",
+            "properties": {
+                "Extraversion": {
+                    "type": "number"
+                },
+                "Agreeableness": {
+                    "type": "number"
+                },
+                "Conscientiousness": {
+                    "type": "number"
+                },
+                "Neuroticism": {
+                    "type": "number"
+                },
+                "Openness": {
+                    "type": "number"
+                }
+            }
+        },
+        "is_refined": {
+            "type": "boolean",
+            "description": "Whether this record has been processed with the refined item set"
+        }
+    },
+    "_implicit_variables_summary": {
+        "description": "The following fields are IMPLICIT BEHAVIORAL VARIABLES designed to control for social desirability bias. They are captured automatically without respondent awareness.",
+        "variables": [
+            "gunaDetails.*.reactionTimeMs — Per-item reaction time",
+            "gunaMetadata.answerChanges — Total answer changes in Guna section",
+            "gunaMetadata.tabSwitches — Browser tab switches during Guna section",
+            "gunaMetadata.cursorDistancePx — Total cursor movement",
+            "gunaMetadata.idleTimeMs — Idle time during Guna section",
+            "bigFiveMetadata.answerChanges — Answer changes in BFI section",
+            "bigFiveMetadata.tabSwitches — Tab switches during BFI section",
+            "scenarioResponses.*.hoverCount — Option hovers per scenario",
+            "scenarioResponses.*.timeToSelectMs — Selection time per scenario",
+            "viewTimings.* — Time per assessment section",
+            "avg_reaction_time — Mean seconds per Guna item"
+        ]
+    }
+}
